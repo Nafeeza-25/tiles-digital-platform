@@ -14,7 +14,16 @@ An academic and practical project exploring the digital transformation and marke
 ## Development setup
 
 1. Install dependencies with `npm install`.
-2. Copy `.env.example` to `.env.local` and add your Supabase project values when available.
+2. Create `.env.local` in the repository root:
+
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=<project URL>
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<publishable key>
+   ```
+
+   Both values are available from your Supabase project's **Connect** or **API Keys** interface.
+   Never commit `.env.local`. Never use a Supabase secret key or `service_role` key in browser code; the publishable key is the correct client-side project key.
+
 3. Start the development server with `npm run dev`.
 4. Visit `http://localhost:3000`.
 
@@ -53,4 +62,4 @@ The following documents define the planned work and testing scope. They are plan
 
 ## Environment variables
 
-Private environment files are ignored by Git. Keep real credentials only in `.env.local`; `.env.example` contains safe placeholders for the expected variables.
+Private environment files are ignored by Git. Keep real credentials only in `.env.local`; `.env.example` contains safe placeholders for the expected variables. Supabase validation runs only when a Supabase client is created, so the homepage can run before `.env.local` is populated.
