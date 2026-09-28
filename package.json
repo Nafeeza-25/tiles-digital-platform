@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:check": "node --env-file=.env.local scripts/check-public-database.mjs"
+    "db:check": "node --env-file=.env.local scripts/check-public-database.mjs",
+    "db:check-catalogue": "node --env-file=.env.local scripts/check-catalogue-data.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

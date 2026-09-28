@@ -33,7 +33,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Catalogue
 
-- [ ] 30–50 tile products
+- [x] 30–50 tile products
 - [ ] Product catalogue
 - [ ] Product search
 - [ ] Product detail pages

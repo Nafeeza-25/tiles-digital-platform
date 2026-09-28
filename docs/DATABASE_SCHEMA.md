@@ -1,6 +1,6 @@
 # Database Schema
 
-This document describes the deployed Supabase/PostgreSQL schema for the Tiles Digital Platform. The initial migration is applied to the linked project database; the database currently contains schema only, with no catalogue seed data.
+This document describes the deployed Supabase/PostgreSQL schema for the Tiles Digital Platform. The linked project database contains the deployed schema and fictional Timeless Tiles demo categories, products, stores, and reviews. Product images and enquiries remain empty by design at this stage.
 
 ## Entities and responsibilities
 
@@ -60,10 +60,10 @@ The public application uses the Supabase publishable key with RLS. No `service_r
 
 ## Project requirement support
 
-The schema supports the product catalogue, category browsing, image galleries, advanced filters, room recommendations, customer reviews, store finder, quote/contact workflows, and historical lead tracking. Product seed data remains a future task.
+The schema supports the product catalogue, category browsing, image galleries, advanced filters, room recommendations, customer reviews, store finder, quote/contact workflows, and historical lead tracking. The 40-product database catalogue requirement is satisfied with demo data; customer-facing catalogue UI and product image assets remain future work.
 
 ## Migration and type-generation workflow
 
 The linked Supabase schema is the project database schema. The generated [`Database` type](../src/types/database.types.ts) is produced from that deployed schema and is used by both Supabase client helpers.
 
-The deployed `20260928000000_initial_schema.sql` migration is immutable. Future schema changes must use new timestamped migration files; do not edit migration history after deployment.
+The deployed `20260928000000_initial_schema.sql` and `20260928231512_seed_catalogue.sql` migrations are immutable. Future schema changes must use new timestamped migration files; do not edit migration history after deployment. See [Timeless Tiles demo dataset](CATALOG_DATASET.md) for dataset conventions.

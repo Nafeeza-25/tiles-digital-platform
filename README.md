@@ -66,8 +66,10 @@ Private environment files are ignored by Git. Keep real credentials only in `.en
 
 ## Supabase schema
 
-The initial migration is deployed to the linked Supabase project. The database currently contains schema only; catalogue seed data has not been added. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
+The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, and moderated demo reviews. Product image assets have not been added, and the website catalogue UI is not implemented yet. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
 
 Deployed migration files are immutable. Make future schema changes through new timestamped files in `supabase/migrations/`, never by editing an already deployed migration.
 
 Run the read-only public database access check with `npm run db:check`. It confirms public catalogue reads and verifies that enquiries are not publicly readable.
+
+Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, public review moderation, filter-data diversity, and enquiry read protection. See [Catalogue dataset](docs/CATALOG_DATASET.md) for the fictional content and demo pricing convention.
