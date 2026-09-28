@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:check": "node --env-file=.env.local scripts/check-public-database.mjs",
-    "db:check-catalogue": "node --env-file=.env.local scripts/check-catalogue-data.mjs"
+    "db:check-catalogue": "node --env-file=.env.local scripts/check-catalogue-data.mjs",
+    "assets:generate": "node --env-file=.env.local scripts/generate-product-renders.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

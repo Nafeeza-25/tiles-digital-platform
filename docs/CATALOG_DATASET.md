@@ -35,3 +35,6 @@ Most products are in stock, with a small number marked low stock, made to order,
 The database includes three fictional active showrooms with demo-only address and contact values. It includes 25 fictional reviews: 24 approved reviews visible through the public API and one unapproved review reserved to verify review moderation.
 
 Product images are intentionally pending in this phase, so `product_images` remains empty by design. The catalogue, search, filtering, comparison, and recommendation website UI are also not implemented yet.
+## Local visual assets
+
+Each of the 40 fictional demo products now has one original local SVG render and one deployed primary `product_images` record. Five category visual SVGs, a hero composition, and Timeless Tiles brand mark and wordmark are also local assets. These visual assets prepare the future UI; catalogue and product-detail pages are not yet implemented.

@@ -1,4 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
@@ -86,11 +88,29 @@ if (approvedReviewCount !== null) {
   }
 }
 
-const imageCount = await countRows("product_images");
-if (imageCount === 0) {
-  console.log("PENDING BY DESIGN - product_images count = 0");
-} else if (imageCount !== null) {
-  fail(`product_images expected 0, found ${imageCount}`);
+const { data: imageRows, error: imageError } = await supabase
+  .from("product_images")
+  .select("product_id, image_url, alt_text, is_primary");
+
+if (imageError) {
+  fail(`product_images lookup (${imageError.code ?? "unknown error"})`);
+} else {
+  expectEqual("public product_images count", imageRows.length, 40);
+  const primaryByProduct = new Map();
+  for (const image of imageRows) {
+    if (!image.image_url.startsWith("/images/products/") || !image.image_url.endsWith(".svg")) fail(`invalid image URL: ${image.image_url}`);
+    if (!image.alt_text?.trim()) fail(`blank image alt text: ${image.image_url}`);
+    if (!existsSync(join(process.cwd(), "public", image.image_url))) fail(`missing local SVG: ${image.image_url}`);
+    if (image.is_primary) primaryByProduct.set(image.product_id, (primaryByProduct.get(image.product_id) ?? 0) + 1);
+  }
+  const { data: activeProducts, error: activeProductError } = await supabase.from("products").select("id").eq("is_active", true);
+  if (activeProductError) fail(`active product image lookup (${activeProductError.code ?? "unknown error"})`);
+  else {
+    for (const product of activeProducts) {
+      if (primaryByProduct.get(product.id) !== 1) fail(`active product needs exactly one primary image: ${product.id}`);
+    }
+    if (!hasFailure) pass("every active product has exactly one primary local SVG image");
+  }
 }
 
 const { error: enquiriesError } = await supabase

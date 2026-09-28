@@ -155,3 +155,6 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 ## Project completion rule
 
 **The project is not considered complete until all required checklist items have either been implemented or deliberately documented as a project deliverable.**
+## Completed visual assets
+
+Timeless Tiles has an original local brand system, five category SVGs, a hero SVG, and 40 local deterministic demo product SVGs linked through one deployed primary image row per active product. This does not represent implementation of Homepage, Catalogue UI, Product Details UI, Search, Filters, Comparison, or Room Recommendations.

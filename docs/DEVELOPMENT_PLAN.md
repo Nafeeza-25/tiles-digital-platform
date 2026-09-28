@@ -79,3 +79,6 @@ All phases below are planned. Future phases are intentionally not marked complet
 - **Purpose:** Package the work as a complete academic submission and demonstration.
 - **Major tasks:** Prepare report sections, diagrams, screenshots, test documentation, presentation, demo script, and viva materials.
 - **Expected completion criteria:** All required academic deliverables are complete and aligned with the implemented platform.
+## Visual foundation
+
+The reusable visual design system, 40 local product renders, category visuals, hero visual, and primary-image database records are complete. Homepage, catalogue UI, product details UI, search, filters, comparison, and recommendations remain planned.

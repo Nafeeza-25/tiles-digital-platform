@@ -73,3 +73,9 @@ Deployed migration files are immutable. Make future schema changes through new t
 Run the read-only public database access check with `npm run db:check`. It confirms public catalogue reads and verifies that enquiries are not publicly readable.
 
 Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, public review moderation, filter-data diversity, and enquiry read protection. See [Catalogue dataset](docs/CATALOG_DATASET.md) for the fictional content and demo pricing convention.
+# Timeless Tiles Digital Platform
+
+## Visual foundation
+
+The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Homepage, catalogue UI, product details, search, filters, comparison, and room recommendations are planned and not implemented yet.
+
