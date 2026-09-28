@@ -1,6 +1,6 @@
 # Database Schema
 
-This document describes the planned Supabase/PostgreSQL schema for the Tiles Digital Platform. The initial migration is local only and has **not** been applied to the live Supabase project.
+This document describes the deployed Supabase/PostgreSQL schema for the Tiles Digital Platform. The initial migration is applied to the linked project database; the database currently contains schema only, with no catalogue seed data.
 
 ## Entities and responsibilities
 
@@ -60,4 +60,10 @@ The public application uses the Supabase publishable key with RLS. No `service_r
 
 ## Project requirement support
 
-The schema supports the product catalogue, category browsing, image galleries, advanced filters, room recommendations, customer reviews, store finder, quote/contact workflows, and historical lead tracking. Database deployment and product seed data remain future tasks.
+The schema supports the product catalogue, category browsing, image galleries, advanced filters, room recommendations, customer reviews, store finder, quote/contact workflows, and historical lead tracking. Product seed data remains a future task.
+
+## Migration and type-generation workflow
+
+The linked Supabase schema is the project database schema. The generated [`Database` type](../src/types/database.types.ts) is produced from that deployed schema and is used by both Supabase client helpers.
+
+The deployed `20260928000000_initial_schema.sql` migration is immutable. Future schema changes must use new timestamped migration files; do not edit migration history after deployment.

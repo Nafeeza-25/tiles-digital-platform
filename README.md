@@ -63,3 +63,11 @@ The following documents define the planned work and testing scope. They are plan
 ## Environment variables
 
 Private environment files are ignored by Git. Keep real credentials only in `.env.local`; `.env.example` contains safe placeholders for the expected variables. Supabase validation runs only when a Supabase client is created, so the homepage can run before `.env.local` is populated.
+
+## Supabase schema
+
+The initial migration is deployed to the linked Supabase project. The database currently contains schema only; catalogue seed data has not been added. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
+
+Deployed migration files are immutable. Make future schema changes through new timestamped files in `supabase/migrations/`, never by editing an already deployed migration.
+
+Run the read-only public database access check with `npm run db:check`. It confirms public catalogue reads and verifies that enquiries are not publicly readable.

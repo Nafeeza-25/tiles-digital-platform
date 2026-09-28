@@ -12,7 +12,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Model the product and lead-generation data.
 - **Major tasks:** Design the schema, access policies, migrations, and representative product seed data.
-- **Expected completion criteria:** Reviewed database schema with secure Supabase configuration and usable seed data.
+- **Expected completion criteria:** Reviewed database schema with secure Supabase configuration and usable seed data. The initial schema is deployed, but seed data has not been added, so this phase is not complete.
 
 ## Phase 3 - Design System & Layout
 

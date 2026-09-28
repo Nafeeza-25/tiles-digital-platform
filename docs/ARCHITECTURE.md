@@ -20,7 +20,7 @@ The local migration defines `categories`, `products`, `product_images`, `reviews
 
 The migration enables RLS on every table. The public application can read active catalogue data, approved reviews, and active stores; it can submit only unapproved reviews and new enquiries through explicitly limited insert grants. Enquiries are not publicly readable.
 
-The schema migration is prepared locally but has not been applied to Supabase. Exact database deployment, seed data, and dashboard configuration remain later tasks. See [Database schema](DATABASE_SCHEMA.md) for the full design.
+The initial migration is deployed to the linked Supabase project, which is the project database schema. TypeScript database types are generated from the deployed schema and used by the Supabase client helpers. The database contains schema only; database seed data and dashboard content remain later tasks. Deployed migrations are immutable, so future schema changes require new timestamped migration files. See [Database schema](DATABASE_SCHEMA.md) for the full design.
 
 ## Deployment
 
