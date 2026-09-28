@@ -14,12 +14,20 @@
 - PostgreSQL database
 - Supabase client and server helpers
 
+### Decided local schema
+
+The local migration defines `categories`, `products`, `product_images`, `reviews`, `stores`, and `enquiries` in the `public` schema. Products belong to categories; images and reviews belong to products; enquiries can optionally reference a product; stores are independent.
+
+The migration enables RLS on every table. The public application can read active catalogue data, approved reviews, and active stores; it can submit only unapproved reviews and new enquiries through explicitly limited insert grants. Enquiries are not publicly readable.
+
+The schema migration is prepared locally but has not been applied to Supabase. Exact database deployment, seed data, and dashboard configuration remain later tasks. See [Database schema](DATABASE_SCHEMA.md) for the full design.
+
 ## Deployment
 
 - GitHub for version control
 - Vercel for deployment
 
-## Planned core data entities
+## Core data entities
 
 - `categories`
 - `products`
@@ -27,8 +35,6 @@
 - `reviews`
 - `stores`
 - `enquiries`
-
-The exact SQL schema, relationships, access rules, and seed data will be designed in a later step.
 
 ## Intended request flow
 
