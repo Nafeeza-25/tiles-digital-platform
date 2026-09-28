@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tiles Digital Platform
 
-## Getting Started
+An academic and practical project exploring the digital transformation and marketing strategy for a tiles company.
 
-First, run the development server:
+## Tech stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- ESLint
+- Supabase (planned backend and database)
+- Vercel (planned deployment platform)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install dependencies with `npm install`.
+2. Copy `.env.example` to `.env.local` and add your Supabase project values when available.
+3. Start the development server with `npm run dev`.
+4. Visit `http://localhost:3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Planned modules
 
-## Learn More
+The following modules are planned and are **not all implemented yet**:
 
-To learn more about Next.js, take a look at the following resources:
+- Homepage
+- Tile product catalogue
+- Floor tiles
+- Wall tiles
+- Bathroom tiles
+- Kitchen tiles
+- Outdoor tiles
+- Advanced product filters
+- Product search
+- Product details
+- Tile comparison
+- Room-wise recommendations
+- Get a Quote
+- WhatsApp enquiry
+- Customer reviews
+- Store finder
+- Contact/enquiry system
+- SEO
+- Digital marketing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The following documents define the planned work and testing scope. They are planning materials; they do not indicate that future modules are implemented.
 
-## Deploy on Vercel
+- [Project scope](docs/PROJECT_SCOPE.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Development plan](docs/DEVELOPMENT_PLAN.md)
+- [Testing checklist](docs/TESTING_CHECKLIST.md)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private environment files are ignored by Git. Keep real credentials only in `.env.local`; `.env.example` contains safe placeholders for the expected variables.
