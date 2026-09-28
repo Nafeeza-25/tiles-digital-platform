@@ -158,3 +158,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 ## Completed visual assets
 
 Timeless Tiles has an original local brand system, five category SVGs, a hero SVG, and 40 local deterministic demo product SVGs linked through one deployed primary image row per active product. This does not represent implementation of Homepage, Catalogue UI, Product Details UI, Search, Filters, Comparison, or Room Recommendations.
+
+## Implemented shell foundations
+
+The global responsive layout, desktop/mobile navigation, footer, breadcrumbs, and route foundations are implemented. Placeholder routes are not completed Homepage, catalogue, product-detail, search, filter, comparison, recommendation, quote, or contact-form modules.

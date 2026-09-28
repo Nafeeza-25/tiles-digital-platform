@@ -1,0 +1,1 @@
+import type { Metadata } from "next"; import { PlaceholderPage } from "@/components/layout/PlaceholderPage"; export const metadata: Metadata={title:"Tiles | Timeless Tiles"}; export default function TilesPage(){return <PlaceholderPage title="Tiles" description="Explore the route foundation for Timeless Tiles collections." crumbs={[{label:"Home",href:"/"},{label:"Tiles"}]}/>}

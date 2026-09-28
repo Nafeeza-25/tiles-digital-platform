@@ -79,3 +79,7 @@ Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, p
 
 The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Homepage, catalogue UI, product details, search, filters, comparison, and room recommendations are planned and not implemented yet.
 
+## Responsive shell
+
+The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and lightweight route foundations are implemented. Homepage, catalogue, product details, search, filters, comparison, recommendations, quote form, and contact form remain future work.
+

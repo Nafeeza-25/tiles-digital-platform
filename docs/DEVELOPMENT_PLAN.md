@@ -82,3 +82,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 ## Visual foundation
 
 The reusable visual design system, 40 local product renders, category visuals, hero visual, and primary-image database records are complete. Homepage, catalogue UI, product details UI, search, filters, comparison, and recommendations remain planned.
+
+## Responsive site shell
+
+Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, and route foundations. Homepage, Product Catalogue, Product Details, Search, Filters, Comparison, Recommendations, Quote Form, and Contact Form remain planned.
