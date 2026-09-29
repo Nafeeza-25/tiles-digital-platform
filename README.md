@@ -8,7 +8,7 @@ An academic and practical project exploring the digital transformation and marke
 - TypeScript
 - Tailwind CSS
 - ESLint
-- Supabase (planned backend and database)
+- Supabase (public demo catalogue backend and database)
 - Vercel (planned deployment platform)
 
 ## Development setup
@@ -27,6 +27,12 @@ An academic and practical project exploring the digital transformation and marke
 3. Start the development server with `npm run dev`.
 4. Visit `http://localhost:3000`.
 
+## Implemented comparison
+
+Tile Comparison is implemented for the fictional demo catalogue. Visitors can select up to three tiles, keep the selection locally in their browser, and share a `/compare?product=<slug>&product=<slug>` URL that resolves current public catalogue data. Room-wise recommendations, quote and contact forms, and WhatsApp enquiries remain planned.
+
+Run `npm run compare:check` to verify that active products expose safe primary local image data for comparison.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:
@@ -41,7 +47,6 @@ The following modules are planned and are **not all implemented yet**:
 - Advanced product filters
 - Product search
 - Product details
-- Tile comparison
 - Room-wise recommendations
 - Get a Quote
 - WhatsApp enquiry
@@ -77,17 +82,17 @@ Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, p
 
 ## Visual foundation
 
-The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Product details, comparison, and room recommendations remain planned.
+The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Product details and Tile Comparison are implemented; room-wise recommendations remain planned.
 
 ## Responsive shell
 
-The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, comparison, recommendations, quote form, and contact form remain future work.
+The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details and Tile Comparison are implemented; recommendations, quote form, and contact form remain future work.
 
 ## Homepage
 
-The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details, comparison, recommendations, and forms are still planned.
+The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details and Tile Comparison are implemented; recommendations and forms are still planned.
 
 ## Catalogue
 
-The `/tiles` catalogue, category pages, and product detail pages use read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, and empty states. Comparison, recommendations, and forms remain planned.
+The `/tiles` catalogue, category pages, and product detail pages use read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, and empty states. Tile Comparison is implemented; recommendations and forms remain planned.
 

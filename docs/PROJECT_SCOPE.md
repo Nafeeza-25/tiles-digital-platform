@@ -53,7 +53,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Smart features
 
-- [ ] Tile comparison
+- [x] Tile comparison
 - [ ] Room-wise recommendations
 - [ ] Browse / discover experience
 
@@ -169,4 +169,4 @@ The homepage is implemented with read-only deployed demo catalogue data: categor
 
 ## Implemented catalogue
 
-The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, and product-detail navigation are implemented. Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.
+The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, and product-detail navigation are implemented. Tile Comparison is implemented with an accessible three-product local selection, shareable URL, and server-side public catalogue verification. Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.

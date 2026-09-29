@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { formatPrice } from "@/lib/utils";
+import { CompareToggle } from "@/components/compare/CompareToggle";
 
 type ProductCardProduct = {
   name: string;
@@ -53,7 +54,7 @@ export function ProductCard({
           {product.is_new ? <span>New arrival</span> : null}
           {product.stock_status === "low_stock" ? <span>Limited demo stock</span> : null}
         </div> : null}
-        {href && ctaLabel ? <Link href={href} className="inline-flex text-sm font-semibold text-primary">{ctaLabel} <span aria-hidden>→</span></Link> : null}
+        <div className="flex flex-wrap items-center gap-3"><CompareToggle slug={product.slug} name={product.name} />{href && ctaLabel ? <Link href={href} className="inline-flex text-sm font-semibold text-primary">{ctaLabel} <span aria-hidden>→</span></Link> : null}</div>
       </div>
     </article>
   );

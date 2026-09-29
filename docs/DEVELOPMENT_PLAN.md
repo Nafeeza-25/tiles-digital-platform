@@ -30,7 +30,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Help visitors narrow and evaluate tile options.
 - **Major tasks:** Add search, size, colour, finish, material, price, and application filters plus comparison.
-- **Expected completion criteria:** Search, all filters, and comparison return clear, accurate product results.
+- **Expected completion criteria:** Search, all filters, and comparison return clear, accurate product results. Search, filters, and Tile Comparison are implemented for the public demo catalogue; room-wise recommendations remain planned.
 
 ## Phase 6 - Room-wise Recommendations
 
@@ -81,16 +81,16 @@ All phases below are planned. Future phases are intentionally not marked complet
 - **Expected completion criteria:** All required academic deliverables are complete and aligned with the implemented platform.
 ## Visual foundation
 
-The reusable visual design system, 40 local product renders, category visuals, hero visual, and primary-image database records are complete. Homepage, catalogue UI, product details UI, search, filters, comparison, and recommendations remain planned.
+The reusable visual design system, 40 local product renders, category visuals, hero visual, and primary-image database records are complete. Homepage, catalogue UI, product details UI, search, filters, and Tile Comparison are implemented; recommendations remain planned.
 
 ## Responsive site shell
 
-Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, and route foundations. Product Details, Comparison, Recommendations, Quote Form, and Contact Form remain planned.
+Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, route foundations, Product Details, and Tile Comparison. Recommendations, Quote Form, and Contact Form remain planned.
 
 ## Homepage
 
-Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, and Tile Comparison are implemented. Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
 
 ## Catalogue
 
-Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, and product-detail navigation. Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, product-detail navigation, and Tile Comparison. Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
