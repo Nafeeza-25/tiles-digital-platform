@@ -236,3 +236,7 @@ Technical SEO infrastructure is complete: root layout metadata with `%s | Timele
 ## Implemented SEO Content & Keyword Strategy
 
 The platform includes an educational long-form tile guide collection (`/guides` and 5 guide routes) and keyword strategy mapping (`docs/SEO_KEYWORD_STRATEGY.md`). Guides cover bathroom tiles, floor tile specifications, room-wise selection, nearby store evaluation criteria, and choosing a tile company. All content adheres strictly to academic claim-safety rules, avoiding unsupported superiority claims or physical retail statements. Contextual internal links connect guides with catalogue categories, recommendations, Store Finder, and quote enquiries. Dynamic sitemap XML contains 59 valid URLs.
+
+## Production deployment — Step 26 complete
+
+The application is deployed on Vercel at <https://tiles-digital-platform.vercel.app> from the GitHub `main` branch. Production environment setup, live route and metadata checks, Supabase public-read/RLS checks, sitemap and robots checks, security headers, and representative responsive/basic accessibility QA are complete. See [Deployment Report](DEPLOYMENT_REPORT.md). The deployment remains an academic demonstration; live analytics, real campaigns, and final academic submission materials are not complete.

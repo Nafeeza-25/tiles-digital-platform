@@ -100,9 +100,10 @@ check(/name[\s\S]*phone[\s\S]*email[\s\S]*message contents/i.test(analytics) && 
 
 check(Boolean(read("docs/VERCEL_DEPLOYMENT_CHECKLIST.md")), "Vercel deployment checklist exists");
 const readiness = read("docs/PRODUCTION_READINESS.md") ?? "";
-for (const limitation of ["fictional academic-demo", "no authentication", "no email delivery", "no real payment", "no live analytics", "no verified production domain"]) {
+for (const limitation of ["fictional academic-demo", "no authentication", "no email delivery", "no real payment", "no live analytics"]) {
   check(readiness.toLowerCase().includes(limitation), `readiness document records ${limitation}`);
 }
+check(readiness.includes("https://tiles-digital-platform.vercel.app"), "readiness document records the verified production URL");
 
 const nextConfig = read("next.config.ts") ?? "";
 const globalStyles = read("src/app/globals.css") ?? "";

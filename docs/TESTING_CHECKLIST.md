@@ -75,9 +75,14 @@ This checklist separates locally verified behavior from deployment and user work
 
 ## Production deployment
 
-- [ ] Production environment variables are configured securely
-- [ ] Production deployment succeeds
-- [ ] Production URL is tested after deployment
+- [x] Production environment variables are configured securely (names documented; values omitted)
+- [x] Vercel production deployment succeeds
+- [x] Production URL is tested after deployment: <https://tiles-digital-platform.vercel.app>
+- [x] `npm run deployment:check` verifies public routes, SEO URLs, sitemap, robots, Open Graph image, response headers, public assets, dev indexing, and obvious client-secret markers (GET only)
+- [x] Read-only live Supabase and RLS checks pass; no production records were written
+- [x] Representative production responsive QA passes at 320, 375, 768, 1024, and 1440 CSS pixels
+- [x] Basic production accessibility QA passes for heading hierarchy, labels, keyboard access, and visible focus; not a formal WCAG audit
+- [x] Live canonical and Open Graph URLs use the production origin
 
 ## Digital marketing documentation
 
@@ -90,7 +95,7 @@ This checklist separates locally verified behavior from deployment and user work
 - [ ] Live advertising or performance measurement (outside this step)
 - [ ] Analytics, pixels, conversion scripts, or tracking consent infrastructure (outside this step)
 
-## Production preparation — Step 25
+## Production readiness — Step 25
 
 - [x] `npm run production:check` validates environment placeholders, ignored secrets, route inventory, dev-route indexing, internal route literals, analytics privacy plan, assets, and configured headers
 - [x] `npm run seo-content:check` passes without a Node module-type warning
@@ -99,6 +104,6 @@ This checklist separates locally verified behavior from deployment and user work
 - [x] Root error boundary and branded 404 are present without exposing error details
 - [x] Baseline response headers verified on the local production server
 - [x] Representative public routes, responsive widths, keyboard focus, and form labels checked
-- [ ] Vercel deployment or production-domain verification
+- [x] Vercel deployment and production-domain verification (Step 26)
 - [ ] Live analytics or conversion data
 - [ ] Formal accessibility certification

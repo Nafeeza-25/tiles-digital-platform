@@ -1,11 +1,12 @@
-# Vercel Deployment Preparation Checklist
+# Vercel Production Deployment Checklist
 
-**Preparation only:** do not import or deploy this project as part of Step 25. Step 26 requires a human to review the actual production URL and environment settings before deployment.
+Step 26 production deployment and live verification are complete for the academic demonstration site. See [Deployment Report](DEPLOYMENT_REPORT.md).
 
 ## Project settings
 
 - GitHub repository: `Nafeeza-25/tiles-digital-platform`
 - Production branch: `main`
+- Production URL: <https://tiles-digital-platform.vercel.app>
 - Framework preset: Next.js
 - Install command: `npm install` (the repository has `package-lock.json` and no alternative package-manager lockfile)
 - Build command: `npm run build`
@@ -14,26 +15,27 @@
 
 ## Environment variables
 
-Configure the two Supabase public values in Vercel's environment settings for the intended environments:
+The production environment uses these variables in Vercel:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
-After Vercel gives the project a confirmed production hostname, set `NEXT_PUBLIC_SITE_URL` to that canonical `https://` origin and redeploy so canonical and Open Graph metadata use it. Do not invent a production hostname before Vercel assigns one. See [Environment Configuration](ENVIRONMENT_CONFIGURATION.md).
+`NEXT_PUBLIC_SITE_URL` is set to the production origin above. Vercel system variables `VERCEL_PROJECT_PRODUCTION_URL` and `VERCEL_URL` provide framework URL fallback support. Values are intentionally omitted here. See [Environment Configuration](ENVIRONMENT_CONFIGURATION.md).
 
 ## Before and after deployment
 
-- [ ] Confirm `main` contains the reviewed release commit.
-- [ ] Verify `.env.local` is ignored and absent from GitHub.
-- [ ] Enter only the public Supabase URL and publishable key in Vercel settings; never enter `service_role`, a database password, or a private key.
-- [ ] Set `NEXT_PUBLIC_SITE_URL` only after the production URL is known.
-- [ ] Confirm Vercel build uses `npm install` and `npm run build`.
-- [ ] Review Vercel build output for route or runtime warnings.
-- [ ] Check the homepage, catalogue, one category, one product, compare, recommendations, contact and enquiry flow, product review submission, stores, guide index and detail, sitemap, robots, and Open Graph image.
-- [ ] Confirm production canonical and Open Graph URLs use the actual production origin.
-- [ ] Run read-only Supabase browser/RLS verification, including public catalogue reads, active-store reads, blocked public enquiry SELECT, pending-review visibility, and insert-only review/enquiry boundaries.
-- [ ] Confirm no auth redirect/site URL settings are changed: the project currently has no authentication.
-- [ ] Review response security headers and browser console after deployment.
+- [x] Confirm `main` contains the reviewed release commit.
+- [x] Verify `.env.local` is ignored and absent from GitHub.
+- [x] Configure only the public Supabase URL and publishable key; no `service_role`, database password, or private key is used by the application.
+- [x] Set `NEXT_PUBLIC_SITE_URL` to the production URL.
+- [x] Confirm Vercel build uses `npm install` and `npm run build`.
+- [x] Review the successful Vercel production deployment.
+- [x] Check public routes, catalogue, categories, product, compare, recommendations, contact form rendering, stores, guides, sitemap, robots, and Open Graph image. Forms were not submitted.
+- [x] Confirm production canonical and Open Graph URLs use the production origin.
+- [x] Run read-only Supabase/RLS verification, including public catalogue/store/review reads and blocked enquiry reads; no records were written.
+- [x] Confirm the project has no authentication or auth redirect settings to change.
+- [x] Review the required response security headers.
+- [x] Complete representative responsive and basic accessibility checks on production.
 
 ## Deployment security
 
@@ -44,4 +46,4 @@ After Vercel gives the project a confirmed production hostname, set `NEXT_PUBLIC
 - Verify the GitHub repository contains no credentials before import and after any configuration change.
 - Reconfirm RLS protections before and after deployment; do not weaken policies to make a page work.
 
-No Vercel project, deployment, production URL, analytics integration, or real campaign is part of this checklist's completion.
+Live analytics, published social content, and paid advertising remain outside this deployment checklist and are incomplete.

@@ -1,6 +1,6 @@
 # Development Plan
 
-Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation and Step 24 local creative asset pack are complete; live campaigns and later phases remain planned.
+Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation, Step 24 local creative asset pack, and Step 26 production deployment are complete; live campaigns and academic submission materials remain planned.
 
 ## Phase 1 - Foundation
 
@@ -116,6 +116,10 @@ Completed: `/collections` with transparent attribute-driven editorial collection
 
 Completed: Route metadata title template `%s | Timeless Tiles`, canonical URLs for all routes and filter/query variations, dynamic `sitemap.xml` for 40 products, 5 categories, and static pages, `robots.txt` rule configuration, Open Graph image generator (`/opengraph-image`), site URL abstraction helper (`NEXT_PUBLIC_SITE_URL`), and BreadcrumbList JSON-LD structured data.
 
+## Deployment — Step 26 complete
+
+Completed: Vercel production deployment at <https://tiles-digital-platform.vercel.app>, production environment configuration, live route/SEO/asset/header checks, read-only Supabase/RLS verification, and representative responsive/basic accessibility QA. See [Deployment Report](DEPLOYMENT_REPORT.md) and [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md). `npm run deployment:check` repeats the read-only live checks.
+
 ## Digital marketing deliverables — Step 23 complete
 
-Completed as a proposed fictional academic-demo deliverable: digital marketing strategy, objectives and audience/persona mapping, Instagram/Facebook/YouTube concepts, short-form video scripts, proposed Google Ads campaign and keyword structure, sample ad copy and negative keywords, four-week planned calendar, social copy library, integrated campaigns, marketing funnel and website destination mapping, lead paths, and KPI/measurement framework. See the five linked deliverables in `README.md`. The completion applies to documentation only. Actual social accounts, published content, paid campaigns, real campaign performance, tracking integration, Vercel deployment, final report, presentation, and viva materials remain incomplete.
+Completed as a proposed fictional academic-demo deliverable: digital marketing strategy, objectives and audience/persona mapping, Instagram/Facebook/YouTube concepts, short-form video scripts, proposed Google Ads campaign and keyword structure, sample ad copy and negative keywords, four-week planned calendar, social copy library, integrated campaigns, marketing funnel and website destination mapping, lead paths, and KPI/measurement framework. See the five linked deliverables in `README.md`. The completion applies to documentation only. Actual social accounts, published content, paid campaigns, real campaign performance, tracking integration, final report, presentation, and viva materials remain incomplete.

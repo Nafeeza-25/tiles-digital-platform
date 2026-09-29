@@ -1,6 +1,6 @@
-# Production Readiness — Step 25
+# Production Readiness — Step 26
 
-This document records preparation status for the fictional academic-demo platform. It does not claim that the platform has been deployed or that the fictional brand, catalogue, locations, reviews, or enquiries represent a real business.
+This document records production readiness for the fictional academic-demo platform. Deployment is verified at the URL below; the fictional brand, catalogue, locations, reviews, and enquiries do not represent a verified real business.
 
 ## Application completeness
 
@@ -10,9 +10,9 @@ The current application includes the public catalogue, five categories, product 
 
 The application uses Supabase with the publishable key and public policies. Catalogue records and active stores are read through public access; public enquiry reads are blocked; reviews are publicly readable only after approval; review submission cannot self-approve. The application uses no service-role credential. Step 25 does not modify database data, policies, or migrations.
 
-## Environment configuration
+## Production deployment and environment configuration
 
-The project variables and Vercel guidance are documented in [Environment Configuration](ENVIRONMENT_CONFIGURATION.md) and [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md). `.env.local` is ignored and must remain untracked. There is no verified production domain yet.
+The deployed production URL is <https://tiles-digital-platform.vercel.app> on Vercel, connected to GitHub repository `Nafeeza-25/tiles-digital-platform` and production branch `main`. The environment variable names are `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `NEXT_PUBLIC_SITE_URL`; Vercel system URL names used as fallbacks are `VERCEL_PROJECT_PRODUCTION_URL` and `VERCEL_URL`. Values are not recorded. `.env.local` is ignored and untracked. See [Environment Configuration](ENVIRONMENT_CONFIGURATION.md), [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md), and [Deployment Report](DEPLOYMENT_REPORT.md).
 
 ## Error handling and not-found UX
 
@@ -38,7 +38,7 @@ The app has semantic route headings, labelled forms, keyboard focus styling, ima
 
 Verified locally against the optimized production build on 2026-09-29. `npm run lint`, `npm run build`, and `npm run production:check` passed. The database-backed read-only checks passed for `db:check`, catalogue, category, product, compare, recommendation, enquiry, review, store, public pages, SEO, SEO content, marketing, and marketing assets. The SEO content check completed without the earlier Node module-type warning. No database writes were performed.
 
-The production server returned the expected baseline headers on the home and unknown routes. The unknown route returned HTTP 404 and the branded not-found content. The root, catalogue, one product detail, contact, store finder, and guide index were checked at 320, 375, 768, 1024, and 1440 CSS pixels: one H1 per page, no horizontal overflow, and no unlabeled visible form controls. Keyboard Tab reached the visible skip link. A browser contrast check caught and fixed a Tailwind cascade issue: the anchor base color now sits in the base layer, allowing white utility text to render on primary buttons. These checks are representative smoke and responsive checks, not an exhaustive device/browser matrix or a formal WCAG audit.
+The production server returned the expected baseline headers on the home and unknown routes. The unknown route returned HTTP 404 and the branded not-found content. The home, catalogue, product, contact, store finder, and guide routes were checked at 320, 375, 768, 1024, and 1440 CSS pixels: one H1 per page, no horizontal overflow, and no unlabeled visible form controls. Keyboard Tab reached the visible skip link. Production live verification also checked route responses, metadata, sitemap, robots, Open Graph image, headers, dev-route indexing, first-party assets, and client bundles. Public Supabase/RLS reads passed. Forms were inspected but not submitted; no production records were written. These are representative smoke, responsive, and basic accessibility checks, not an exhaustive browser matrix or a formal WCAG audit. The read-only checks are repeatable with `npm run deployment:check`.
 
 The public route smoke check also covered category, collections, offers, About, comparison, recommendations, contact, stores, guide details, sitemap, robots, and the 404 route. `npm run production:check` checks 72 literal internal links against known route patterns. This is a static route check, not an external-link checker.
 
@@ -51,12 +51,11 @@ The public route smoke check also covered category, collections, offers, About, 
 - There is no real payment or ecommerce checkout.
 - There is no live analytics installed and no live conversion data.
 - No real social or advertising campaign has launched.
-- There is no verified production domain yet.
-- Deployment to Vercel remains future work.
+- Accessibility verification is a representative manual check, not a formal WCAG certification.
 
-## Deployment prerequisites
+## Deployment reference
 
-Complete the human-reviewed [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md), configure only public Supabase values, set the canonical site URL after it is known, verify the deployed routes and headers, and recheck RLS. Do not deploy as part of Step 25.
+The live deployment procedure and evidence are recorded in the completed [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md) and [Deployment Report](DEPLOYMENT_REPORT.md).
 
 ## Analytics status
 
@@ -64,4 +63,4 @@ Provider-neutral event planning, privacy limits, and future conversion definitio
 
 ## Remaining project work
 
-Step 25 is complete locally and is prepared for the approved commit and push. The Vercel deployment and real-domain checks remain human follow-up work; Step 26 has not started.
+Step 26 production deployment and verification are complete. Live analytics, real advertising/social campaigns, final report, diagrams package, PPT, and viva materials remain incomplete.

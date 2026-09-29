@@ -9,7 +9,13 @@ An academic and practical project exploring the digital transformation and marke
 - Tailwind CSS
 - ESLint
 - Supabase (public demo catalogue backend and database)
-- Vercel (planned deployment platform)
+- Vercel (production deployment)
+
+## Production
+
+The academic demonstration is deployed at <https://tiles-digital-platform.vercel.app>. Vercel builds the `main` branch from GitHub using `npm install` and `npm run build`. Live verification is documented in [Deployment Report](docs/DEPLOYMENT_REPORT.md); rerun the read-only check with `npm run deployment:check`.
+
+The production site uses Supabase public client configuration with row-level security. It contains fictional academic-demo content; it has no authentication, real payments, email delivery, or live analytics. Do not submit production forms during verification.
 
 ## Development setup
 
