@@ -21,5 +21,6 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   categories: tileCategories,
+  recommendations: { label: "Room Recommendations", href: "/recommendations" },
   quote: { label: "Get a Quote", href: "/contact?intent=quote" },
 } as const;

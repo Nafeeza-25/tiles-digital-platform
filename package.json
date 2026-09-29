@@ -13,7 +13,8 @@
     "catalog:check": "node --env-file=.env.local scripts/check-catalogue-filters.mjs",
     "category:check": "node --env-file=.env.local scripts/check-category-pages.mjs",
     "product:check": "node --env-file=.env.local scripts/check-product-pages.mjs",
-    "compare:check": "node --env-file=.env.local scripts/check-comparison.mjs"
+    "compare:check": "node --env-file=.env.local scripts/check-comparison.mjs",
+    "recommendation:check": "node --env-file=.env.local scripts/check-room-recommendations.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

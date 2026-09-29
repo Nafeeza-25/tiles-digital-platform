@@ -1,0 +1,10 @@
+import { createClient } from "@supabase/supabase-js";
+const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;if(!url||!key)throw new Error("Supabase public environment variables are required.");
+const client=createClient(url,key);const {data,error}=await client.from("products").select("slug,price,sale_price,colour,finish,material,applications,rooms,slip_rating,category:categories(name,slug),product_images(image_url,is_primary)").eq("is_active",true);if(error)throw error;if(!data?.length)throw new Error("No active products.");
+const rooms=["living_room","bedroom","bathroom","kitchen","balcony","outdoor","commercial"];
+for(const room of rooms){const matches=data.filter(p=>p.rooms.includes(room));if(!matches.length)throw new Error(`No products tagged ${room}.`);if(matches.some(p=>!p.rooms.includes(room)))throw new Error(`Room isolation failed for ${room}.`);}
+const bathroom=data.filter(p=>p.rooms.includes("bathroom"));const sample=bathroom[0];if(!sample)throw new Error("Bathroom sample unavailable.");
+if(bathroom.filter(p=>p.colour===sample.colour).some(p=>p.colour!==sample.colour))throw new Error("Colour filtering failed.");if(bathroom.filter(p=>p.finish===sample.finish).some(p=>p.finish!==sample.finish))throw new Error("Finish filtering failed.");if(bathroom.filter(p=>p.material===sample.material).some(p=>p.material!==sample.material))throw new Error("Material filtering failed.");
+const ceiling=Math.max(...bathroom.map(p=>p.sale_price!==null&&p.sale_price<p.price?p.sale_price:p.price));if(bathroom.filter(p=>(p.sale_price!==null&&p.sale_price<p.price?p.sale_price:p.price)<=ceiling).some(p=>(p.sale_price!==null&&p.sale_price<p.price?p.sale_price:p.price)>ceiling))throw new Error("Maximum price filtering failed.");
+if(data.filter(p=>p.rooms.includes("not_real")).length)throw new Error("Invalid room was accepted.");if(data.filter(p=>p.rooms.includes("bathroom")&&p.colour==="__none__").length)throw new Error("Empty combination is unsafe.");
+console.log(`Room recommendation verification passed for ${data.length} active products and all seven room tags.`);

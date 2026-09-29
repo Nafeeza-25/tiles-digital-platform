@@ -1,0 +1,1 @@
+export function RecommendationReasons({ reasons }: { reasons: string[] }) { return <div className="mt-3 flex flex-wrap gap-2" aria-label="Why this tile is shown">{reasons.map((reason) => <span key={reason} className="border border-border bg-surface-muted px-2 py-1 text-xs text-muted">{reason}</span>)}</div>; }

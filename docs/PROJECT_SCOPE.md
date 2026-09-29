@@ -54,7 +54,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 ### Smart features
 
 - [x] Tile comparison
-- [ ] Room-wise recommendations
+- [x] Room-wise recommendations
 - [ ] Browse / discover experience
 
 ### Lead generation

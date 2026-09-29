@@ -36,7 +36,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Guide visitors toward suitable products by room or use case.
 - **Major tasks:** Define recommendation rules and build the room-wise discovery interface.
-- **Expected completion criteria:** Recommendations are understandable, relevant, and linked to products.
+- **Expected completion criteria:** Recommendations are understandable, relevant, and linked to products. Implemented as a transparent room-tag and catalogue-preference filter, not AI or machine learning.
 
 ## Phase 7 - Enquiries, Quotes & WhatsApp
 

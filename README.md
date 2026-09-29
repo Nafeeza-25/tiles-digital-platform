@@ -33,6 +33,10 @@ Tile Comparison is implemented for the fictional demo catalogue. Visitors can se
 
 Run `npm run compare:check` to verify that active products expose safe primary local image data for comparison.
 
+## Implemented room recommendations
+
+Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI. Quote/contact forms, WhatsApp enquiry, review submission, and store finder remain planned.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:
