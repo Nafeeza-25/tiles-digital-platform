@@ -89,5 +89,5 @@ The homepage now uses read-only deployed demo data for featured products, actual
 
 ## Catalogue
 
-The `/tiles` catalogue and its five category-specific pages use read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, sorting, pagination infrastructure, active filter state, and empty states. Product details, comparison, recommendations, and forms remain planned.
+The `/tiles` catalogue, category pages, and product detail pages use read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, and empty states. Comparison, recommendations, and forms remain planned.
 

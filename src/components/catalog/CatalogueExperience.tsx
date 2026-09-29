@@ -34,7 +34,7 @@ export function CatalogueExperience({ basePath = "/tiles", categoryLabel, produc
           <ActiveFilters basePath={basePath} params={params} />
           {pagination.items.length ? (
             <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {pagination.items.map((product) => <ProductCard key={product.id} product={product} href={categoryLabel ? null : `/tiles/${product.slug}`} ctaLabel={categoryLabel ? null : "Explore Collection"} />)}
+              {pagination.items.map((product) => <ProductCard key={product.id} product={product} href={product.category ? `/tiles/${product.category.slug}/${product.slug}` : null} ctaLabel="View Tile" />)}
             </div>
           ) : (
             <div className="mt-6 border p-8">

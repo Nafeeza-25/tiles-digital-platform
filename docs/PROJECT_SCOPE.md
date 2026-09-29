@@ -36,11 +36,11 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 - [x] 30–50 tile products
 - [x] Product catalogue
 - [x] Product search
-- [ ] Product detail pages
+- [x] Product detail pages
 - [x] High-quality product images
-- [ ] Specifications
-- [ ] Pricing
-- [ ] Application information
+- [x] Specifications
+- [x] Pricing
+- [x] Application information
 
 ### Advanced filters
 
@@ -169,4 +169,4 @@ The homepage is implemented with read-only deployed demo catalogue data: categor
 
 ## Implemented catalogue
 
-The responsive Product Catalogue, product search, Size, Colour, Finish, Material, Price, and Application filters, sorting, pagination, and category-specific catalogue browsing for Floor Tiles, Wall Tiles, Bathroom Tiles, Kitchen Tiles, and Outdoor Tiles are implemented. Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.
+The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, and product-detail navigation are implemented. Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.

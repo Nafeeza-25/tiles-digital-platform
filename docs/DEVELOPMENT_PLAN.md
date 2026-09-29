@@ -93,4 +93,4 @@ Completed: the server-rendered, data-driven homepage with hero, category discove
 
 ## Catalogue
 
-Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, and Floor Tiles, Wall Tiles, Bathroom Tiles, Kitchen Tiles, and Outdoor Tiles category catalogue pages. Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, and product-detail navigation. Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.

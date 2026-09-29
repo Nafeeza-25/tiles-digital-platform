@@ -5,6 +5,7 @@ import { formatPrice } from "@/lib/utils";
 
 type ProductCardProduct = {
   name: string;
+  slug: string;
   price: number;
   sale_price: number | null;
   size_label: string;
@@ -18,7 +19,7 @@ type ProductCardProduct = {
 
 export function ProductCard({
   product,
-  href = product.category ? `/tiles/${product.category.slug}` : "/tiles",
+  href = product.category ? `/tiles/${product.category.slug}/${product.slug}` : "/tiles",
   ctaLabel = "View Tile",
 }: {
   product: ProductCardProduct;

@@ -1,0 +1,21 @@
+import { createClient } from "@supabase/supabase-js";
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+if (!url || !key) throw new Error("Missing Supabase environment variables.");
+const supabase = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
+const { data: products, error } = await supabase.from("products").select("id,category_id,slug,price,sale_price,size_label,colour,finish,material,applications,rooms,category:categories(slug),product_images(image_url,is_primary)").eq("is_active", true);
+if (error) throw new Error(`Public product read failed (${error.code ?? "unknown"})`);
+const check = (condition, message) => { if (!condition) throw new Error(message); console.log(`PASS - ${message}`); };
+const categorySlug = (product) => Array.isArray(product.category) ? product.category[0]?.slug : product.category?.slug;
+check(products.length === 40, "40 active products exist");
+const routes = new Set();
+for (const product of products) { const category = categorySlug(product); const primaryImages = product.product_images.filter((image) => image.is_primary); const route = `/tiles/${category}/${product.slug}`; check(Boolean(category && product.slug && primaryImages.length === 1), `${product.slug} has a valid category, slug, and primary image`); check(!routes.has(route), `${route} is unique`); routes.add(route); check(product.price > 0 && product.size_label && product.colour && product.finish && product.material && product.applications.length && product.rooms.length, `${product.slug} has required detail fields`); }
+const sample = products.find((product) => product.slug === "carrara-white") ?? products[0];
+const sampleCategory = categorySlug(sample);
+check(categorySlug(sample) !== "bathroom-tiles", "product-category mismatch is invalid");
+const { data: related, error: relatedError } = await supabase.from("products").select("id,category:categories(slug)").eq("is_active", true).eq("category_id", sample.category_id).neq("id", sample.id).limit(4);
+if (relatedError) throw new Error(`Related product read failed (${relatedError.code ?? "unknown"})`);
+check(related.length <= 4 && related.every((product) => categorySlug(product) === sampleCategory && product.id !== sample.id), "related products share category, exclude current product, and limit to four");
+const { data: reviews, error: reviewError } = await supabase.from("reviews").select("is_approved").eq("product_id", sample.id).eq("is_approved", true);
+if (reviewError) throw new Error(`Review read failed (${reviewError.code ?? "unknown"})`);
+check(reviews.every((review) => review.is_approved), "public product reviews are approved only");
+check(Boolean(sampleCategory && routes.has(`/tiles/${sampleCategory}/${sample.slug}`)), "sample canonical product route is valid");
