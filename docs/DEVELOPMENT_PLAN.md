@@ -42,7 +42,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Convert visitor interest into actionable sales leads.
 - **Major tasks:** Build quote, product-enquiry, and contact forms; validate inputs; store enquiries; add WhatsApp links.
-- **Expected completion criteria:** Valid leads reach Supabase and users receive clear success or error feedback.
+- **Expected completion criteria:** Valid leads reach Supabase and users receive clear success or error feedback. Contact, quote, product-aware enquiry, and WhatsApp entry flows are implemented as fictional academic-demo submissions through the existing public INSERT-only RLS policy. Review submission and store finder remain planned.
 
 ## Phase 8 - Reviews & Store Finder
 
@@ -85,12 +85,12 @@ The reusable visual design system, 40 local product renders, category visuals, h
 
 ## Responsive site shell
 
-Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, route foundations, Product Details, and Tile Comparison. Recommendations, Quote Form, and Contact Form remain planned.
+Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, route foundations, Product Details, Tile Comparison, Room Recommendations, and lead-generation enquiry flows. Review submission and store finder remain planned.
 
 ## Homepage
 
-Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, and Tile Comparison are implemented. Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, Tile Comparison, Room-wise Recommendations, and lead-generation enquiry flows are implemented. Review Submission and Store Finder remain planned.
 
 ## Catalogue
 
-Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, product-detail navigation, and Tile Comparison. Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, product-detail navigation, Tile Comparison, Room-wise Recommendations, and lead-generation enquiry flows. Review Submission and Store Finder remain planned.

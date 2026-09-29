@@ -14,7 +14,8 @@
     "category:check": "node --env-file=.env.local scripts/check-category-pages.mjs",
     "product:check": "node --env-file=.env.local scripts/check-product-pages.mjs",
     "compare:check": "node --env-file=.env.local scripts/check-comparison.mjs",
-    "recommendation:check": "node --env-file=.env.local scripts/check-room-recommendations.mjs"
+    "recommendation:check": "node --env-file=.env.local scripts/check-room-recommendations.mjs",
+    "enquiry:check": "node --env-file=.env.local scripts/check-enquiry-flow.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

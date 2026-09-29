@@ -29,13 +29,17 @@ An academic and practical project exploring the digital transformation and marke
 
 ## Implemented comparison
 
-Tile Comparison is implemented for the fictional demo catalogue. Visitors can select up to three tiles, keep the selection locally in their browser, and share a `/compare?product=<slug>&product=<slug>` URL that resolves current public catalogue data. Room-wise recommendations, quote and contact forms, and WhatsApp enquiries remain planned.
+Tile Comparison is implemented for the fictional demo catalogue. Visitors can select up to three tiles, keep the selection locally in their browser, and share a `/compare?product=<slug>&product=<slug>` URL that resolves current public catalogue data.
 
 Run `npm run compare:check` to verify that active products expose safe primary local image data for comparison.
 
 ## Implemented room recommendations
 
-Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI. Quote/contact forms, WhatsApp enquiry, review submission, and store finder remain planned.
+Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI. Review submission and store finder remain planned.
+
+## Implemented lead generation
+
+`/contact` now supports contact, quote, and product-aware enquiry URLs. Forms are validated with Zod and react-hook-form, then use the existing Supabase public INSERT policy for fictional academic-demo enquiries. Public enquiry records remain unreadable. WhatsApp links use existing safe demo-store data when available; no real business contact details are invented. Review submission and store finder remain planned.
 
 ## Planned modules
 
@@ -52,8 +56,6 @@ The following modules are planned and are **not all implemented yet**:
 - Product search
 - Product details
 - Room-wise recommendations
-- Get a Quote
-- WhatsApp enquiry
 - Customer reviews
 - Store finder
 - Contact/enquiry system
@@ -90,7 +92,7 @@ The project now includes a reusable local design system, Timeless Tiles brand SV
 
 ## Responsive shell
 
-The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details and Tile Comparison are implemented; recommendations, quote form, and contact form remain future work.
+The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, Tile Comparison, Room Recommendations, and lead-generation enquiry flows are implemented; review submission and store finder remain future work.
 
 ## Homepage
 

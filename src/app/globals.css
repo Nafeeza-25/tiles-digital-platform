@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+.field { @apply min-h-11 border border-border bg-surface px-3 py-2 font-normal text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary; }
+
 :root { --background:#FAF8F4; --foreground:#211E1C; --surface:#FFFFFF; --surface-muted:#F1EDE7; --primary:#6F2435; --primary-foreground:#FFFFFF; --secondary:#D9D0C6; --secondary-foreground:#302B28; --accent:#A87947; --accent-foreground:#FFFFFF; --border:#DDD6CE; --muted:#736C66; --success:#2F6B4F; --error:#A43F3F; --radius-md:.5rem; --container-max:76rem; --page-padding:clamp(1.25rem,4vw,3rem); --shadow-subtle:0 8px 24px rgb(33 30 28 / 8%); }
 
 @theme inline {

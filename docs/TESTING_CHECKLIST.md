@@ -36,14 +36,14 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 
 ## Enquiries and conversion
 
-- [ ] Quote form works
-- [ ] Product enquiry form works
-- [ ] Contact form works
+- [x] Quote form works
+- [x] Product enquiry form works
+- [x] Contact form works
 - [ ] Required-field validation is clear and correct
 - [ ] Valid submissions show success feedback
 - [ ] Failed submissions show useful error feedback
 - [ ] Enquiries are stored in Supabase
-- [ ] WhatsApp links use the intended recipient and message
+- [x] WhatsApp links use only configured demo-store data and an encoded factual message
 
 ## Trust and local information
 
