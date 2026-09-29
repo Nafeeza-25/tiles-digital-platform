@@ -22,11 +22,11 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 - [ ] Responsive website
 - [ ] Homepage
 - [ ] Collections
-- [ ] Floor Tiles
-- [ ] Wall Tiles
-- [ ] Bathroom Tiles
-- [ ] Kitchen Tiles
-- [ ] Outdoor Tiles
+- [x] Floor Tiles
+- [x] Wall Tiles
+- [x] Bathroom Tiles
+- [x] Kitchen Tiles
+- [x] Outdoor Tiles
 - [ ] About Us
 - [ ] Offers
 - [ ] Contact
@@ -169,4 +169,4 @@ The homepage is implemented with read-only deployed demo catalogue data: categor
 
 ## Implemented catalogue
 
-The responsive Product Catalogue, product search, Size, Colour, Finish, Material, Price, and Application filters, sorting, and pagination are implemented. Category catalogue pages, Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.
+The responsive Product Catalogue, product search, Size, Colour, Finish, Material, Price, and Application filters, sorting, pagination, and category-specific catalogue browsing for Floor Tiles, Wall Tiles, Bathroom Tiles, Kitchen Tiles, and Outdoor Tiles are implemented. Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.

@@ -10,7 +10,8 @@
     "db:check": "node --env-file=.env.local scripts/check-public-database.mjs",
     "db:check-catalogue": "node --env-file=.env.local scripts/check-catalogue-data.mjs",
     "assets:generate": "node --env-file=.env.local scripts/generate-product-renders.mjs",
-    "catalog:check": "node --env-file=.env.local scripts/check-catalogue-filters.mjs"
+    "catalog:check": "node --env-file=.env.local scripts/check-catalogue-filters.mjs",
+    "category:check": "node --env-file=.env.local scripts/check-category-pages.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

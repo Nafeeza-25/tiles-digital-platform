@@ -21,7 +21,7 @@ const applicationLabels: Record<string, string> = {
 
 const filterKeys: FilterKey[] = ["size", "colour", "finish", "material", "application"];
 
-export function CatalogueFilters({ products, params, state }: { products: CatalogProduct[]; params: SearchParams; state: CatalogState }) {
+export function CatalogueFilters({ basePath = "/tiles", products, params, state }: { basePath?: string; products: CatalogProduct[]; params: SearchParams; state: CatalogState }) {
   return (
     <details open className="border bg-surface p-4">
       <summary className="cursor-pointer font-semibold">Filters</summary>
@@ -49,7 +49,7 @@ export function CatalogueFilters({ products, params, state }: { products: Catalo
           <input type="number" name="maxPrice" min="0" defaultValue={state.maxPrice ?? ""} className="mt-1 w-full border p-2" />
         </label>
         <button className="bg-primary px-4 py-3 text-primary-foreground">Apply Filters</button>
-        <Link href="/tiles" className="text-center text-sm text-primary">Clear All</Link>
+        <Link href={basePath} className="text-center text-sm text-primary">Clear All</Link>
       </form>
     </details>
   );

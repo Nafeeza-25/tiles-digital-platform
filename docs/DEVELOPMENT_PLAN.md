@@ -85,12 +85,12 @@ The reusable visual design system, 40 local product renders, category visuals, h
 
 ## Responsive site shell
 
-Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, and route foundations. Homepage, Product Catalogue, Product Details, Search, Filters, Comparison, Recommendations, Quote Form, and Contact Form remain planned.
+Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, and route foundations. Product Details, Comparison, Recommendations, Quote Form, and Contact Form remain planned.
 
 ## Homepage
 
-Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
 
 ## Catalogue
 
-Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, and responsive catalogue browsing. Category catalogue pages, Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, and Floor Tiles, Wall Tiles, Bathroom Tiles, Kitchen Tiles, and Outdoor Tiles category catalogue pages. Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.

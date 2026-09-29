@@ -1,1 +1,24 @@
-import Link from "next/link"; import {catalogueHref,type QueryValue} from "@/lib/catalog/catalog-url"; export function ActiveFilters({params}:{params:Record<string,QueryValue>}){const keys=["q","size","colour","finish","material","application","minPrice","maxPrice"] as const;const entries=keys.flatMap(k=>{const v=params[k];return(Array.isArray(v)?v:v?[v]:[]).map(x=>[k,x] as const)});if(!entries.length)return null;return <div className="mt-4 flex flex-wrap gap-2 text-sm">{entries.map(([k,v])=>{const cur=Array.isArray(params[k])?params[k] as string[]:[params[k] as string];const rest=cur.filter(x=>x!==v);return <Link key={`${k}-${v}`} className="border px-2 py-1" href={catalogueHref(params,{[k]:rest,page:undefined})}>{k}: {v} ×</Link>})}<Link href="/tiles" className="px-2 py-1 text-primary">Clear All</Link></div>}
+import Link from "next/link";
+import { catalogueHref, type QueryValue } from "@/lib/catalog/catalog-url";
+
+const keys = ["q", "size", "colour", "finish", "material", "application", "minPrice", "maxPrice"] as const;
+
+export function ActiveFilters({ basePath = "/tiles", params }: { basePath?: string; params: Record<string, QueryValue> }) {
+  const entries = keys.flatMap((key) => {
+    const value = params[key];
+    return (Array.isArray(value) ? value : value ? [value] : []).map((item) => [key, item] as const);
+  });
+
+  if (!entries.length) return null;
+
+  return (
+    <div className="mt-4 flex flex-wrap gap-2 text-sm">
+      {entries.map(([key, value]) => {
+        const values = Array.isArray(params[key]) ? params[key] : [params[key] as string];
+        const remaining = values.filter((item) => item !== value);
+        return <Link key={`${key}-${value}`} className="border px-2 py-1" href={catalogueHref(basePath, params, { [key]: remaining, page: undefined })}>{key}: {value} ×</Link>;
+      })}
+      <Link href={basePath} className="px-2 py-1 text-primary">Clear All</Link>
+    </div>
+  );
+}

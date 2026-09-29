@@ -1,1 +1,0 @@
-import { PlaceholderPage } from "@/components/layout/PlaceholderPage"; export default function Page(){return <PlaceholderPage title="Floor Tiles" description="A future catalogue view for considered floor tile choices." crumbs={[{label:"Home",href:"/"},{label:"Tiles",href:"/tiles"},{label:"Floor Tiles"}]}/>}

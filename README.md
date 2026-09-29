@@ -81,13 +81,13 @@ The project now includes a reusable local design system, Timeless Tiles brand SV
 
 ## Responsive shell
 
-The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and lightweight route foundations are implemented. Homepage, catalogue, product details, search, filters, comparison, recommendations, quote form, and contact form remain future work.
+The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, comparison, recommendations, quote form, and contact form remain future work.
 
 ## Homepage
 
-The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Full catalogue, product details, search, filters, comparison, recommendations, and forms are still planned.
+The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details, comparison, recommendations, and forms are still planned.
 
 ## Catalogue
 
-The `/tiles` catalogue uses read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, sorting, pagination, active filter state, and empty states. Category pages and product details remain planned.
+The `/tiles` catalogue and its five category-specific pages use read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, sorting, pagination infrastructure, active filter state, and empty states. Product details, comparison, recommendations, and forms remain planned.
 
