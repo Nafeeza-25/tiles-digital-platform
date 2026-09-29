@@ -47,7 +47,7 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 
 ## Trust and local information
 
-- [ ] Reviews render correctly
+- [x] Approved reviews render correctly and review submission is moderated before public display
 - [ ] Store finder returns relevant locations
 - [ ] Store/showroom details are accurate
 - [ ] Directions or map integration works

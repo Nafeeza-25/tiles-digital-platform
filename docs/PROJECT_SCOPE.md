@@ -68,7 +68,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Trust & local features
 
-- [ ] Customer reviews
+- [x] Customer review submission and approved review display
 - [ ] Store finder
 - [ ] Store/showroom details
 - [ ] Directions/map integration
@@ -165,8 +165,8 @@ The global responsive layout, desktop/mobile navigation, footer, breadcrumbs, an
 
 ## Implemented homepage
 
-The homepage is implemented with read-only deployed demo catalogue data: category discovery, featured tiles, accurate demo offers, approved demo reviews, audience, journey, brand story, and CTAs. The full Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, and WhatsApp Enquiry are now implemented. Review Submission and Store Finder remain out of scope.
+The homepage is implemented with read-only deployed demo catalogue data: category discovery, featured tiles, accurate demo offers, approved demo reviews, audience, journey, brand story, and CTAs. The full Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, and moderated Review Submission are now implemented. Store Finder remains out of scope.
 
 ## Implemented catalogue
 
-The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, and product-detail navigation are implemented. Tile Comparison is implemented with an accessible three-product local selection, shareable URL, and server-side public catalogue verification. Room-wise Recommendations and lead-generation contact, quote, product-enquiry, and WhatsApp flows are implemented. Review Submission and Store Finder remain out of scope.
+The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, product-detail navigation, and moderated product-aware review submission are implemented. Tile Comparison is implemented with an accessible three-product local selection, shareable URL, and server-side public catalogue verification. Room-wise Recommendations and lead-generation contact, quote, product-enquiry, and WhatsApp flows are implemented. Submitted reviews are fictional academic-demo records and default to unapproved; manual approval remains a Supabase dashboard task. Store Finder remains out of scope.
