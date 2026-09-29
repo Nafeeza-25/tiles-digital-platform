@@ -1,11 +1,11 @@
 # Step 26 — Production Deployment Report
 
-**Verification date:** 2026-09-29  
-**Production URL:** <https://tiles-digital-platform.vercel.app>  
-**Platform:** Vercel  
-**Source repository:** <https://github.com/Nafeeza-25/tiles-digital-platform>  
-**Production branch:** `main`  
-**Deployed source commit before this report:** `750e5b2` — `fix: add route-specific Open Graph URLs`
+- **Verification date:** 2026-09-29
+- **Production URL:** <https://tiles-digital-platform.vercel.app>
+- **Platform:** Vercel
+- **Source repository:** <https://github.com/Nafeeza-25/tiles-digital-platform>
+- **Production branch:** `main`
+- **Deployed source commit before this report:** `750e5b2` — `fix: add route-specific Open Graph URLs`
 
 ## Application and services
 
