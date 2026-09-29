@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -16,9 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   const { categorySlug, productSlug } = await params;
   const product = await getProductDetail(categorySlug, productSlug);
   if (!product) return {};
+  const title = `${product.name} ${product.category?.name.replace("Tiles", "Tile") ?? "Tile"}`;
+  const description = product.short_description ?? product.description ?? `Explore ${product.name} from Timeless Tiles.`;
   return {
-    title: `${product.name} ${product.category?.name.replace("Tiles", "Tile") ?? "Tile"}`,
-    description: product.short_description ?? product.description ?? `Explore ${product.name} from Timeless Tiles.`,
+    title,
+    description,
+    openGraph: createOpenGraphMetadata(`/tiles/${categorySlug}/${productSlug}`, title, description),
     alternates: { canonical: `/tiles/${categorySlug}/${productSlug}` },
   };
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { site } from "@/data/site";
@@ -7,6 +8,7 @@ import { tileGuides } from "@/data/guides";
 export const metadata: Metadata = {
   title: "Tile Guides",
   description: "Explore expert tile selection guides covering bathroom tiles, floor tile specifications, room suitabilities, nearby stores, and tile company evaluation.",
+  openGraph: createOpenGraphMetadata("/guides", "Tile Guides", "Explore expert tile selection guides covering bathroom tiles, floor tile specifications, room suitabilities, nearby stores, and tile company evaluation."),
   alternates: { canonical: "/guides" },
 };
 

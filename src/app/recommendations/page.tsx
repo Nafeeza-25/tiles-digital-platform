@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProductCard } from "@/components/products/ProductCard";
@@ -13,6 +14,7 @@ import { getRecommendations, getRoomOptions, parseRecommendationState, recommend
 export const metadata: Metadata = {
   title: "Room Recommendations",
   description: "Choose a room and explore Timeless Tiles demo products matched using room suitability, colour, finish, material and budget preferences.",
+  openGraph: createOpenGraphMetadata("/recommendations", "Room Recommendations", "Choose a room and explore Timeless Tiles demo products matched using room suitability, colour, finish, material and budget preferences."),
   alternates: { canonical: "/recommendations" },
 };
 

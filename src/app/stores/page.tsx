@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { StoreCard } from "@/components/stores/StoreCard";
@@ -8,6 +9,7 @@ import { filterStores, normalizeStoreSearch, parseStoreLocation, storeLocationOp
 export const metadata: Metadata = {
   title: "Store Finder",
   description: "Find fictional Timeless Tiles demo store locations and view available contact and directions information.",
+  openGraph: createOpenGraphMetadata("/stores", "Store Finder", "Find fictional Timeless Tiles demo store locations and view available contact and directions information."),
   alternates: { canonical: "/stores" },
 };
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { CatalogueExperience } from "@/components/catalog/CatalogueExperience";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import type { SearchParams } from "@/lib/catalog/catalog-filters";
@@ -7,6 +8,7 @@ import { getCatalogueProducts } from "@/lib/queries/catalog";
 export const metadata: Metadata = {
   title: "Tile Catalogue",
   description: "Browse floor, wall, bathroom, kitchen and outdoor tiles and filter the Timeless Tiles demo catalogue by size, colour, finish, material, price and application.",
+  openGraph: createOpenGraphMetadata("/tiles", "Tile Catalogue", "Browse floor, wall, bathroom, kitchen and outdoor tiles and filter the Timeless Tiles demo catalogue by size, colour, finish, material, price and application."),
   alternates: { canonical: "/tiles" },
 };
 

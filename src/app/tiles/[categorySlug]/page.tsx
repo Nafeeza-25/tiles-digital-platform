@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -21,9 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
 
   if (!category) return {};
 
+  const description = `${category.description} Explore the Timeless Tiles academic demonstration catalogue.`;
   return {
     title: category.label,
-    description: `${category.description} Explore the Timeless Tiles academic demonstration catalogue.`,
+    description,
+    openGraph: createOpenGraphMetadata(`/tiles/${categorySlug}`, category.label, description),
     alternates: { canonical: `/tiles/${categorySlug}` },
   };
 }

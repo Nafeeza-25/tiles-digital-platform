@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProductCard } from "@/components/products/ProductCard";
@@ -8,6 +9,7 @@ import { formatPrice } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Tile Offers",
   description: "Browse Timeless Tiles demo catalogue products currently showing genuine reduced prices.",
+  openGraph: createOpenGraphMetadata("/offers", "Tile Offers", "Browse Timeless Tiles demo catalogue products currently showing genuine reduced prices."),
   alternates: { canonical: "/offers" },
 };
 

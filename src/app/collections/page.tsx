@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProductCard } from "@/components/products/ProductCard";
@@ -8,6 +9,7 @@ import { getEditorialCollections } from "@/lib/collections/collections";
 export const metadata: Metadata = {
   title: "Tile Collections",
   description: "Explore curated groups from the Timeless Tiles demo catalogue, including featured, new, sale, outdoor and wet-area tile selections.",
+  openGraph: createOpenGraphMetadata("/collections", "Tile Collections", "Explore curated groups from the Timeless Tiles demo catalogue, including featured, new, sale, outdoor and wet-area tile selections."),
   alternates: { canonical: "/collections" },
 };
 

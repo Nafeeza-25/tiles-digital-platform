@@ -23,7 +23,8 @@
     "seo-content:check": "node --env-file=.env.local scripts/check-seo-content.mjs",
     "marketing:check": "node scripts/check-marketing-deliverables.mjs",
     "marketing-assets:check": "node scripts/check-marketing-assets.mjs",
-    "production:check": "node scripts/check-production-readiness.mjs"
+    "production:check": "node scripts/check-production-readiness.mjs",
+    "deployment:check": "node scripts/check-deployment.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { HeroSection } from "@/components/home/HeroSection";
 import { CategorySection } from "@/components/home/CategorySection";
 import { ProductSections } from "@/components/home/ProductSections";
@@ -10,6 +11,7 @@ import { getApprovedReviews, getFeaturedProducts, getOfferProducts } from "@/lib
 export const metadata: Metadata = {
   title: "Tiles for Every Space",
   description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections, featured designs and demo offers from Timeless Tiles.",
+  openGraph: createOpenGraphMetadata("/", "Tiles for Every Space", "Explore floor, wall, bathroom, kitchen and outdoor tile collections, featured designs and demo offers from Timeless Tiles."),
   alternates: { canonical: "/" },
 };
 

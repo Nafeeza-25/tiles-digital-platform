@@ -5,6 +5,9 @@ import { Footer } from "@/components/layout/Footer";
 import { CompareProvider } from "@/components/compare/CompareProvider";
 import { CompareTray } from "@/components/compare/CompareTray";
 import { getBaseUrl } from "@/lib/seo/site-url";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
+
+const siteDescription = "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
@@ -12,15 +15,9 @@ export const metadata: Metadata = {
     default: "Timeless Tiles | Digital Tiles Demo Platform",
     template: "%s | Timeless Tiles",
   },
-  description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.",
+  description: siteDescription,
   applicationName: "Timeless Tiles",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Timeless Tiles",
-    title: "Timeless Tiles | Digital Tiles Demo Platform",
-    description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.",
-  },
+  openGraph: createOpenGraphMetadata("/", "Timeless Tiles | Digital Tiles Demo Platform", siteDescription),
   twitter: {
     card: "summary_large_image",
     title: "Timeless Tiles | Digital Tiles Demo Platform",

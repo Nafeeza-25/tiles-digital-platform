@@ -126,8 +126,20 @@ try {
 check(manifestValid, "marketing asset manifest contains the expected 20 records");
 
 check(Boolean(read("src/data/guides.ts")), "guide content source exists");
+const metadataRoutes = [
+  "src/app/layout.tsx", "src/app/page.tsx", "src/app/tiles/page.tsx",
+  "src/app/tiles/[categorySlug]/page.tsx", "src/app/tiles/[categorySlug]/[productSlug]/page.tsx",
+  "src/app/compare/page.tsx", "src/app/recommendations/page.tsx", "src/app/collections/page.tsx",
+  "src/app/offers/page.tsx", "src/app/about/page.tsx", "src/app/contact/page.tsx",
+  "src/app/stores/page.tsx", "src/app/guides/page.tsx", "src/app/guides/[slug]/page.tsx",
+];
+for (const path of metadataRoutes) {
+  check(/openGraph:\s*createOpenGraphMetadata\(/.test(read(path) ?? ""), `${path} declares a route-specific Open Graph URL`);
+}
 const packageJson = JSON.parse(read("package.json") ?? "{}");
 check(packageJson.scripts?.["production:check"] === "node scripts/check-production-readiness.mjs", "production:check package script is registered");
+check(packageJson.scripts?.["deployment:check"] === "node scripts/check-deployment.mjs", "deployment:check package script is registered");
+check(Boolean(read("scripts/check-deployment.mjs")), "read-only deployment verification script exists");
 const packageNames = Object.keys(packageJson.dependencies ?? {}).concat(Object.keys(packageJson.devDependencies ?? {}));
 check(!packageNames.some((name) => /analytics|gtag|segment|posthog|mixpanel|pixel/i.test(name)), "no analytics provider package is installed");
 check(!/gtag\(|googletagmanager|fbq\(|connect\.facebook\.net|posthog/i.test(appText), "no third-party tracking runtime is configured");

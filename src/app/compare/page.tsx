@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CompareResults } from "@/components/compare/CompareResults";
 import { getCompareProducts, normalizeCompareSlugs } from "@/lib/queries/compare";
@@ -6,6 +7,7 @@ import { getCompareProducts, normalizeCompareSlugs } from "@/lib/queries/compare
 export const metadata: Metadata = {
   title: "Compare Tiles",
   description: "Compare Timeless Tiles demo products side by side by price, size, finish, material, application and other catalogue specifications.",
+  openGraph: createOpenGraphMetadata("/compare", "Compare Tiles", "Compare Timeless Tiles demo products side by side by price, size, finish, material, application and other catalogue specifications."),
   alternates: { canonical: "/compare" },
 };
 

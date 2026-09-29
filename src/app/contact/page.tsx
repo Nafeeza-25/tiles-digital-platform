@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EnquiryContext } from "@/components/forms/EnquiryContext";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
@@ -9,6 +10,7 @@ import { getActiveEnquiryProduct, getDemoWhatsAppNumber } from "@/lib/queries/en
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Send a fictional academic-demo contact, quote, or product enquiry to Timeless Tiles.",
+  openGraph: createOpenGraphMetadata("/contact", "Contact Us", "Send a fictional academic-demo contact, quote, or product enquiry to Timeless Tiles."),
   alternates: { canonical: "/contact" },
 };
 

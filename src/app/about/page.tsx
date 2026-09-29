@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "About Timeless Tiles",
   description: "Learn about the fictional Timeless Tiles academic project and its digital catalogue, comparison, recommendation and enquiry experience.",
+  openGraph: createOpenGraphMetadata("/about", "About Timeless Tiles", "Learn about the fictional Timeless Tiles academic project and its digital catalogue, comparison, recommendation and enquiry experience."),
   alternates: { canonical: "/about" },
 };
 

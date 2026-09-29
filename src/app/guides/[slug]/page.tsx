@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -21,9 +22,12 @@ export async function generateMetadata({
 
   if (!guide) return {};
 
+  const title = guide.title;
+  const description = guide.description;
   return {
-    title: guide.title,
-    description: guide.description,
+    title,
+    description,
+    openGraph: createOpenGraphMetadata(`/guides/${slug}`, title, description),
     alternates: { canonical: `/guides/${slug}` },
   };
 }
