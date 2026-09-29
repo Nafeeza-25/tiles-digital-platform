@@ -1,6 +1,6 @@
 # Development Plan
 
-Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation is complete; live campaigns and later phases remain planned.
+Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation and Step 24 local creative asset pack are complete; live campaigns and later phases remain planned.
 
 ## Phase 1 - Foundation
 
@@ -61,6 +61,12 @@ Future phases remain planned unless explicitly marked complete below. Phase 10's
 - **Purpose:** Turn the platform into a campaign-ready marketing asset.
 - **Major tasks:** Create social strategies, content ideas, banners, content calendar, Google Ads proposal, keywords, ad copy, and landing-page strategy.
 - **Expected completion criteria:** A coherent, channel-specific academic proposal, four-week planned calendar, sample social/ad copy, campaign concepts, route mapping, and measurement framework are available. Completed in Step 23: see `docs/DIGITAL_MARKETING_STRATEGY.md`, `docs/GOOGLE_ADS_PLAN.md`, `docs/CONTENT_CALENDAR.md`, `docs/SOCIAL_CONTENT_LIBRARY.md`, and `docs/MARKETING_MEASUREMENT_PLAN.md`. No live accounts, ads, tracking, or campaign results are included.
+
+## Step 24 - Marketing Creative Asset Pack — local assets complete
+
+- **Purpose:** Produce a reviewable set of brand-aligned social, video, and campaign creatives.
+- **Completed:** 20 SVG assets in five channel/format groups, a factual asset manifest, creative guidelines, a responsive noindex preview at `/dev/marketing-preview`, and `npm run marketing-assets:check`. See `docs/MARKETING_ASSET_MANIFEST.md` and `docs/MARKETING_CREATIVE_GUIDELINES.md`.
+- **Remaining:** Publishing, live paid campaigns, tracking, analytics, and campaign results require future work. The pack is fictional academic-demo material.
 
 ## Phase 11 - Testing & Optimization
 

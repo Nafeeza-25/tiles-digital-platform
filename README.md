@@ -90,6 +90,16 @@ Step 23 documentation is complete as a proposed academic campaign plan. It inclu
 
 Run `npm run marketing:check` to check required deliverables, planned calendar coverage, claim/data safeguards, and implemented destination routes. This is a documentation check; it does not launch campaigns or add tracking.
 
+### Marketing creative asset pack — Step 24
+
+The local asset pack contains 20 original, brand-aligned SVG creatives: six Instagram squares, four Stories/Reels/Shorts, three Facebook link graphics, four YouTube thumbnails, and three campaign banners. The manifest records each asset's dimensions, intended channel, message, CTA, destination, accessibility text, and source data. Review the responsive, noindex preview at `/dev/marketing-preview` while the local app is running.
+
+- [Asset manifest](public/marketing/manifest.json)
+- [Manifest documentation](docs/MARKETING_ASSET_MANIFEST.md)
+- [Creative guidelines](docs/MARKETING_CREATIVE_GUIDELINES.md)
+
+Run `npm run marketing-assets:check` to validate files, metadata, verified demo sale data, routes, and preview indexing safeguards. The assets are fictional academic-demo creatives; social publication, paid campaign launch, analytics/tracking, and campaign results remain planned.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:
@@ -110,6 +120,7 @@ The following modules are planned and are **not all implemented yet**:
 - Contact/enquiry system
 - SEO
 - Actual social account creation and publication (the strategy and sample content are documented proposals)
+- Creative production is complete as local SVG assets; publishing remains planned
 - Live paid advertising or campaign measurement
 - Tracking integration
 

@@ -121,6 +121,21 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 The completed items are documentation/examples for a fictional academic demo brand; they do not report live marketing activity or results.
 
+### Marketing creative asset pack — Step 24 complete (local demo assets)
+
+- [x] 20 original SVG creatives across Instagram, Stories/Reels/Shorts, Facebook, YouTube, and campaign banners
+- [x] Asset manifest with channel, dimensions, intended use, copy, CTA, route, alt text, and source-data notes
+- [x] Creative guidelines covering brand use, offer accuracy, accessibility, and safe demo claims
+- [x] Responsive `/dev/marketing-preview` gallery, excluded from search indexing and sitemap
+- [x] `npm run marketing-assets:check` validation
+- [ ] Social account creation or publication
+- [ ] Live paid advertising or campaign performance
+- [ ] Analytics or tracking integration
+- [ ] Vercel deployment
+- [ ] Final project report, presentation, or viva materials
+
+Creative assets use the existing local brand and product SVGs. Any offer uses verified demo catalogue prices and carries an academic-demo disclosure. No campaign has been published and no live campaign results are claimed.
+
 ### Content
 
 - [x] Website copy

@@ -1,0 +1,426 @@
+{
+  "brand": "Timeless Tiles",
+  "purpose": "Fictional academic-demo marketing material; not published or used in live advertising.",
+  "assets": [
+    {
+      "file": "/instagram/01-bathroom-inspiration.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Design Inspiration",
+      "headline": "A Calmer Bathroom",
+      "support": "Explore bathroom tile details, one choice at a time.",
+      "cta": "Explore Bathroom Tiles",
+      "route": "/tiles/bathroom-tiles",
+      "alt": "Timeless Tiles bathroom inspiration graphic featuring Aqua Mist Anti-Skid and Cloud White tile artwork.",
+      "productSources": "Aqua Mist Anti-Skid and Cloud White, Bathroom Tiles catalogue",
+      "factualData": "Existing Bathroom Tiles products and local product artwork.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "cloud-white"
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/instagram/02-floor-tile-guide.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Tile Education",
+      "headline": "Floor Tile Guide",
+      "support": "Size · Finish · Material",
+      "cta": "Read the Guide",
+      "route": "/guides/floor-tile-size-finish-material-guide",
+      "alt": "Timeless Tiles floor tile guide graphic featuring Carrara White and Urban Concrete Grey artwork.",
+      "productSources": "Carrara White and Urban Concrete Grey, Floor Tiles catalogue",
+      "factualData": "Existing Floor Tiles products and published floor tile guide.",
+      "images": [
+        "carrara-white",
+        "urban-concrete-grey"
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/instagram/03-compare-tiles.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Compare Before You Choose",
+      "headline": "Compare Tiles",
+      "support": "Review product details side by side.",
+      "cta": "Compare Tiles",
+      "route": "/compare",
+      "alt": "Timeless Tiles comparison graphic featuring Carrara White and Calacatta Gold artwork.",
+      "productSources": "Carrara White and Calacatta Gold, Floor Tiles catalogue",
+      "factualData": "Existing product renders and implemented comparison destination.",
+      "images": [
+        "carrara-white",
+        "calacatta-gold"
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/instagram/04-room-recommendations.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Find Your Room Style",
+      "headline": "Find Tiles for Your Space",
+      "support": "Start with a room. Explore catalogue matches.",
+      "cta": "Room Recommendations",
+      "route": "/recommendations",
+      "alt": "Timeless Tiles room recommendation graphic with Bathroom, Kitchen, and Floor tile artwork.",
+      "productSources": "Aqua Mist Anti-Skid, Midnight Blue, and Carrara White product renders",
+      "factualData": "Existing tagged catalogue products; recommendation tool uses room tags.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "midnight-blue",
+        "carrara-white"
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/instagram/05-sale-selection.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Current Offers",
+      "headline": "Current Offers",
+      "support": "Calacatta Gold · ₹2,750 → ₹2,490 / sq.m.",
+      "cta": "View Offers",
+      "route": "/offers",
+      "alt": "Timeless Tiles demo offer graphic featuring Calacatta Gold with its regular and current demo prices.",
+      "productSources": "Calacatta Gold, Floor Tiles catalogue",
+      "factualData": "Current queried demo price pair: ₹2,750 and ₹2,490 per sq.m.",
+      "images": [
+        "calacatta-gold"
+      ],
+      "productData": [
+        {
+          "slug": "calacatta-gold",
+          "name": "Calacatta Gold",
+          "categorySlug": "floor-tiles",
+          "price": 2750,
+          "salePrice": 2490
+        }
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/instagram/06-store-finder.svg",
+      "width": 1080,
+      "height": 1080,
+      "channel": "Instagram square",
+      "campaign": "Store Discovery",
+      "headline": "Find a Store",
+      "support": "Explore demo store locations.",
+      "cta": "Explore Demo Locations",
+      "route": "/stores",
+      "alt": "Timeless Tiles Store Finder graphic with local tile artwork and a demo locations label.",
+      "productSources": "Existing local product artwork; no location image or address used.",
+      "factualData": "Store Finder destinations contain fictional academic-demo locations.",
+      "images": [
+        "stonecrest-grey",
+        "travertine-sand"
+      ],
+      "dimensions": "1080 × 1080",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/stories/01-find-your-room-style.svg",
+      "width": 1080,
+      "height": 1920,
+      "channel": "Instagram Story / Reels / Shorts",
+      "campaign": "Find Your Room Style",
+      "headline": "Find Your Room Style",
+      "support": "A room-wise starting point from the demo catalogue.",
+      "cta": "Explore Recommendations",
+      "route": "/recommendations",
+      "alt": "Vertical Timeless Tiles room recommendation cover featuring bathroom, kitchen, and floor tile artwork.",
+      "productSources": "Aqua Mist Anti-Skid, Midnight Blue, and Carrara White product renders",
+      "factualData": "Existing tagged products; no personalization or AI claim.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "midnight-blue",
+        "carrara-white"
+      ],
+      "dimensions": "1080 × 1920",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/stories/02-matte-vs-glossy.svg",
+      "width": 1080,
+      "height": 1920,
+      "channel": "Instagram Story / Reels / Shorts",
+      "campaign": "Tile Education",
+      "headline": "Matte or Glossy?",
+      "support": "A visual finish comparison across demo products.",
+      "cta": "Read the Finish Guide",
+      "route": "/guides/floor-tile-size-finish-material-guide",
+      "alt": "Vertical Timeless Tiles finish guide showing Urban Concrete Grey matte and Metro White Gloss glossy renders.",
+      "productSources": "Urban Concrete Grey (Matte) and Metro White Gloss (Glossy), separate products",
+      "factualData": "Finish labels follow product records; not a like-for-like product claim.",
+      "images": [
+        "urban-concrete-grey",
+        "metro-white-gloss"
+      ],
+      "dimensions": "1080 × 1920",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/stories/03-compare-before-you-choose.svg",
+      "width": 1080,
+      "height": 1920,
+      "channel": "Instagram Story / Reels / Shorts",
+      "campaign": "Compare Before You Choose",
+      "headline": "Compare Before You Choose",
+      "support": "Review sizes, finishes, materials, and prices.",
+      "cta": "Compare Tiles",
+      "route": "/compare",
+      "alt": "Vertical Timeless Tiles comparison cover featuring Carrara White and Calacatta Gold renders.",
+      "productSources": "Carrara White and Calacatta Gold, Floor Tiles catalogue",
+      "factualData": "Existing products shown as examples in the comparison tool.",
+      "images": [
+        "carrara-white",
+        "calacatta-gold"
+      ],
+      "dimensions": "1080 × 1920",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/stories/04-get-a-quote.svg",
+      "width": 1080,
+      "height": 1920,
+      "channel": "Instagram Story / Reels / Shorts",
+      "campaign": "Explore, Enquire, Decide",
+      "headline": "Ready to Enquire?",
+      "support": "Bring your room and product questions.",
+      "cta": "Request a Demo Quote",
+      "route": "/contact?intent=quote",
+      "alt": "Vertical Timeless Tiles quote enquiry cover featuring Aqua Mist Anti-Skid and demo disclosure.",
+      "productSources": "Aqua Mist Anti-Skid, Bathroom Tiles catalogue",
+      "factualData": "Quote path is an implemented fictional academic-demo enquiry form.",
+      "images": [
+        "aqua-mist-anti-skid"
+      ],
+      "dimensions": "1080 × 1920",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/facebook/01-tile-catalogue.svg",
+      "width": 1200,
+      "height": 630,
+      "channel": "Facebook link graphic",
+      "campaign": "Catalogue Discovery",
+      "headline": "Explore the Tile Catalogue",
+      "support": "Browse categories, product details, and comparison.",
+      "cta": "Browse Tile Catalogue",
+      "route": "/tiles",
+      "alt": "Timeless Tiles catalogue graphic featuring Carrara White, Aqua Mist Anti-Skid, and Midnight Blue artwork.",
+      "productSources": "Carrara White, Aqua Mist Anti-Skid, and Midnight Blue product renders",
+      "factualData": "Existing catalogue products; academic demo.",
+      "images": [
+        "carrara-white",
+        "aqua-mist-anti-skid",
+        "midnight-blue"
+      ],
+      "dimensions": "1200 × 630",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/facebook/02-current-offers.svg",
+      "width": 1200,
+      "height": 630,
+      "channel": "Facebook link graphic",
+      "campaign": "Current Offers",
+      "headline": "Current Demo Offers",
+      "support": "Calacatta Gold · ₹2,750 → ₹2,490 / sq.m.",
+      "cta": "View Offers",
+      "route": "/offers",
+      "alt": "Timeless Tiles demo offer graphic featuring Calacatta Gold with its regular and current demo prices.",
+      "productSources": "Calacatta Gold, Floor Tiles catalogue",
+      "factualData": "Current queried demo price pair: ₹2,750 and ₹2,490 per sq.m.",
+      "images": [
+        "calacatta-gold"
+      ],
+      "productData": [
+        {
+          "slug": "calacatta-gold",
+          "name": "Calacatta Gold",
+          "categorySlug": "floor-tiles",
+          "price": 2750,
+          "salePrice": 2490
+        }
+      ],
+      "dimensions": "1200 × 630",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/facebook/03-room-recommendations.svg",
+      "width": 1200,
+      "height": 630,
+      "channel": "Facebook link graphic",
+      "campaign": "Find Your Room Style",
+      "headline": "Find Tiles for Your Space",
+      "support": "Choose a room to explore catalogue matches.",
+      "cta": "Explore Recommendations",
+      "route": "/recommendations",
+      "alt": "Timeless Tiles room recommendation link graphic featuring room-wise product artwork.",
+      "productSources": "Aqua Mist Anti-Skid, Midnight Blue, and Carrara White product renders",
+      "factualData": "Room suggestions are catalogue tag matches, not AI.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "midnight-blue",
+        "carrara-white"
+      ],
+      "dimensions": "1200 × 630",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/youtube/01-how-to-choose-bathroom-tiles.svg",
+      "width": 1280,
+      "height": 720,
+      "channel": "YouTube thumbnail",
+      "campaign": "Tile Education",
+      "headline": "Bathroom Tiles|How to Choose",
+      "support": "A practical catalogue walkthrough",
+      "cta": "Video guide",
+      "route": "/guides/how-to-choose-bathroom-tiles",
+      "alt": "Timeless Tiles video thumbnail titled Bathroom Tiles How to Choose, featuring Aqua Mist Anti-Skid artwork.",
+      "productSources": "Aqua Mist Anti-Skid, Bathroom Tiles catalogue",
+      "factualData": "Existing bathroom guide and product render.",
+      "images": [
+        "aqua-mist-anti-skid"
+      ],
+      "dimensions": "1280 × 720",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/youtube/02-floor-tile-guide.svg",
+      "width": 1280,
+      "height": 720,
+      "channel": "YouTube thumbnail",
+      "campaign": "Tile Education",
+      "headline": "Floor Tiles|Size · Finish · Material",
+      "support": "Explore product details and selection questions",
+      "cta": "Video guide",
+      "route": "/guides/floor-tile-size-finish-material-guide",
+      "alt": "Timeless Tiles thumbnail titled Floor Tiles Size Finish Material, with floor tile artwork.",
+      "productSources": "Carrara White and Urban Concrete Grey, Floor Tiles catalogue",
+      "factualData": "Existing floor tile guide and product renders.",
+      "images": [
+        "carrara-white",
+        "urban-concrete-grey"
+      ],
+      "dimensions": "1280 × 720",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/youtube/03-how-tile-comparison-works.svg",
+      "width": 1280,
+      "height": 720,
+      "channel": "YouTube thumbnail",
+      "campaign": "Compare Before You Choose",
+      "headline": "Compare Tiles|Before You Choose",
+      "support": "See the comparison feature in action",
+      "cta": "Video guide",
+      "route": "/compare",
+      "alt": "Timeless Tiles thumbnail titled Compare Tiles Before You Choose, featuring floor tile renders.",
+      "productSources": "Carrara White and Calacatta Gold, Floor Tiles catalogue",
+      "factualData": "Existing products and implemented comparison feature.",
+      "images": [
+        "carrara-white",
+        "calacatta-gold"
+      ],
+      "dimensions": "1280 × 720",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/youtube/04-room-recommendations.svg",
+      "width": 1280,
+      "height": 720,
+      "channel": "YouTube thumbnail",
+      "campaign": "Find Your Room Style",
+      "headline": "Tiles for Every Room",
+      "support": "A transparent room-tag walkthrough",
+      "cta": "Video guide",
+      "route": "/recommendations",
+      "alt": "Timeless Tiles thumbnail titled Tiles for Every Room, with bathroom, kitchen, and floor art.",
+      "productSources": "Aqua Mist Anti-Skid, Midnight Blue, and Carrara White product renders",
+      "factualData": "Recommendation tool uses catalogue room tags.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "midnight-blue",
+        "carrara-white"
+      ],
+      "dimensions": "1280 × 720",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/banners/01-find-your-room-style.svg",
+      "width": 1600,
+      "height": 600,
+      "channel": "Campaign banner",
+      "campaign": "Find Your Room Style",
+      "headline": "Find Your Room Style",
+      "support": "Explore tile options by room in the demo catalogue.",
+      "cta": "Explore Room Recommendations",
+      "route": "/recommendations",
+      "alt": "Timeless Tiles banner for room recommendations, with bathroom, kitchen, and floor product artwork.",
+      "productSources": "Aqua Mist Anti-Skid, Midnight Blue, and Carrara White product renders",
+      "factualData": "Transparent tag-based room recommendations.",
+      "images": [
+        "aqua-mist-anti-skid",
+        "midnight-blue",
+        "carrara-white"
+      ],
+      "dimensions": "1600 × 600",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/banners/02-compare-before-you-choose.svg",
+      "width": 1600,
+      "height": 600,
+      "channel": "Campaign banner",
+      "campaign": "Compare Before You Choose",
+      "headline": "Compare Before You Choose",
+      "support": "Review product details side by side.",
+      "cta": "Compare Tiles",
+      "route": "/compare",
+      "alt": "Timeless Tiles comparison banner featuring Carrara White and Calacatta Gold artwork.",
+      "productSources": "Carrara White and Calacatta Gold product renders",
+      "factualData": "Implemented comparison route and current catalogue visuals.",
+      "images": [
+        "carrara-white",
+        "calacatta-gold"
+      ],
+      "dimensions": "1600 × 600",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    },
+    {
+      "file": "/banners/03-explore-enquire-decide.svg",
+      "width": 1600,
+      "height": 600,
+      "channel": "Campaign banner",
+      "campaign": "Explore, Enquire, Decide",
+      "headline": "Explore. Enquire. Decide.",
+      "support": "Start with the catalogue and follow the details.",
+      "cta": "Browse Tile Catalogue",
+      "route": "/tiles",
+      "alt": "Timeless Tiles catalogue banner featuring Carrara White and Aqua Mist Anti-Skid artwork.",
+      "productSources": "Carrara White and Aqua Mist Anti-Skid product renders",
+      "factualData": "Implemented catalogue route and product artwork.",
+      "images": [
+        "carrara-white",
+        "aqua-mist-anti-skid"
+      ],
+      "dimensions": "1600 × 600",
+      "intendedUse": "Academic demo creative for review, presentation, or future adaptation."
+    }
+  ]
+}

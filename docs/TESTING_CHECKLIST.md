@@ -83,6 +83,9 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 
 - [x] Strategy, channel concepts, four-week planned calendar, social copy, Google Ads proposal, campaign mapping, and measurement plan documented
 - [x] `npm run marketing:check` validates required files, calendar count, claim/data safeguards, and campaign destination routes
+- [x] 20 local SVG creative assets and their channel dimensions are recorded in the asset manifest
+- [x] `npm run marketing-assets:check` validates the asset set, source data, metadata, local routes, and preview indexing safeguards
+- [x] `/dev/marketing-preview` visually checked at mobile widths without horizontal overflow; preview is excluded from indexing and sitemap
 - [ ] Social accounts or content publication (outside this step)
 - [ ] Live advertising or performance measurement (outside this step)
 - [ ] Analytics, pixels, conversion scripts, or tracking consent infrastructure (outside this step)
