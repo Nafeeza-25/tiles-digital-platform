@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { tileCategories } from "@/data/site";
+import { tileGuides } from "@/data/guides";
 import { getCatalogueProducts } from "@/lib/queries/catalog";
 import { getSiteUrl } from "@/lib/seo/site-url";
 
@@ -33,5 +34,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     productRoutes = [];
   }
 
-  return [...staticRoutes, ...categoryRoutes, ...productRoutes];
+  const guideRoutes: MetadataRoute.Sitemap = [
+    "/guides",
+    ...tileGuides.map((guide) => `/guides/${guide.slug}`),
+  ].map((route) => ({
+    url: getSiteUrl(route),
+  }));
+
+  return [...staticRoutes, ...categoryRoutes, ...guideRoutes, ...productRoutes];
 }

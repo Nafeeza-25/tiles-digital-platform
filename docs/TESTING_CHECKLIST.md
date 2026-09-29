@@ -61,8 +61,13 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 ## SEO, accessibility, and performance
 
 - [x] SEO metadata, title template, and canonical URLs are present and accurate
-- [x] Sitemap.xml and robots.txt routes generate valid XML and crawl rules
+- [x] Sitemap.xml (59 valid URLs) and robots.txt routes generate valid XML and crawl rules
 - [x] BreadcrumbList JSON-LD structured data is present on applicable pages
+- [x] Educational Tile Guides index (`/guides`) and 5 detail routes (`/guides/[slug]`) render clean responsive typography
+- [x] Keyword strategy documented in `docs/SEO_KEYWORD_STRATEGY.md` with intent mapping
+- [x] Contextual internal links connect guides with categories, recommendations, Store Finder, and quote form
+- [x] Claim-safety rules enforced (no unsupported "best company" superiority claims or physical retail statements)
+- [x] `npm run seo:check` and `npm run seo-content:check` verification scripts pass
 - [x] Semantic landmarks and heading hierarchy are appropriate
 - [x] Basic accessibility checks pass, including keyboard access and alternative text
 - [ ] Performance is checked with a suitable measurement tool

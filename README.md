@@ -69,6 +69,15 @@ Technical SEO infrastructure is implemented across all public routes:
 - **Breadcrumb JSON-LD:** Structured `BreadcrumbList` schema rendered via `<JsonLd>` helper. Commercial schemas (LocalBusiness, AggregateRating, Product offer schema) are intentionally omitted for academic demo compliance.
 Run `npm run seo:check` to verify canonical URLs, site URL abstraction, sitemap datasets, and structured data safety.
 
+## Implemented SEO Content & Keyword Strategy
+
+Educational long-form tile guide system and keyword mapping are implemented:
+- **Guide architecture & route:** `/guides` and 5 detailed guide routes (`/guides/[slug]`) covering bathroom tiles, floor tile specifications, room suitabilities, nearby store criteria, and tile company evaluation.
+- **Keyword mapping & strategy:** Documented in [`docs/SEO_KEYWORD_STRATEGY.md`](docs/SEO_KEYWORD_STRATEGY.md) without fabricated keyword metrics.
+- **Internal linking network:** Contextual cross-links connect guides, catalogue categories, recommendations, Store Finder, and quote enquiries.
+- **Claim safety compliance:** Addressed phrases like "best tiles company" and "tiles near me" strictly informationally without making unsupported superiority or physical retail claims.
+Run `npm run seo-content:check` to verify guide structure, slug uniqueness, claim-safety, and sitemap URL expansion (59 URLs).
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:

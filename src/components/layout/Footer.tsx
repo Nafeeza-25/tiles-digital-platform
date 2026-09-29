@@ -16,6 +16,7 @@ export function Footer() {
         <section>
           <h2>Explore</h2>
           {site.primaryNavigation.slice(0, 4).map((item) => <Link className="mt-2 block text-sm" href={item.href} key={item.href}>{item.label}</Link>)}
+          <Link className="mt-2 block text-sm" href="/guides">Tile Guides</Link>
           <Link className="mt-2 block text-sm" href="/compare">Compare Tiles</Link>
           <Link className="mt-2 block text-sm" href={site.recommendations.href}>{site.recommendations.label}</Link>
         </section>

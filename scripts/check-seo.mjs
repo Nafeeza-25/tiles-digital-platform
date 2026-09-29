@@ -88,9 +88,16 @@ for (const route of productRoutes) {
 }
 
 // Sitemap route dataset verification
-const staticRoutes = ["", "/tiles", "/collections", "/offers", "/about", "/recommendations", "/contact", "/stores"];
+const staticRoutes = ["", "/tiles", "/collections", "/offers", "/about", "/recommendations", "/contact", "/stores", "/guides"];
+const guideRoutes = [
+  "how-to-choose-bathroom-tiles",
+  "floor-tile-size-finish-material-guide",
+  "how-to-choose-tiles-for-each-room",
+  "tiles-near-me-guide",
+  "how-to-choose-a-tile-company",
+].map((s) => `/guides/${s}`);
 const categoryRoutes = tileCategories.map((c) => `/tiles/${c.slug}`);
-const fullSitemapRoutes = [...staticRoutes, ...categoryRoutes, ...productRoutes];
+const fullSitemapRoutes = [...staticRoutes, ...categoryRoutes, ...guideRoutes, ...productRoutes];
 
 if (fullSitemapRoutes.some((r) => r.includes("?") || r.includes("&") || r.includes("page=") || r.includes("q="))) {
   throw new Error("Filtered query URLs found in sitemap dataset.");

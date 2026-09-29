@@ -53,8 +53,8 @@ All phases below are planned. Future phases are intentionally not marked complet
 ## Phase 9 - SEO & Content
 
 - **Purpose:** Improve organic discoverability and useful product education.
-- **Major tasks:** Prepare keyword research, metadata, semantic structure, sitemap, robots rules, structured data, and content plan.
-- **Expected completion criteria:** Core pages meet technical SEO basics and content priorities are documented. Technical SEO foundation (metadata template, canonical URLs, sitemap.xml, robots.txt, opengraph-image, and BreadcrumbList JSON-LD) is implemented; content marketing campaign phase remains planned.
+- **Major tasks:** Prepare keyword strategy document (`docs/SEO_KEYWORD_STRATEGY.md`), metadata, semantic structure, sitemap, robots rules, structured data, and long-form educational tile guides (`/guides` + 5 guide routes).
+- **Expected completion criteria:** Core pages and guides meet technical SEO standards, sitemap expanded to 59 URLs, and claim-safety guidelines enforced for "best tiles company" and "tiles near me" keywords. Technical SEO foundation and SEO Content layer are fully implemented; social media and paid campaign deliverables remain planned.
 
 ## Phase 10 - Digital Marketing Deliverables
 

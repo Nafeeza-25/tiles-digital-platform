@@ -75,15 +75,15 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### SEO
 
-- [ ] Keyword research
+- [x] Keyword strategy / mapping
 - [x] Page titles
 - [x] Meta descriptions
 - [x] Semantic page structure
 - [x] SEO-friendly URLs
-- [ ] Local SEO
+- [x] Local SEO / Store evaluation guide
 - [x] sitemap.xml
 - [x] robots.txt
-- [x] Structured data where appropriate
+- [x] Structured data where appropriate (BreadcrumbList)
 - [x] Performance/basic technical SEO
 
 ### Digital marketing
@@ -95,7 +95,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 - [ ] Example reels/content ideas
 - [ ] Marketing banners
 - [ ] Content calendar
-- [ ] Blog/content strategy
+- [x] Tile Guides / SEO content strategy
 - [ ] Google Ads campaign proposal
 - [ ] Google Ads keywords
 - [ ] Google Ads sample ad copy
@@ -103,11 +103,11 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Content
 
-- [ ] Website copy
-- [ ] Product content
-- [ ] Category content
-- [ ] Helpful/blog content
-- [ ] Marketing content
+- [x] Website copy
+- [x] Product content
+- [x] Category content
+- [x] Helpful tile guides content
+- [ ] Social/Paid Marketing content
 
 ### Quality
 
@@ -178,3 +178,7 @@ The responsive Product Catalogue, product search, filters, category-specific bro
 ## Implemented technical SEO foundation
 
 Technical SEO infrastructure is complete: root layout metadata with `%s | Timeless Tiles` template, site URL abstraction supporting `NEXT_PUBLIC_SITE_URL`, Vercel production URLs, and localhost fallback, canonical URL metadata pointing search/filter variants to stable base routes, dynamically generated `sitemap.xml` covering 40 products, 5 categories, and static pages, `robots.txt` allowing public crawling and protecting `/dev/`, Open Graph image generator (`/opengraph-image`), and safe `BreadcrumbList` JSON-LD structured data. Commercial schemas (LocalBusiness, AggregateRating, Product offer schemas) are intentionally excluded to maintain academic demo integrity.
+
+## Implemented SEO Content & Keyword Strategy
+
+The platform includes an educational long-form tile guide collection (`/guides` and 5 guide routes) and keyword strategy mapping (`docs/SEO_KEYWORD_STRATEGY.md`). Guides cover bathroom tiles, floor tile specifications, room-wise selection, nearby store evaluation criteria, and choosing a tile company. All content adheres strictly to academic claim-safety rules, avoiding unsupported superiority claims or physical retail statements. Contextual internal links connect guides with catalogue categories, recommendations, Store Finder, and quote enquiries. Dynamic sitemap XML contains 59 valid URLs.

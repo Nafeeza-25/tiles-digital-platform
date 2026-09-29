@@ -43,7 +43,19 @@ export default async function CategoryCataloguePage({ params, searchParams }: { 
         <div>
           <h1 className="text-4xl">{category.label}</h1>
           <p className="mt-3 max-w-2xl text-muted">{category.description}</p>
-          <Link href="/tiles" className="mt-5 inline-flex text-sm font-semibold text-primary">View All Tiles <span aria-hidden>→</span></Link>
+          <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold">
+            <Link href="/tiles" className="text-primary hover:underline">View All Tiles <span aria-hidden>→</span></Link>
+            {category.slug === "bathroom-tiles" && (
+              <Link href="/guides/how-to-choose-bathroom-tiles" className="text-primary hover:underline">
+                Bathroom Tile Guide <span aria-hidden>→</span>
+              </Link>
+            )}
+            {category.slug === "floor-tiles" && (
+              <Link href="/guides/floor-tile-size-finish-material-guide" className="text-primary hover:underline">
+                Floor Tile Guide <span aria-hidden>→</span>
+              </Link>
+            )}
+          </div>
         </div>
         <Image src={category.image} alt={`${category.label} category visual`} width={1600} height={1000} unoptimized className="w-full border bg-surface-muted" />
       </div>

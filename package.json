@@ -19,7 +19,8 @@
     "review:check": "node --env-file=.env.local scripts/check-review-flow.mjs",
     "store:check": "node --env-file=.env.local scripts/check-store-finder.mjs",
     "public-pages:check": "node --env-file=.env.local scripts/check-public-pages.mjs",
-    "seo:check": "node --env-file=.env.local scripts/check-seo.mjs"
+    "seo:check": "node --env-file=.env.local scripts/check-seo.mjs",
+    "seo-content:check": "node --env-file=.env.local scripts/check-seo-content.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
