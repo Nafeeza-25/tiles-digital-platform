@@ -49,6 +49,14 @@ Every active product detail page includes a product-aware review form. It valida
 
 `/stores` reads the existing active fictional Timeless Tiles demo-store records through the Supabase public read policy. It has shareable `q` search and a city filter derived only from active records, plus factual phone, email, WhatsApp, opening-hours, and external directions links when the stored field supports them. It does not use geolocation tracking, an embedded map, or an external Maps API. Run `npm run store:check` for the read-only Store Finder and policy verification.
 
+## Implemented public content pages
+
+`/collections`, `/offers`, and `/about` are fully implemented with data-driven catalogue integration:
+- `/collections`: Renders five transparent, attribute-based editorial groupings (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection) with live product preview cards and direct catalogue links.
+- `/offers`: Displays genuine sale-priced items (`sale_price < price`) with calculated savings amounts, discount percentages, and clear academic-demo disclosures without artificial countdowns.
+- `/about`: Presents the academic-demo project context, digital opportunity, implemented capabilities, four target audience overviews, and four-step customer journey.
+Run `npm run public-pages:check` to verify data-driven collections, offer calculations, and security protections.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:

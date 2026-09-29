@@ -52,6 +52,12 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 - [x] Store details use existing public Supabase fields only
 - [x] Factual external directions links work without an embedded map or Maps API
 
+## Public content pages
+
+- [x] Collections page renders data-driven editorial groupings with actual catalogue product cards
+- [x] Offers page displays database sale-priced products with accurate discount metrics
+- [x] About page provides clear academic-demo disclosures, digital opportunity context, and customer journey presentation
+
 ## SEO, accessibility, and performance
 
 - [ ] SEO metadata is present and accurate

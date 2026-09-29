@@ -21,14 +21,14 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 - [ ] Responsive website
 - [ ] Homepage
-- [ ] Collections
+- [x] Collections
 - [x] Floor Tiles
 - [x] Wall Tiles
 - [x] Bathroom Tiles
 - [x] Kitchen Tiles
 - [x] Outdoor Tiles
-- [ ] About Us
-- [ ] Offers
+- [x] About Us
+- [x] Offers
 - [ ] Contact
 
 ### Catalogue
@@ -170,3 +170,7 @@ The homepage is implemented with read-only deployed demo catalogue data: categor
 ## Implemented catalogue
 
 The responsive Product Catalogue, product search, filters, category-specific browsing, Product Details, product specifications and pricing, application information, suitable-space tags, approved product-review display, product-detail navigation, moderated product-aware review submission, and Store Finder are implemented. Tile Comparison is implemented with an accessible three-product local selection, shareable URL, and server-side public catalogue verification. Store Finder is a read-only active-store list with shareable search/city state, factual contact actions, and external directions links where addresses exist. Submitted reviews are fictional academic-demo records and default to unapproved; manual approval remains a Supabase dashboard task.
+
+## Implemented public content pages
+
+`/collections` renders five transparent, data-driven editorial groupings (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection) derived directly from product attributes without hardcoded IDs. `/offers` presents actual sale-priced products (`sale_price < price`) with verified discount math and clear demo notices without artificial countdowns. `/about` presents the academic project context, why the platform exists, implemented feature overview, four target audiences, and the four-step customer journey.

@@ -94,3 +94,7 @@ Completed: the server-rendered, data-driven homepage with hero, category discove
 ## Catalogue
 
 Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, moderated review submission, product-detail navigation, Tile Comparison, Room-wise Recommendations, lead-generation enquiry flows, and Store Finder.
+
+## Public content pages
+
+Completed: `/collections` with transparent attribute-driven editorial collections (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection); `/offers` with genuine database sale-priced items and discount metrics; `/about` with academic demonstration disclosures, digital opportunity context, implemented feature highlights, audience descriptions, and customer journey presentation.
