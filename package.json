@@ -20,7 +20,8 @@
     "store:check": "node --env-file=.env.local scripts/check-store-finder.mjs",
     "public-pages:check": "node --env-file=.env.local scripts/check-public-pages.mjs",
     "seo:check": "node --env-file=.env.local scripts/check-seo.mjs",
-    "seo-content:check": "node --env-file=.env.local scripts/check-seo-content.mjs"
+    "seo-content:check": "node --env-file=.env.local scripts/check-seo-content.mjs",
+    "marketing:check": "node scripts/check-marketing-deliverables.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

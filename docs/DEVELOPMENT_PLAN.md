@@ -1,6 +1,6 @@
 # Development Plan
 
-All phases below are planned. Future phases are intentionally not marked complete.
+Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation is complete; live campaigns and later phases remain planned.
 
 ## Phase 1 - Foundation
 
@@ -54,13 +54,13 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Improve organic discoverability and useful product education.
 - **Major tasks:** Prepare keyword strategy document (`docs/SEO_KEYWORD_STRATEGY.md`), metadata, semantic structure, sitemap, robots rules, structured data, and long-form educational tile guides (`/guides` + 5 guide routes).
-- **Expected completion criteria:** Core pages and guides meet technical SEO standards, sitemap expanded to 59 URLs, and claim-safety guidelines enforced for "best tiles company" and "tiles near me" keywords. Technical SEO foundation and SEO Content layer are fully implemented; social media and paid campaign deliverables remain planned.
+- **Expected completion criteria:** Core pages and guides meet technical SEO standards, sitemap expanded to 59 URLs, and claim-safety guidelines enforced for "best tiles company" and "tiles near me" keywords. Technical SEO foundation and SEO Content layer are implemented; proposed social and paid campaign deliverables are documented in Phase 10, while live activity remains planned.
 
-## Phase 10 - Digital Marketing Deliverables
+## Phase 10 - Digital Marketing Deliverables — documentation complete
 
 - **Purpose:** Turn the platform into a campaign-ready marketing asset.
 - **Major tasks:** Create social strategies, content ideas, banners, content calendar, Google Ads proposal, keywords, ad copy, and landing-page strategy.
-- **Expected completion criteria:** A coherent, channel-specific marketing deliverable set is available.
+- **Expected completion criteria:** A coherent, channel-specific academic proposal, four-week planned calendar, sample social/ad copy, campaign concepts, route mapping, and measurement framework are available. Completed in Step 23: see `docs/DIGITAL_MARKETING_STRATEGY.md`, `docs/GOOGLE_ADS_PLAN.md`, `docs/CONTENT_CALENDAR.md`, `docs/SOCIAL_CONTENT_LIBRARY.md`, and `docs/MARKETING_MEASUREMENT_PLAN.md`. No live accounts, ads, tracking, or campaign results are included.
 
 ## Phase 11 - Testing & Optimization
 
@@ -102,3 +102,7 @@ Completed: `/collections` with transparent attribute-driven editorial collection
 ## Technical SEO foundation
 
 Completed: Route metadata title template `%s | Timeless Tiles`, canonical URLs for all routes and filter/query variations, dynamic `sitemap.xml` for 40 products, 5 categories, and static pages, `robots.txt` rule configuration, Open Graph image generator (`/opengraph-image`), site URL abstraction helper (`NEXT_PUBLIC_SITE_URL`), and BreadcrumbList JSON-LD structured data.
+
+## Digital marketing deliverables — Step 23 complete
+
+Completed as a proposed fictional academic-demo deliverable: digital marketing strategy, objectives and audience/persona mapping, Instagram/Facebook/YouTube concepts, short-form video scripts, proposed Google Ads campaign and keyword structure, sample ad copy and negative keywords, four-week planned calendar, social copy library, integrated campaigns, marketing funnel and website destination mapping, lead paths, and KPI/measurement framework. See the five linked deliverables in `README.md`. The completion applies to documentation only. Actual social accounts, published content, paid campaigns, real campaign performance, tracking integration, Vercel deployment, final report, presentation, and viva materials remain incomplete.

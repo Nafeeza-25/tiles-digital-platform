@@ -88,18 +88,38 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Digital marketing
 
-- [ ] Instagram strategy
-- [ ] Facebook strategy
-- [ ] YouTube strategy
-- [ ] Example social posts
-- [ ] Example reels/content ideas
+- [x] Instagram strategy
+- [x] Facebook strategy
+- [x] YouTube strategy
+- [x] Example social posts
+- [x] Example reels/content ideas
 - [ ] Marketing banners
-- [ ] Content calendar
+- [x] Four-week content calendar
 - [x] Tile Guides / SEO content strategy
-- [ ] Google Ads campaign proposal
-- [ ] Google Ads keywords
-- [ ] Google Ads sample ad copy
-- [ ] Landing-page strategy
+- [x] Google Ads campaign proposal
+- [x] Google Ads keyword structure
+- [x] Google Ads sample ad copy
+- [x] Landing-page strategy and website route mapping
+
+### Digital marketing deliverables — Step 23 complete (academic proposal only)
+
+- [x] Digital marketing strategy and campaign objectives
+- [x] Instagram content strategy and concepts
+- [x] Facebook content strategy and concepts
+- [x] YouTube strategy and video concepts
+- [x] Short-form video strategy and concepts
+- [x] Google Ads proposal, keyword structure, sample copy, and negative-keyword planning
+- [x] Four-week planned content calendar
+- [x] Social copy library and restrained hashtag framework
+- [x] Integrated campaign concepts, funnel, and website route mapping
+- [x] Lead-generation route mapping and KPI / measurement framework
+- [ ] Actual social accounts or published campaigns
+- [ ] Actual paid ads or campaign performance
+- [ ] Tracking integration
+- [ ] Vercel deployment
+- [ ] Final project report, presentation, or viva materials
+
+The completed items are documentation/examples for a fictional academic demo brand; they do not report live marketing activity or results.
 
 ### Content
 
@@ -107,7 +127,7 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 - [x] Product content
 - [x] Category content
 - [x] Helpful tile guides content
-- [ ] Social/Paid Marketing content
+- [x] Proposed social / paid marketing content (academic demo examples only)
 
 ### Quality
 

@@ -78,3 +78,11 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 - [ ] Production environment variables are configured securely
 - [ ] Production deployment succeeds
 - [ ] Production URL is tested after deployment
+
+## Digital marketing documentation
+
+- [x] Strategy, channel concepts, four-week planned calendar, social copy, Google Ads proposal, campaign mapping, and measurement plan documented
+- [x] `npm run marketing:check` validates required files, calendar count, claim/data safeguards, and campaign destination routes
+- [ ] Social accounts or content publication (outside this step)
+- [ ] Live advertising or performance measurement (outside this step)
+- [ ] Analytics, pixels, conversion scripts, or tracking consent infrastructure (outside this step)

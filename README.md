@@ -78,6 +78,18 @@ Educational long-form tile guide system and keyword mapping are implemented:
 - **Claim safety compliance:** Addressed phrases like "best tiles company" and "tiles near me" strictly informationally without making unsupported superiority or physical retail claims.
 Run `npm run seo-content:check` to verify guide structure, slug uniqueness, claim-safety, and sitemap URL expansion (59 URLs).
 
+## Digital marketing deliverables
+
+Step 23 documentation is complete as a proposed academic campaign plan. It includes channel strategies for Instagram, Facebook, and YouTube; short-form concepts; a proposed Google Ads structure and sample copy; a four-week calendar; social copy; integrated campaigns; funnel and destination mapping; and a KPI framework. All campaigns remain fictional examples: no accounts, ads, analytics, or tracking have been created, and no results are claimed.
+
+- [Digital marketing strategy](docs/DIGITAL_MARKETING_STRATEGY.md)
+- [Google Ads proposal](docs/GOOGLE_ADS_PLAN.md)
+- [Four-week content calendar](docs/CONTENT_CALENDAR.md)
+- [Social content library](docs/SOCIAL_CONTENT_LIBRARY.md)
+- [Marketing measurement plan](docs/MARKETING_MEASUREMENT_PLAN.md)
+
+Run `npm run marketing:check` to check required deliverables, planned calendar coverage, claim/data safeguards, and implemented destination routes. This is a documentation check; it does not launch campaigns or add tracking.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:
@@ -97,11 +109,13 @@ The following modules are planned and are **not all implemented yet**:
 - Store Finder and active-store browsing
 - Contact/enquiry system
 - SEO
-- Digital marketing content
+- Actual social account creation and publication (the strategy and sample content are documented proposals)
+- Live paid advertising or campaign measurement
+- Tracking integration
 
 ## Project documentation
 
-The following documents define the planned work and testing scope. They are planning materials; they do not indicate that future modules are implemented.
+The following documents define project scope and testing. Marketing strategy files are academic proposals and do not indicate live campaigns or measured outcomes.
 
 - [Project scope](docs/PROJECT_SCOPE.md)
 - [Architecture](docs/ARCHITECTURE.md)
