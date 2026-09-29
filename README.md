@@ -83,3 +83,7 @@ The project now includes a reusable local design system, Timeless Tiles brand SV
 
 The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and lightweight route foundations are implemented. Homepage, catalogue, product details, search, filters, comparison, recommendations, quote form, and contact form remain future work.
 
+## Homepage
+
+The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Full catalogue, product details, search, filters, comparison, recommendations, and forms are still planned.
+

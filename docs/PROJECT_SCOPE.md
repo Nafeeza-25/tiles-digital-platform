@@ -162,3 +162,7 @@ Timeless Tiles has an original local brand system, five category SVGs, a hero SV
 ## Implemented shell foundations
 
 The global responsive layout, desktop/mobile navigation, footer, breadcrumbs, and route foundations are implemented. Placeholder routes are not completed Homepage, catalogue, product-detail, search, filter, comparison, recommendation, quote, or contact-form modules.
+
+## Implemented homepage
+
+The homepage is implemented with read-only deployed demo catalogue data: category discovery, featured tiles, accurate demo offers, approved demo reviews, audience, journey, brand story, and CTAs. The full Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.

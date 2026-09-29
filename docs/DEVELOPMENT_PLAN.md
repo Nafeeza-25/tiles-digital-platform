@@ -86,3 +86,7 @@ The reusable visual design system, 40 local product renders, category visuals, h
 ## Responsive site shell
 
 Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, and route foundations. Homepage, Product Catalogue, Product Details, Search, Filters, Comparison, Recommendations, Quote Form, and Contact Form remain planned.
+
+## Homepage
+
+Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
