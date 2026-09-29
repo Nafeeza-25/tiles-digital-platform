@@ -66,7 +66,7 @@ Private environment files are ignored by Git. Keep real credentials only in `.en
 
 ## Supabase schema
 
-The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, and moderated demo reviews. Product image assets have not been added, and the website catalogue UI is not implemented yet. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
+The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, moderated demo reviews, and one local SVG product image per active product. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
 
 Deployed migration files are immutable. Make future schema changes through new timestamped files in `supabase/migrations/`, never by editing an already deployed migration.
 
@@ -77,7 +77,7 @@ Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, p
 
 ## Visual foundation
 
-The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Homepage, catalogue UI, product details, search, filters, comparison, and room recommendations are planned and not implemented yet.
+The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Product details, comparison, and room recommendations remain planned.
 
 ## Responsive shell
 
@@ -86,4 +86,8 @@ The responsive global layout, desktop and mobile navigation, footer, breadcrumbs
 ## Homepage
 
 The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Full catalogue, product details, search, filters, comparison, recommendations, and forms are still planned.
+
+## Catalogue
+
+The `/tiles` catalogue uses read-only deployed data with URL-driven search, multi-value filters, effective-price filtering, sorting, pagination, active filter state, and empty states. Category pages and product details remain planned.
 

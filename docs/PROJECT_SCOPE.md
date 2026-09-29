@@ -34,22 +34,22 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 ### Catalogue
 
 - [x] 30–50 tile products
-- [ ] Product catalogue
-- [ ] Product search
+- [x] Product catalogue
+- [x] Product search
 - [ ] Product detail pages
-- [ ] High-quality product images
+- [x] High-quality product images
 - [ ] Specifications
 - [ ] Pricing
 - [ ] Application information
 
 ### Advanced filters
 
-- [ ] Size
-- [ ] Colour
-- [ ] Finish
-- [ ] Material
-- [ ] Price
-- [ ] Application
+- [x] Size
+- [x] Colour
+- [x] Finish
+- [x] Material
+- [x] Price
+- [x] Application
 
 ### Smart features
 
@@ -166,3 +166,7 @@ The global responsive layout, desktop/mobile navigation, footer, breadcrumbs, an
 ## Implemented homepage
 
 The homepage is implemented with read-only deployed demo catalogue data: category discovery, featured tiles, accurate demo offers, approved demo reviews, audience, journey, brand story, and CTAs. The full Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.
+
+## Implemented catalogue
+
+The responsive Product Catalogue, product search, Size, Colour, Finish, Material, Price, and Application filters, sorting, and pagination are implemented. Category catalogue pages, Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain out of scope.

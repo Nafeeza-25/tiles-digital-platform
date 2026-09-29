@@ -90,3 +90,7 @@ Completed: responsive global layout, desktop navigation, mobile navigation, foot
 ## Homepage
 
 Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Catalogue, Product Details, Search, Advanced Filters, Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
+
+## Catalogue
+
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, and responsive catalogue browsing. Category catalogue pages, Product Details, Tile Comparison, Room-wise Recommendations, Quote Form, Contact Form, WhatsApp Enquiry, Review Submission, and Store Finder remain planned.
