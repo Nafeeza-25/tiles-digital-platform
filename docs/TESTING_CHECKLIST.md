@@ -1,19 +1,19 @@
 # Testing Checklist
 
-This checklist is a future validation guide. It does not indicate that unimplemented functionality has passed.
+This checklist separates locally verified behavior from deployment and user workflows that still need follow-up. Checkmarks record a completed local check; unchecked items remain unverified or are explicitly outside this step.
 
 ## Installation and build
 
 - [ ] Dependencies install successfully
-- [ ] `npm run lint` passes
-- [ ] `npm run build` passes
+- [x] `npm run lint` passes
+- [x] `npm run build` passes
 
 ## Navigation and responsiveness
 
 - [ ] Navigation works across implemented pages
-- [ ] Responsive design works at mobile breakpoints
-- [ ] Responsive design works at tablet breakpoints
-- [ ] Responsive design works at desktop breakpoints
+- [x] Representative pages render without horizontal overflow at mobile widths (320, 375 CSS px)
+- [x] Representative pages render without horizontal overflow at tablet width (768 CSS px)
+- [x] Representative pages render without horizontal overflow at desktop widths (1024, 1440 CSS px)
 - [ ] Mobile testing is completed on representative devices or emulators
 - [ ] Desktop testing is completed in supported browsers
 
@@ -89,3 +89,16 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 - [ ] Social accounts or content publication (outside this step)
 - [ ] Live advertising or performance measurement (outside this step)
 - [ ] Analytics, pixels, conversion scripts, or tracking consent infrastructure (outside this step)
+
+## Production preparation — Step 25
+
+- [x] `npm run production:check` validates environment placeholders, ignored secrets, route inventory, dev-route indexing, internal route literals, analytics privacy plan, assets, and configured headers
+- [x] `npm run seo-content:check` passes without a Node module-type warning
+- [x] Environment and Vercel deployment preparation are documented without a guessed production URL
+- [x] Credential audit confirms `.env.local` is ignored and untracked; no application service-role key reference was found
+- [x] Root error boundary and branded 404 are present without exposing error details
+- [x] Baseline response headers verified on the local production server
+- [x] Representative public routes, responsive widths, keyboard focus, and form labels checked
+- [ ] Vercel deployment or production-domain verification
+- [ ] Live analytics or conversion data
+- [ ] Formal accessibility certification

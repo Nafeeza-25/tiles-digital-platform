@@ -1,7 +1,30 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { tileGuides } from "../src/data/guides.ts";
-import { tileCategories } from "../src/data/site.ts";
+import { createRequire } from "node:module";
+import { dirname, resolve as resolvePath } from "node:path";
+import { runInThisContext } from "node:vm";
+
+// Node does not assign a module type to these TypeScript files in this package.
+// Transpile the source data to CommonJS in memory instead of asking Node to
+// guess the module type or adding a runtime TS loader to the application.
+const require = createRequire(import.meta.url);
+const ts = require("typescript");
+
+function loadTypeScriptData(relativePath) {
+  const filename = resolvePath(process.cwd(), relativePath);
+  const source = readFileSync(filename, "utf8");
+  const { outputText } = ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+    fileName: filename,
+  });
+  const commonJsModule = { exports: {} };
+  const wrapper = runInThisContext(`(function (exports, require, module, __filename, __dirname) {\n${outputText}\n})`, { filename });
+  wrapper(commonJsModule.exports, createRequire(filename), commonJsModule, filename, dirname(filename));
+  return commonJsModule.exports;
+}
+
+const { tileGuides } = loadTypeScriptData("src/data/guides.ts");
+const { tileCategories } = loadTypeScriptData("src/data/site.ts");
 
 console.log("🔍 Running SEO Content & Keyword Strategy Verification...");
 

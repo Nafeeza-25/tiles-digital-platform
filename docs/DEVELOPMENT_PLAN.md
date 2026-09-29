@@ -68,6 +68,13 @@ Future phases remain planned unless explicitly marked complete below. Phase 10's
 - **Completed:** 20 SVG assets in five channel/format groups, a factual asset manifest, creative guidelines, a responsive noindex preview at `/dev/marketing-preview`, and `npm run marketing-assets:check`. See `docs/MARKETING_ASSET_MANIFEST.md` and `docs/MARKETING_CREATIVE_GUIDELINES.md`.
 - **Remaining:** Publishing, live paid campaigns, tracking, analytics, and campaign results require future work. The pack is fictional academic-demo material.
 
+## Step 25 - Production Readiness, QA Hardening & Analytics Measurement Preparation — complete
+
+- **Purpose:** Prepare the app and project documentation for a later human-reviewed deployment.
+- **Completed:** Fixed the SEO checker module-type warning without changing package module mode; audited public environment variables and ignored credentials; added baseline response headers and branded error/404 UX; audited development routes, internal route patterns, placeholders, debug statements, secrets, and local assets; documented production routes, analytics events/privacy/conversions, environment setup, Vercel preparation, and limitations; added read-only `npm run production:check`.
+- **Verified:** Read-only Supabase RLS/data checks, application regression checks, production build, browser route/header checks, responsive checks, and manual accessibility checks are listed in `docs/TESTING_CHECKLIST.md` and the task verification report.
+- **Remaining:** Vercel deployment, production-domain verification, live analytics or conversions, real marketing activity, final report, diagrams, presentation, and viva materials. Do not deploy until the production URL and settings are reviewed.
+
 ## Phase 11 - Testing & Optimization
 
 - **Purpose:** Verify quality, usability, and performance before release.

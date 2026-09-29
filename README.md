@@ -100,29 +100,27 @@ The local asset pack contains 20 original, brand-aligned SVG creatives: six Inst
 
 Run `npm run marketing-assets:check` to validate files, metadata, verified demo sale data, routes, and preview indexing safeguards. The assets are fictional academic-demo creatives; social publication, paid campaign launch, analytics/tracking, and campaign results remain planned.
 
-## Planned modules
+## Production preparation — Step 25
 
-The following modules are planned and are **not all implemented yet**:
+Production-readiness preparation is documented without deploying the app or installing analytics. It includes public environment-variable setup, a route inventory, baseline response headers, branded error and not-found states, credential and public-route audits, provider-neutral analytics planning, and a Vercel deployment checklist.
 
-- Homepage
-- Tile product catalogue
-- Floor tiles
-- Wall tiles
-- Bathroom tiles
-- Kitchen tiles
-- Outdoor tiles
-- Advanced product filters
-- Product search
-- Product details
-- Room-wise recommendations
-- Customer review submission and approved review display
-- Store Finder and active-store browsing
-- Contact/enquiry system
-- SEO
-- Actual social account creation and publication (the strategy and sample content are documented proposals)
-- Creative production is complete as local SVG assets; publishing remains planned
+- [Environment configuration](docs/ENVIRONMENT_CONFIGURATION.md)
+- [Production route inventory](docs/PRODUCTION_ROUTE_INVENTORY.md)
+- [Analytics event plan](docs/ANALYTICS_EVENT_PLAN.md)
+- [Vercel deployment checklist](docs/VERCEL_DEPLOYMENT_CHECKLIST.md)
+- [Production readiness record](docs/PRODUCTION_READINESS.md)
+
+Run `npm run production:check` for read-only production preparation checks. Vercel deployment, a verified production URL, and live analytics remain future work.
+
+## Remaining project work
+
+The core demo platform, its local creative assets, and production-readiness preparation are implemented. These items remain future work:
+
+- Actual social account creation and publication
 - Live paid advertising or campaign measurement
-- Tracking integration
+- Tracking integration or live analytics
+- Vercel deployment and production-domain verification
+- Final project report, diagrams package, presentation, and viva materials
 
 ## Project documentation
 

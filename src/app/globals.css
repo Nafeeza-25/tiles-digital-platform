@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@layer base {
+  a { color: inherit; text-underline-offset: .2em; }
+  a:hover { color: var(--primary); }
+}
+
 .field { @apply min-h-11 border border-border bg-surface px-3 py-2 font-normal text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary; }
 
 :root { --background:#FAF8F4; --foreground:#211E1C; --surface:#FFFFFF; --surface-muted:#F1EDE7; --primary:#6F2435; --primary-foreground:#FFFFFF; --secondary:#D9D0C6; --secondary-foreground:#302B28; --accent:#A87947; --accent-foreground:#FFFFFF; --border:#DDD6CE; --muted:#736C66; --success:#2F6B4F; --error:#A43F3F; --radius-md:.5rem; --container-max:76rem; --page-padding:clamp(1.25rem,4vw,3rem); --shadow-subtle:0 8px 24px rgb(33 30 28 / 8%); }
@@ -10,4 +15,4 @@
   --color-surface: var(--surface); --color-surface-muted: var(--surface-muted); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-border: var(--border); --color-muted: var(--muted); --font-sans: Arial, Helvetica, sans-serif; --font-serif: Georgia, "Times New Roman", serif;
 }
 
-* { border-color:var(--border); } html { background:var(--background); } body { margin:0; background:var(--background); color:var(--foreground); font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; } ::selection { background:var(--secondary); color:var(--foreground); } h1,h2,h3,h4 { font-family:Georgia,"Times New Roman",serif; letter-spacing:-.025em; } a { color:inherit; text-underline-offset:.2em; } a:hover { color:var(--primary); } :focus-visible { outline:3px solid var(--accent); outline-offset:3px; } .site-container { width:min(100% - (var(--page-padding) * 2),var(--container-max)); margin-inline:auto; } @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+* { border-color:var(--border); } html { background:var(--background); } body { margin:0; background:var(--background); color:var(--foreground); font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; } ::selection { background:var(--secondary); color:var(--foreground); } h1,h2,h3,h4 { font-family:Georgia,"Times New Roman",serif; letter-spacing:-.025em; } :focus-visible { outline:3px solid var(--accent); outline-offset:3px; } .site-container { width:min(100% - (var(--page-padding) * 2),var(--container-max)); margin-inline:auto; } @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }

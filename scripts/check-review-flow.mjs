@@ -18,4 +18,7 @@ for (const token of ["customer_name", "rating", "title", "comment", ".int(", ".m
 for (const keyName of ["product_id", "customer_name", "rating", "title", "comment"]) if (!utils.includes(`\"${keyName}\"`)) throw new Error(`Missing permitted review insert key: ${keyName}`);
 for (const forbidden of ["is_approved:", "created_at:", "service_role", "SUPABASE_SECRET", "SUPABASE_SERVICE_ROLE"]) if (`${schema}\n${form}\n${utils}`.includes(forbidden)) throw new Error(`Forbidden public review reference: ${forbidden}`);
 if (!form.includes("createPublicReviewInsert(product, parsed.data)") || !detailPage.includes("product={{ id: product.id, name: product.name, slug: product.slug }}")) throw new Error("Review product context is not resolved by the active server product.");
+for (const [label, id] of [["Name", "review-customer-name"], ["Title", "review-title"], ["Review", "review-comment"]]) {
+  if (!form.includes(`<FormField label="${label}" id="${id}"`) || !form.includes(`id="${id}"`)) throw new Error(`Review field label is not associated with ${id}.`);
+}
 console.log("Review flow verification passed: approved-only public reads, pending review concealment, enquiry read protection, restricted insert shape, validation, and server-resolved product context verified.");

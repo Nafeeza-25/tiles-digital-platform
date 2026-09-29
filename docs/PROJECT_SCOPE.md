@@ -136,6 +136,25 @@ The completed items are documentation/examples for a fictional academic demo bra
 
 Creative assets use the existing local brand and product SVGs. Any offer uses verified demo catalogue prices and carries an academic-demo disclosure. No campaign has been published and no live campaign results are claimed.
 
+### Production readiness preparation — Step 25
+
+- [x] Production environment variables audited and safe setup documented
+- [x] `.env.example` limited to blank public-variable placeholders
+- [x] Credential audit and `.env.local` ignore/tracking check
+- [x] Baseline HTTP security headers documented and configured
+- [x] Branded root error boundary and not-found UX
+- [x] Development route indexing and sitemap safeguards audited
+- [x] Production route inventory and internal route checks
+- [x] Provider-neutral analytics event taxonomy, privacy rules, and conversion definitions
+- [x] Vercel deployment preparation and security checklist
+- [x] Read-only `npm run production:check`
+- [ ] Vercel deployment
+- [ ] Verified production domain
+- [ ] Live analytics or conversions
+- [ ] Final project report, diagrams, presentation, or viva materials
+
+This step prepares verification and documentation only. It does not deploy, install analytics, modify Supabase data/policies, or claim legal compliance.
+
 ### Content
 
 - [x] Website copy
