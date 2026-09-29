@@ -16,7 +16,8 @@
     "compare:check": "node --env-file=.env.local scripts/check-comparison.mjs",
     "recommendation:check": "node --env-file=.env.local scripts/check-room-recommendations.mjs",
     "enquiry:check": "node --env-file=.env.local scripts/check-enquiry-flow.mjs",
-    "review:check": "node --env-file=.env.local scripts/check-review-flow.mjs"
+    "review:check": "node --env-file=.env.local scripts/check-review-flow.mjs",
+    "store:check": "node --env-file=.env.local scripts/check-store-finder.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

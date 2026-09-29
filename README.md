@@ -35,7 +35,7 @@ Run `npm run compare:check` to verify that active products expose safe primary l
 
 ## Implemented room recommendations
 
-Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI. Store finder remains planned.
+Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI.
 
 ## Implemented lead generation
 
@@ -43,7 +43,11 @@ Room Recommendations use only the fictional catalogue's room-suitability tags an
 
 ## Implemented review submission
 
-Every active product detail page includes a product-aware review form. It validates name, whole-star rating, optional title, and comment with Zod and react-hook-form, then submits only the public review fields through Supabase. Reviews are fictional academic-demo submissions, default to unapproved under the existing RLS policy, and never appear publicly until manually moderated in the Supabase dashboard. Public reads continue to return approved reviews only; no review moderation dashboard or store finder UI is implemented here. Run `npm run review:check` to verify the public safety boundary without creating a row.
+Every active product detail page includes a product-aware review form. It validates name, whole-star rating, optional title, and comment with Zod and react-hook-form, then submits only the public review fields through Supabase. Reviews are fictional academic-demo submissions, default to unapproved under the existing RLS policy, and never appear publicly until manually moderated in the Supabase dashboard. Public reads continue to return approved reviews only; no review moderation dashboard is implemented here. Run `npm run review:check` to verify the public safety boundary without creating a row.
+
+## Implemented Store Finder
+
+`/stores` reads the existing active fictional Timeless Tiles demo-store records through the Supabase public read policy. It has shareable `q` search and a city filter derived only from active records, plus factual phone, email, WhatsApp, opening-hours, and external directions links when the stored field supports them. It does not use geolocation tracking, an embedded map, or an external Maps API. Run `npm run store:check` for the read-only Store Finder and policy verification.
 
 ## Planned modules
 
@@ -61,7 +65,7 @@ The following modules are planned and are **not all implemented yet**:
 - Product details
 - Room-wise recommendations
 - Customer review submission and approved review display
-- Store finder
+- Store Finder and active-store browsing
 - Contact/enquiry system
 - SEO
 - Digital marketing content
@@ -96,13 +100,13 @@ The project now includes a reusable local design system, Timeless Tiles brand SV
 
 ## Responsive shell
 
-The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, and moderated review submission are implemented; store finder remains future work.
+The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder are implemented.
 
 ## Homepage
 
-The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details and Tile Comparison are implemented; recommendations and forms are still planned.
+The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder are implemented.
 
 ## Catalogue
 
-The `/tiles` catalogue, category pages, and product detail pages use deployed read-only catalogue data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, empty states, and a moderated public review-submission form. Tile Comparison, room recommendations, and lead-generation forms are implemented.
+The `/tiles` catalogue, category pages, and product detail pages use deployed read-only catalogue data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, empty states, and a moderated public review-submission form. Tile Comparison, room recommendations, lead-generation forms, and Store Finder are implemented.
 

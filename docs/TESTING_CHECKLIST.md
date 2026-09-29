@@ -48,9 +48,9 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 ## Trust and local information
 
 - [x] Approved reviews render correctly and review submission is moderated before public display
-- [ ] Store finder returns relevant locations
-- [ ] Store/showroom details are accurate
-- [ ] Directions or map integration works
+- [x] Store Finder returns active fictional demo locations with URL-driven search and city filtering
+- [x] Store details use existing public Supabase fields only
+- [x] Factual external directions links work without an embedded map or Maps API
 
 ## SEO, accessibility, and performance
 

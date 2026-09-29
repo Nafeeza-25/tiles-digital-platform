@@ -42,13 +42,13 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Convert visitor interest into actionable sales leads.
 - **Major tasks:** Build quote, product-enquiry, and contact forms; validate inputs; store enquiries; add WhatsApp links.
-- **Expected completion criteria:** Valid leads reach Supabase and users receive clear success or error feedback. Contact, quote, product-aware enquiry, and WhatsApp entry flows are implemented as fictional academic-demo submissions through the existing public INSERT-only RLS policy. Store finder remains planned.
+- **Expected completion criteria:** Valid leads reach Supabase and users receive clear success or error feedback. Contact, quote, product-aware enquiry, and WhatsApp entry flows are implemented as fictional academic-demo submissions through the existing public INSERT-only RLS policy.
 
 ## Phase 8 - Reviews & Store Finder
 
 - **Purpose:** Build trust and connect online visitors to local showrooms.
 - **Major tasks:** Add moderated review submission, store details, finder interactions, and maps/directions integration.
-- **Expected completion criteria:** Product review submission is implemented as a public INSERT-only, default-unapproved academic-demo flow. Manual moderation remains in the Supabase dashboard; store finder, maps, and directions remain planned.
+- **Expected completion criteria:** Product review submission is implemented as a public INSERT-only, default-unapproved academic-demo flow. Manual moderation remains in the Supabase dashboard. Store Finder is implemented with active public records, URL-driven search, derived city filtering, factual contact links, and external directions links; it has no embedded map, Maps API, or geolocation tracking.
 
 ## Phase 9 - SEO & Content
 
@@ -85,12 +85,12 @@ The reusable visual design system, 40 local product renders, category visuals, h
 
 ## Responsive site shell
 
-Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, route foundations, Product Details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, and moderated review submission. Store finder remains planned.
+Completed: responsive global layout, desktop navigation, mobile navigation, footer, breadcrumbs, route foundations, Product Details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder.
 
 ## Homepage
 
-Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, Tile Comparison, Room-wise Recommendations, lead-generation enquiry flows, and moderated review submission are implemented. Store Finder remains planned.
+Completed: the server-rendered, data-driven homepage with hero, category discovery, featured products, real demo offers, audiences, journey, approved demo reviews, brand story, and final CTAs. Product Details, Search refinement, Advanced Filters refinement, Tile Comparison, Room-wise Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder are implemented.
 
 ## Catalogue
 
-Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, moderated review submission, product-detail navigation, Tile Comparison, Room-wise Recommendations, and lead-generation enquiry flows. Store Finder remains planned.
+Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/Application filters, sorting, pagination, responsive catalogue browsing, category catalogue pages, Product Details, specifications, pricing, application and suitable-space display, approved demo-review display, moderated review submission, product-detail navigation, Tile Comparison, Room-wise Recommendations, lead-generation enquiry flows, and Store Finder.

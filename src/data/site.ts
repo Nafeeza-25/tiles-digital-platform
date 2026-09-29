@@ -18,9 +18,11 @@ export const site = {
     { label: "Collections", href: "/collections" },
     { label: "Offers", href: "/offers" },
     { label: "About Us", href: "/about" },
+    { label: "Store Finder", href: "/stores" },
     { label: "Contact", href: "/contact" },
   ],
   categories: tileCategories,
   recommendations: { label: "Room Recommendations", href: "/recommendations" },
+  stores: { label: "Store Finder", href: "/stores" },
   quote: { label: "Get a Quote", href: "/contact?intent=quote" },
 } as const;

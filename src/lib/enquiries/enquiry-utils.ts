@@ -3,6 +3,11 @@ import type { PublicEnquiryType } from "@/lib/enquiries/enquiry-schema";
 export type EnquiryIntent = PublicEnquiryType;
 export type ProductEnquiryContext = { id: string; name: string; slug: string };
 
+export function normalizeWhatsAppNumber(number: string | null) {
+  const recipient = (number ?? "").replace(/\D/g, "");
+  return recipient.length >= 7 && recipient.length <= 15 ? recipient : null;
+}
+
 function first(value: string | string[] | undefined) { return (Array.isArray(value) ? value[0] : value)?.trim() ?? ""; }
 
 export function parseEnquiryIntent(value: string | string[] | undefined): EnquiryIntent {
@@ -28,8 +33,8 @@ export function enquiryDescription(intent: EnquiryIntent, product: ProductEnquir
 }
 
 export function buildWhatsAppHref(number: string | null, intent: EnquiryIntent, product: ProductEnquiryContext | null) {
-  const recipient = (number ?? "").replace(/\D/g, "");
-  if (recipient.length < 7 || recipient.length > 15) return null;
+  const recipient = normalizeWhatsAppNumber(number);
+  if (!recipient) return null;
   const topic = intent === "quote" ? "a quote" : intent === "product" ? "a product enquiry" : "an enquiry";
   const productText = product ? ` about ${product.name}` : "";
   return `https://wa.me/${recipient}?text=${encodeURIComponent(`Hello Timeless Tiles, I have ${topic}${productText}.`)}`;
