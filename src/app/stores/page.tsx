@@ -5,7 +5,11 @@ import { StoreCard } from "@/components/stores/StoreCard";
 import { getActiveStores } from "@/lib/queries/stores";
 import { filterStores, normalizeStoreSearch, parseStoreLocation, storeLocationOptions } from "@/lib/stores/store-utils";
 
-export const metadata: Metadata = { title: "Store Finder | Timeless Tiles", description: "Find fictional Timeless Tiles demo store locations and view available contact and directions information." };
+export const metadata: Metadata = {
+  title: "Store Finder",
+  description: "Find fictional Timeless Tiles demo store locations and view available contact and directions information.",
+  alternates: { canonical: "/stores" },
+};
 
 export default async function StoresPage({ searchParams }: { searchParams: Promise<{ q?: string | string[]; location?: string | string[] }> }) {
   const [params, stores] = await Promise.all([searchParams, getActiveStores()]);

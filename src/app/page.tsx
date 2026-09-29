@@ -1,3 +1,35 @@
-import type { Metadata } from "next"; import { HeroSection } from "@/components/home/HeroSection"; import { CategorySection } from "@/components/home/CategorySection"; import { ProductSections } from "@/components/home/ProductSections"; import { AudienceSection, JourneySection } from "@/components/home/AudienceJourneySections"; import { ReviewsSection } from "@/components/home/ReviewsSection"; import { BrandStorySection, FinalCtaSection } from "@/components/home/BrandCtaSections"; import { getApprovedReviews, getFeaturedProducts, getOfferProducts } from "@/lib/queries/home";
-export const metadata: Metadata={title:"Timeless Tiles | Tiles for Every Space",description:"Explore floor, wall, bathroom, kitchen and outdoor tile collections, featured designs and demo offers from Timeless Tiles."};
-export default async function Home(){const [featured,offers,reviews]=await Promise.all([getFeaturedProducts(),getOfferProducts(),getApprovedReviews()]);return <><HeroSection/><CategorySection/><ProductSections featured={featured} offers={offers}/><AudienceSection/><JourneySection/><ReviewsSection reviews={reviews}/><BrandStorySection/><FinalCtaSection/></>}
+import type { Metadata } from "next";
+import { HeroSection } from "@/components/home/HeroSection";
+import { CategorySection } from "@/components/home/CategorySection";
+import { ProductSections } from "@/components/home/ProductSections";
+import { AudienceSection, JourneySection } from "@/components/home/AudienceJourneySections";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
+import { BrandStorySection, FinalCtaSection } from "@/components/home/BrandCtaSections";
+import { getApprovedReviews, getFeaturedProducts, getOfferProducts } from "@/lib/queries/home";
+
+export const metadata: Metadata = {
+  title: "Tiles for Every Space",
+  description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections, featured designs and demo offers from Timeless Tiles.",
+  alternates: { canonical: "/" },
+};
+
+export default async function Home() {
+  const [featured, offers, reviews] = await Promise.all([
+    getFeaturedProducts(),
+    getOfferProducts(),
+    getApprovedReviews(),
+  ]);
+
+  return (
+    <>
+      <HeroSection />
+      <CategorySection />
+      <ProductSections featured={featured} offers={offers} />
+      <AudienceSection />
+      <JourneySection />
+      <ReviewsSection reviews={reviews} />
+      <BrandStorySection />
+      <FinalCtaSection />
+    </>
+  );
+}

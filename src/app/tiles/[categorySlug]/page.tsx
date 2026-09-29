@@ -22,8 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   if (!category) return {};
 
   return {
-    title: `${category.label} | Timeless Tiles`,
+    title: category.label,
     description: `${category.description} Explore the Timeless Tiles academic demonstration catalogue.`,
+    alternates: { canonical: `/tiles/${categorySlug}` },
   };
 }
 

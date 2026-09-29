@@ -57,6 +57,18 @@ Every active product detail page includes a product-aware review form. It valida
 - `/about`: Presents the academic-demo project context, digital opportunity, implemented capabilities, four target audience overviews, and four-step customer journey.
 Run `npm run public-pages:check` to verify data-driven collections, offer calculations, and security protections.
 
+## Implemented Technical SEO foundation
+
+Technical SEO infrastructure is implemented across all public routes:
+- **Title template & metadata:** Root layout defines `%s | Timeless Tiles` template, default fallback title, metadataBase, Open Graph, and Twitter card defaults.
+- **Site URL abstraction:** Resolves production domain safely via `NEXT_PUBLIC_SITE_URL`, `VERCEL_PROJECT_PRODUCTION_URL`, `VERCEL_URL`, or `http://localhost:3000` fallback (`src/lib/seo/site-url.ts`).
+- **Canonical URL strategy:** Every page exports explicit canonical metadata. Filter/search/pagination variants canonicalize to stable base routes (`/tiles`, `/tiles/[categorySlug]`, `/recommendations`, `/stores`, `/contact`, `/compare`).
+- **Dynamic XML Sitemap:** `/sitemap.xml` generates stable URLs covering the homepage, catalogue, 5 category pages, 40 active products, collections, offers, about, recommendations, contact, and stores while excluding query parameters, inactive products, and `/dev/visual-check`.
+- **Robots.txt:** `/robots.txt` points to `/sitemap.xml`, permits search engine crawling of public pages, and disallows `/dev/`.
+- **Open Graph Image:** `/opengraph-image` generates branded social card previews dynamically via Next.js `ImageResponse`.
+- **Breadcrumb JSON-LD:** Structured `BreadcrumbList` schema rendered via `<JsonLd>` helper. Commercial schemas (LocalBusiness, AggregateRating, Product offer schema) are intentionally omitted for academic demo compliance.
+Run `npm run seo:check` to verify canonical URLs, site URL abstraction, sitemap datasets, and structured data safety.
+
 ## Planned modules
 
 The following modules are planned and are **not all implemented yet**:

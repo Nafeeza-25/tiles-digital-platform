@@ -3,8 +3,9 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About Timeless Tiles | Digital Tiles Demo Platform",
+  title: "About Timeless Tiles",
   description: "Learn about the fictional Timeless Tiles academic project and its digital catalogue, comparison, recommendation and enquiry experience.",
+  alternates: { canonical: "/about" },
 };
 
 const AUDIENCES = [

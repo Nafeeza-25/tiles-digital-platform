@@ -5,8 +5,9 @@ import type { SearchParams } from "@/lib/catalog/catalog-filters";
 import { getCatalogueProducts } from "@/lib/queries/catalog";
 
 export const metadata: Metadata = {
-  title: "Tile Catalogue | Timeless Tiles",
+  title: "Tile Catalogue",
   description: "Browse floor, wall, bathroom, kitchen and outdoor tiles and filter the Timeless Tiles demo catalogue by size, colour, finish, material, price and application.",
+  alternates: { canonical: "/tiles" },
 };
 
 export default async function TilesPage({ searchParams }: { searchParams: Promise<SearchParams> }) {

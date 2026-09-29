@@ -4,16 +4,42 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CompareProvider } from "@/components/compare/CompareProvider";
 import { CompareTray } from "@/components/compare/CompareTray";
+import { getBaseUrl } from "@/lib/seo/site-url";
 
 export const metadata: Metadata = {
-  title: "Timeless Tiles",
+  metadataBase: new URL(getBaseUrl()),
+  title: {
+    default: "Timeless Tiles | Digital Tiles Demo Platform",
+    template: "%s | Timeless Tiles",
+  },
   description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.",
+  applicationName: "Timeless Tiles",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Timeless Tiles",
+    title: "Timeless Tiles | Digital Tiles Demo Platform",
+    description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timeless Tiles | Digital Tiles Demo Platform",
+    description: "Explore floor, wall, bathroom, kitchen and outdoor tile collections from Timeless Tiles.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col"><a href="#main-content" className="sr-only focus:not-sr-only">Skip to content</a><CompareProvider><Header /><main id="main-content" className="flex-1">{children}</main><Footer /><CompareTray /></CompareProvider></body>
+      <body className="min-h-full flex flex-col">
+        <a href="#main-content" className="sr-only focus:not-sr-only">Skip to content</a>
+        <CompareProvider>
+          <Header />
+          <main id="main-content" className="flex-1">{children}</main>
+          <Footer />
+          <CompareTray />
+        </CompareProvider>
+      </body>
     </html>
   );
 }

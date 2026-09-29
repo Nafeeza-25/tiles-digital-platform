@@ -6,8 +6,9 @@ import { getCatalogueProducts } from "@/lib/queries/catalog";
 import { getEditorialCollections } from "@/lib/collections/collections";
 
 export const metadata: Metadata = {
-  title: "Tile Collections | Timeless Tiles",
+  title: "Tile Collections",
   description: "Explore curated groups from the Timeless Tiles demo catalogue, including featured, new, sale, outdoor and wet-area tile selections.",
+  alternates: { canonical: "/collections" },
 };
 
 export default async function CollectionsPage() {

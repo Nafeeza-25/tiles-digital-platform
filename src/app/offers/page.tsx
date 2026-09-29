@@ -6,8 +6,9 @@ import { getCatalogueProducts } from "@/lib/queries/catalog";
 import { formatPrice } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Tile Offers | Timeless Tiles",
+  title: "Tile Offers",
   description: "Browse Timeless Tiles demo catalogue products currently showing genuine reduced prices.",
+  alternates: { canonical: "/offers" },
 };
 
 export default async function OffersPage() {

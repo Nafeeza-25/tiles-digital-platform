@@ -3,7 +3,11 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CompareResults } from "@/components/compare/CompareResults";
 import { getCompareProducts, normalizeCompareSlugs } from "@/lib/queries/compare";
 
-export const metadata: Metadata = { title: "Compare Tiles | Timeless Tiles", description: "Compare Timeless Tiles demo products side by side by price, size, finish, material, application and other catalogue specifications." };
+export const metadata: Metadata = {
+  title: "Compare Tiles",
+  description: "Compare Timeless Tiles demo products side by side by price, size, finish, material, application and other catalogue specifications.",
+  alternates: { canonical: "/compare" },
+};
 
 export default async function ComparePage({ searchParams }: { searchParams: Promise<{ product?: string | string[] }> }) {
   const params = await searchParams;

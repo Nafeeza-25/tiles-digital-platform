@@ -60,9 +60,11 @@ This checklist is a future validation guide. It does not indicate that unimpleme
 
 ## SEO, accessibility, and performance
 
-- [ ] SEO metadata is present and accurate
-- [ ] Semantic landmarks and heading hierarchy are appropriate
-- [ ] Basic accessibility checks pass, including keyboard access and alternative text
+- [x] SEO metadata, title template, and canonical URLs are present and accurate
+- [x] Sitemap.xml and robots.txt routes generate valid XML and crawl rules
+- [x] BreadcrumbList JSON-LD structured data is present on applicable pages
+- [x] Semantic landmarks and heading hierarchy are appropriate
+- [x] Basic accessibility checks pass, including keyboard access and alternative text
 - [ ] Performance is checked with a suitable measurement tool
 - [ ] No broken internal or external links remain
 

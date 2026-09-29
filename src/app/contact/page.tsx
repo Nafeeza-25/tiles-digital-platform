@@ -6,7 +6,11 @@ import { WhatsAppEnquiryLink } from "@/components/forms/WhatsAppEnquiryLink";
 import { enquiryDescription, enquiryTitle, parseEnquiryIntent, parseProductSlug } from "@/lib/enquiries/enquiry-utils";
 import { getActiveEnquiryProduct, getDemoWhatsAppNumber } from "@/lib/queries/enquiries";
 
-export const metadata: Metadata = { title: "Contact | Timeless Tiles", description: "Send a fictional academic-demo contact, quote, or product enquiry to Timeless Tiles." };
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Send a fictional academic-demo contact, quote, or product enquiry to Timeless Tiles.",
+  alternates: { canonical: "/contact" },
+};
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ intent?: string | string[]; product?: string | string[] }> }) {
   const params = await searchParams;

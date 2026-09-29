@@ -76,15 +76,15 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 ### SEO
 
 - [ ] Keyword research
-- [ ] Page titles
-- [ ] Meta descriptions
-- [ ] Semantic page structure
-- [ ] SEO-friendly URLs
+- [x] Page titles
+- [x] Meta descriptions
+- [x] Semantic page structure
+- [x] SEO-friendly URLs
 - [ ] Local SEO
-- [ ] sitemap.xml
-- [ ] robots.txt
-- [ ] Structured data where appropriate
-- [ ] Performance/basic technical SEO
+- [x] sitemap.xml
+- [x] robots.txt
+- [x] Structured data where appropriate
+- [x] Performance/basic technical SEO
 
 ### Digital marketing
 
@@ -174,3 +174,7 @@ The responsive Product Catalogue, product search, filters, category-specific bro
 ## Implemented public content pages
 
 `/collections` renders five transparent, data-driven editorial groupings (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection) derived directly from product attributes without hardcoded IDs. `/offers` presents actual sale-priced products (`sale_price < price`) with verified discount math and clear demo notices without artificial countdowns. `/about` presents the academic project context, why the platform exists, implemented feature overview, four target audiences, and the four-step customer journey.
+
+## Implemented technical SEO foundation
+
+Technical SEO infrastructure is complete: root layout metadata with `%s | Timeless Tiles` template, site URL abstraction supporting `NEXT_PUBLIC_SITE_URL`, Vercel production URLs, and localhost fallback, canonical URL metadata pointing search/filter variants to stable base routes, dynamically generated `sitemap.xml` covering 40 products, 5 categories, and static pages, `robots.txt` allowing public crawling and protecting `/dev/`, Open Graph image generator (`/opengraph-image`), and safe `BreadcrumbList` JSON-LD structured data. Commercial schemas (LocalBusiness, AggregateRating, Product offer schemas) are intentionally excluded to maintain academic demo integrity.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
 
-export const metadata: Metadata = { title: "Visual Check | Timeless Tiles", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Visual Check (Development Only)", robots: { index: false, follow: false } };
 
 const products = [
   ["Carrara White", "carrara-white"], ["Urban Concrete Grey", "urban-concrete-grey"], ["Oakwood Natural", "oakwood-natural"], ["Terrazzo Pearl", "terrazzo-pearl"],

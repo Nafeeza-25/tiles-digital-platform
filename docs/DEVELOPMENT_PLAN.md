@@ -54,7 +54,7 @@ All phases below are planned. Future phases are intentionally not marked complet
 
 - **Purpose:** Improve organic discoverability and useful product education.
 - **Major tasks:** Prepare keyword research, metadata, semantic structure, sitemap, robots rules, structured data, and content plan.
-- **Expected completion criteria:** Core pages meet technical SEO basics and content priorities are documented.
+- **Expected completion criteria:** Core pages meet technical SEO basics and content priorities are documented. Technical SEO foundation (metadata template, canonical URLs, sitemap.xml, robots.txt, opengraph-image, and BreadcrumbList JSON-LD) is implemented; content marketing campaign phase remains planned.
 
 ## Phase 10 - Digital Marketing Deliverables
 
@@ -98,3 +98,7 @@ Completed: Product Catalogue, Product Search, Size/Colour/Finish/Material/Price/
 ## Public content pages
 
 Completed: `/collections` with transparent attribute-driven editorial collections (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection); `/offers` with genuine database sale-priced items and discount metrics; `/about` with academic demonstration disclosures, digital opportunity context, implemented feature highlights, audience descriptions, and customer journey presentation.
+
+## Technical SEO foundation
+
+Completed: Route metadata title template `%s | Timeless Tiles`, canonical URLs for all routes and filter/query variations, dynamic `sitemap.xml` for 40 products, 5 categories, and static pages, `robots.txt` rule configuration, Open Graph image generator (`/opengraph-image`), site URL abstraction helper (`NEXT_PUBLIC_SITE_URL`), and BreadcrumbList JSON-LD structured data.

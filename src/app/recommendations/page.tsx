@@ -10,7 +10,11 @@ import { roomLabels } from "@/lib/catalog/product-labels";
 import { getCatalogueProducts } from "@/lib/queries/catalog";
 import { getRecommendations, getRoomOptions, parseRecommendationState, recommendationReasons } from "@/lib/recommendations/room-recommendations";
 
-export const metadata: Metadata = { title: "Room Tile Recommendations | Timeless Tiles", description: "Choose a room and explore Timeless Tiles demo products matched using room suitability, colour, finish, material and budget preferences." };
+export const metadata: Metadata = {
+  title: "Room Recommendations",
+  description: "Choose a room and explore Timeless Tiles demo products matched using room suitability, colour, finish, material and budget preferences.",
+  alternates: { canonical: "/recommendations" },
+};
 
 export default async function RecommendationsPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const [params, products] = await Promise.all([searchParams, getCatalogueProducts()]);

@@ -16,7 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   const { categorySlug, productSlug } = await params;
   const product = await getProductDetail(categorySlug, productSlug);
   if (!product) return {};
-  return { title: `${product.name} ${product.category?.name.replace("Tiles", "Tile") ?? "Tile"} | Timeless Tiles`, description: product.short_description ?? product.description ?? `Explore ${product.name} from Timeless Tiles.` };
+  return {
+    title: `${product.name} ${product.category?.name.replace("Tiles", "Tile") ?? "Tile"}`,
+    description: product.short_description ?? product.description ?? `Explore ${product.name} from Timeless Tiles.`,
+    alternates: { canonical: `/tiles/${categorySlug}/${productSlug}` },
+  };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ categorySlug: string; productSlug: string }> }) {
