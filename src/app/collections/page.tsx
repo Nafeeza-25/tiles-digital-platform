@@ -1,3 +1,5 @@
+import { PageHero } from "@/components/ui/PageHero";
+import { CategoryNavigation } from "@/components/catalog/CategoryNavigation";
 import type { Metadata } from "next";
 import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
@@ -16,46 +18,11 @@ export const metadata: Metadata = {
 export default async function CollectionsPage() {
   const products = await getCatalogueProducts();
   const collections = getEditorialCollections(products);
-
-  return (
-    <section className="site-container py-10">
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Collections" }]} />
-      <div className="max-w-3xl">
-        <h1 className="text-4xl">Tile Collections</h1>
-        <p className="mt-3 text-lg text-muted">
-          Explore curated editorial groupings drawn from the Timeless Tiles academic-demo catalogue, categorized by application, suitabilities, and special catalogue highlights.
-        </p>
-      </div>
-
-      <div className="mt-10 space-y-16">
-        {collections.map((collection) => (
-          <section key={collection.id} className="border-t pt-10" aria-labelledby={`collection-${collection.id}`}>
-            <div className="flex flex-wrap items-baseline justify-between gap-4">
-              <div>
-                <h2 id={`collection-${collection.id}`} className="text-2xl font-semibold">
-                  {collection.title}
-                </h2>
-                <p className="mt-1 text-muted max-w-2xl">{collection.description}</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-sm font-semibold text-muted">{collection.totalCount} products</span>
-                <Link
-                  href={collection.href}
-                  className="inline-flex min-h-11 items-center border bg-surface px-4 text-sm font-semibold hover:bg-surface-muted"
-                >
-                  Explore Collection →
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {collection.sampleProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
-    </section>
-  );
+  return <><PageHero compact eyebrow="A surface for every setting" title="Our" accent="Collections" description="Explore curated editorial groupings from the Timeless Tiles academic-demo catalogue, based on actual product attributes." image="/images/editorial/collections-hero.webp" alt="Illustrative modern living room with architectural tile surfaces" />
+    <section className="site-container pb-16 pt-6"><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Collections" }]} /><CategoryNavigation />
+      <div className="mt-10 space-y-14">{collections.map(collection => <section key={collection.id} className="border-t pt-9" aria-labelledby={`collection-${collection.id}`}>
+        <div className="flex flex-wrap items-end justify-between gap-5"><div><p className="mb-2 text-xs font-semibold uppercase tracking-[.18em] text-primary">Catalogue edit</p><h2 id={`collection-${collection.id}`} className="text-3xl">{collection.title}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-muted">{collection.description}</p></div><div className="flex flex-wrap items-center gap-4"><span className="text-sm text-muted">{collection.totalCount} products</span><Link href={collection.href} className="action-primary">Explore Collection</Link></div></div>
+        <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{collection.sampleProducts.map(product => <ProductCard key={product.id} product={product} />)}</div>
+      </section>)}</div>
+    </section></>;
 }

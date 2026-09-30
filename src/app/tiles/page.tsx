@@ -1,3 +1,5 @@
+import { PageHero } from "@/components/ui/PageHero";
+import { CategoryNavigation } from "@/components/catalog/CategoryNavigation";
 import type { Metadata } from "next";
 import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { CatalogueExperience } from "@/components/catalog/CatalogueExperience";
@@ -14,13 +16,6 @@ export const metadata: Metadata = {
 
 export default async function TilesPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const [params, products] = await Promise.all([searchParams, getCatalogueProducts()]);
-
-  return (
-    <section className="site-container py-10">
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tiles" }]} />
-      <h1 className="text-4xl">Tile Catalogue</h1>
-      <p className="mt-3 max-w-2xl text-muted">Browse the Timeless Tiles demo catalogue and narrow designs by size, colour, finish, material, price, and application.</p>
-      <CatalogueExperience products={products} params={params} />
-    </section>
-  );
+  return <><PageHero compact eyebrow="Explore the catalogue" title="Our Tile" accent="Collections" description="Browse the Timeless Tiles demo catalogue and narrow designs by size, colour, finish, material, price, and application." image="/images/editorial/collections-hero.webp" alt="Architectural living space with polished tile floors" />
+    <section className="site-container pb-16 pt-6"><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tiles" }]} /><CategoryNavigation selected="all" /><CatalogueExperience products={products} params={params} /></section></>;
 }

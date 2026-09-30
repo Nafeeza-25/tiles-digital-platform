@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { guideImages } from "@/lib/visuals/assets";
 import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -65,6 +67,8 @@ export default async function GuideDetailPage({
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">{guide.intro}</p>
       </header>
+
+      <div className="relative mx-auto mt-8 aspect-[16/7] max-w-3xl overflow-hidden rounded-sm"><Image src={guideImages[guide.slug]} alt={`Illustrative architectural setting for ${guide.topicLabel.toLowerCase()}`} fill loading="eager" sizes="(max-width: 767px) 92vw, 768px" className="object-cover" /></div>
 
       <div className="mx-auto mt-8 max-w-3xl space-y-10 text-base leading-relaxed text-foreground">
         {guide.sections.map((section, idx) => (
@@ -136,6 +140,7 @@ export default async function GuideDetailPage({
               href={`/guides/${rel.slug}`}
               className="group block rounded-lg border bg-surface p-4 transition-all hover:border-primary"
             >
+              <div className="relative mb-3 aspect-[16/10] overflow-hidden rounded-sm"><Image src={guideImages[rel.slug]} alt="" fill sizes="(max-width: 639px) 90vw, 240px" className="object-cover" /></div>
               <span className="text-xs font-semibold text-primary">{rel.topicLabel}</span>
               <h3 className="mt-2 text-sm font-semibold line-clamp-2 group-hover:underline">
                 {rel.title}

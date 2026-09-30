@@ -15,25 +15,24 @@ export function CatalogueExperience({ basePath = "/tiles", categoryLabel, produc
 
   return (
     <>
-      <form method="get" className="mt-8 grid gap-4 border bg-surface p-4 md:grid-cols-[1fr_auto]">
-        <CatalogueQueryInputs params={params} omit={["q", "page"]} />
-        <div>
-          <label htmlFor="q" className="text-sm font-semibold">Search tiles</label>
-          <input id="q" name="q" defaultValue={state.q} placeholder="Search tiles, colours, materials..." className="mt-2 w-full border bg-background p-3" />
-        </div>
-        <button className="self-end bg-primary px-5 py-3 text-primary-foreground">Search</button>
-      </form>
-
-      <div className="mt-8 grid gap-8 lg:grid-cols-[17rem_1fr]">
+      <div className="mt-5 grid gap-7 lg:grid-cols-[14rem_minmax(0,1fr)]">
         <aside><CatalogueFilters basePath={basePath} products={products} params={params} state={state} /></aside>
-        <div>
-          <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="min-w-0">
+          <form id="catalogue-search" method="get" className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto]">
+            <CatalogueQueryInputs params={params} omit={["q", "page"]} />
+            <div>
+              <label htmlFor="q" className="text-sm font-semibold">Search tiles</label>
+              <input id="q" name="q" defaultValue={state.q} placeholder="Search tiles, colours, materials..." className="field mt-2 w-full" />
+            </div>
+            <button className="action-primary self-end">Search</button>
+          </form>
+          <div className="mt-5 flex flex-wrap items-end justify-between gap-4">
             <p className="text-sm text-muted">{resultText}</p>
             <CatalogueSort params={params} state={state} />
           </div>
           <ActiveFilters basePath={basePath} params={params} />
           {pagination.items.length ? (
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               {pagination.items.map((product) => <ProductCard key={product.id} product={product} href={product.category ? `/tiles/${product.category.slug}/${product.slug}` : null} ctaLabel="View Tile" />)}
             </div>
           ) : (

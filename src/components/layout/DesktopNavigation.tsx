@@ -1,1 +1,18 @@
-"use client"; import Link from "next/link"; import {usePathname} from "next/navigation"; import {site} from "@/data/site"; export function DesktopNavigation(){const path=usePathname(),tiles=path==="/tiles"||path.startsWith("/tiles/")||path==="/recommendations"; return <nav aria-label="Primary navigation" className="hidden items-center gap-5 lg:flex">{site.primaryNavigation.map(n=>n.label==="Tiles"?<details key={n.href} className="group relative"><summary className={`cursor-pointer list-none ${tiles?"text-primary":""}`}>Tiles</summary><div className="absolute left-0 top-8 z-20 w-56 border bg-surface p-3 shadow-[var(--shadow-subtle)]">{site.categories.map(c=><Link className="block p-2 hover:bg-surface-muted" href={c.href} key={c.href}>{c.label}</Link>)}<Link className="block p-2 hover:bg-surface-muted" href={site.recommendations.href}>{site.recommendations.label}</Link><Link className="block p-2 font-semibold text-primary" href="/tiles">View All Tiles</Link></div></details>:<Link className={path===n.href?"text-primary":""} href={n.href} key={n.href}>{n.label}</Link>)}</nav>}
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { site } from "@/data/site";
+
+export function DesktopNavigation() {
+  const path = usePathname();
+  const tiles = path === "/tiles" || path.startsWith("/tiles/") || path === "/recommendations";
+  return <nav aria-label="Primary navigation" className="desktop-navigation">
+    {site.primaryNavigation.map(item => item.label === "Tiles"
+      ? <details key={item.href} className="relative"><summary className={`nav-link cursor-pointer list-none ${tiles ? "is-active" : ""}`}>Tiles</summary><div className="nav-dropdown">
+        <Link href="/tiles">View All Tiles</Link>
+        {site.categories.map(category => <Link href={category.href} key={category.href}>{category.label}</Link>)}
+        <Link href={site.recommendations.href}>Room Recommendations</Link><Link href="/compare">Compare Tiles</Link>
+      </div></details>
+      : <Link className={`nav-link ${path === item.href ? "is-active" : ""}`} aria-current={path === item.href ? "page" : undefined} href={item.href} key={item.href}>{item.label}</Link>)}
+  </nav>;
+}

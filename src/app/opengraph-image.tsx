@@ -9,7 +9,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: "#1c2b26",
+          background: "#0C1720",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -27,7 +27,7 @@ export default function Image() {
             fontWeight: 700,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#e2b866",
+            color: "#E5B663",
             marginBottom: 20,
           }}
         >
@@ -48,7 +48,7 @@ export default function Image() {
           style={{
             fontSize: 26,
             lineHeight: 1.4,
-            color: "#a0b2aa",
+            color: "#D8DEE2",
             maxWidth: 800,
           }}
         >

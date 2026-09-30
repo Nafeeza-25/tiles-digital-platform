@@ -4,32 +4,13 @@ import { Container } from "@/components/ui/container";
 import { site } from "@/data/site";
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
-  return (
-    <footer className="mt-auto border-t bg-surface-muted py-12">
-      <Container className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <section>
-          <Image src="/images/brand/timeless-tiles-wordmark.svg" alt="Timeless Tiles" width={176} height={32} unoptimized className="h-8 w-44" />
-          <p className="mt-3 text-sm text-muted">A thoughtful academic demonstration of a contemporary tile brand.</p>
-        </section>
-        <section>
-          <h2>Explore</h2>
-          {site.primaryNavigation.slice(0, 4).map((item) => <Link className="mt-2 block text-sm" href={item.href} key={item.href}>{item.label}</Link>)}
-          <Link className="mt-2 block text-sm" href="/guides">Tile Guides</Link>
-          <Link className="mt-2 block text-sm" href="/compare">Compare Tiles</Link>
-          <Link className="mt-2 block text-sm" href={site.recommendations.href}>{site.recommendations.label}</Link>
-        </section>
-        <section>
-          <h2>Tile Categories</h2>
-          {site.categories.map((item) => <Link className="mt-2 block text-sm" href={item.href} key={item.href}>{item.label}</Link>)}
-        </section>
-        <section>
-          <h2>Company</h2>
-          {site.primaryNavigation.slice(-2).map((item) => <Link className="mt-2 block text-sm" href={item.href} key={item.href}>{item.label}</Link>)}
-        </section>
-      </Container>
-      <Container className="mt-10 text-sm text-muted">Timeless Tiles is a fictional academic demonstration brand. © {year} Timeless Tiles.</Container>
-    </footer>
-  );
+  return <footer className="site-footer mt-auto border-t py-14">
+    <Container className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <section><div className="flex items-center gap-3"><Image src="/images/brand/timeless-tiles-mark.svg" alt="" width={38} height={38} className="brand-mark" unoptimized /><p className="text-lg font-bold uppercase tracking-[.1em]">Timeless Tiles</p></div><p className="mt-5 max-w-xs text-sm leading-7 text-muted">A thoughtful academic demonstration of a contemporary tile brand. Beautiful spaces begin with considered choices.</p></section>
+      <section><h2>Explore</h2>{[["Home", "/"], ["Tile Catalogue", "/tiles"], ["Collections", "/collections"], ["Offers", "/offers"], ["Compare Tiles", "/compare"], ["Room Recommendations", "/recommendations"]].map(([label, href]) => <Link key={href} href={href} className="mt-2 block py-1 text-sm text-white/80">{label}</Link>)}</section>
+      <section><h2>Tile Categories</h2>{site.categories.map(item => <Link key={item.href} href={item.href} className="mt-2 block py-1 text-sm text-white/80">{item.label}</Link>)}</section>
+      <section><h2>Discover</h2>{[["About Us", "/about"], ["Tile Guides", "/guides"], ["Store Finder", "/stores"], ["Contact", "/contact"], ["Get a Quote", "/contact?intent=quote"]].map(([label, href]) => <Link key={href} href={href} className="mt-2 block py-1 text-sm text-white/80">{label}</Link>)}</section>
+    </Container>
+    <Container className="mt-10 flex flex-wrap justify-between gap-4 border-t border-white/15 pt-6 text-xs leading-6 text-muted"><p>Timeless Tiles is a fictional academic demonstration brand.</p><p>© {new Date().getFullYear()} Timeless Tiles.</p></Container>
+  </footer>;
 }

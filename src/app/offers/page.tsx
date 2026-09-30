@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { PageHero } from "@/components/ui/PageHero";
+import { productVisual } from "@/lib/visuals/assets";
 import type { Metadata } from "next";
 import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
@@ -15,64 +18,16 @@ export const metadata: Metadata = {
 
 export default async function OffersPage() {
   const products = await getCatalogueProducts();
-  const saleProducts = products.filter(
-    (product) => product.sale_price !== null && product.sale_price > 0 && product.sale_price < product.price
-  );
-
-  return (
-    <section className="site-container py-10">
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Offers" }]} />
-      <div className="max-w-3xl">
-        <h1 className="text-4xl">Tile Offers</h1>
-        <p className="mt-3 text-lg text-muted">
-          Browse active Timeless Tiles demo catalogue items currently showing reduced pricing.
-        </p>
-      </div>
-
-      <aside className="mt-6 border-l-4 border-primary bg-surface-muted p-4 text-sm text-muted">
-        <strong>Academic Demo Note:</strong> Offers reflect factual price reductions in the project database. No artificial countdown timers, fake stock urgency, or flash sale claims are used.
-      </aside>
-
-      <section className="mt-10" aria-labelledby="offers-heading">
-        <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <h2 id="offers-heading" className="text-2xl font-semibold">
-            {saleProducts.length === 1 ? "1 product on offer" : `${saleProducts.length} products on offer`}
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/tiles" className="inline-flex min-h-11 items-center border bg-surface px-4 text-sm font-semibold hover:bg-surface-muted">
-              Browse All Tiles
-            </Link>
-            <Link href="/contact?intent=quote" className="inline-flex min-h-11 items-center bg-primary px-4 text-sm font-semibold text-primary-foreground">
-              Get a Quote
-            </Link>
-          </div>
-        </div>
-
-        {saleProducts.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {saleProducts.map((product) => {
-              const savings = product.price - product.sale_price!;
-              const percent = Math.round((savings / product.price) * 100);
-              return (
-                <div key={product.id} className="flex flex-col">
-                  <ProductCard product={product} />
-                  <div className="border-x border-b bg-surface-muted p-3 text-xs font-semibold text-muted">
-                    Save {formatPrice(savings)} ({percent}% discount)
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="mt-8 border bg-surface p-8 text-center">
-            <h3 className="text-xl">No demo offers are currently available.</h3>
-            <p className="mt-2 text-muted">Check back later or browse the full catalogue for standard tile pricing.</p>
-            <Link href="/tiles" className="mt-6 inline-flex min-h-11 items-center bg-primary px-5 font-semibold text-primary-foreground">
-              Browse Tile Catalogue
-            </Link>
-          </div>
-        )}
+  const saleProducts = products.filter(product => product.sale_price !== null && product.sale_price > 0 && product.sale_price < product.price);
+  return <><PageHero eyebrow="Current catalogue offers" title="Selected Tiles." accent="Considered Prices." description="Browse active Timeless Tiles demo catalogue items currently showing genuine reduced pricing." image="/images/editorial/offers-hero.webp" alt="Illustrative architectural living room with warm tile finishes" />
+    <section className="site-container pb-16 pt-6"><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Offers" }]} />
+      {saleProducts.length ? <div className="mt-6 grid gap-5 lg:grid-cols-3">{saleProducts.slice(0, 3).map(product => <Link key={product.id} href={`/tiles/${product.category?.slug}/${product.slug}`} className="group relative isolate overflow-hidden rounded-sm bg-[#0C1720] p-6 text-white">
+        <Image src={productVisual(product.slug, "room")!} alt={`Illustrative ${product.name} room setting`} fill loading="eager" sizes="(max-width: 1023px) 92vw, 33vw" className="-z-2 object-cover" /><div className="absolute inset-0 -z-1 bg-[#0C1720]/60" />
+        <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E5B663]">{product.category?.name}</p><p className="mt-3 text-4xl font-bold">{Math.round(((product.price - product.sale_price!) / product.price) * 100)}% <span className="text-[#E5B663]">demo offer</span></p><h2 className="mt-3 text-xl">{product.name}</h2><p className="mt-2 text-sm">{formatPrice(product.sale_price!)}</p><span className="action-primary mt-6">Explore Offer</span>
+      </Link>)}</div> : null}
+      <aside className="mt-6 rounded-sm border-l-4 border-accent bg-surface-muted px-5 py-4 text-sm leading-6 text-muted"><strong>Academic Demo Note:</strong> Offers reflect current price reductions in the project catalogue. Prices are shown per square metre.</aside>
+      <section className="mt-12" aria-labelledby="offers-heading"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="mb-2 text-xs font-semibold uppercase tracking-[.18em] text-primary">Current selection</p><h2 id="offers-heading" className="text-3xl">{saleProducts.length === 1 ? "1 product on offer" : `${saleProducts.length} products on offer`}</h2></div><div className="flex gap-3"><Link href="/tiles" className="inline-flex min-h-11 items-center rounded-sm border px-4 text-sm font-semibold">Browse All Tiles</Link><Link href="/contact?intent=quote" className="action-primary">Get a Quote</Link></div></div>
+        {saleProducts.length ? <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{saleProducts.map(product => <div key={product.id}><ProductCard product={product} /><p className="mt-2 text-xs text-muted">Save {formatPrice(product.price - product.sale_price!)} ({Math.round(((product.price - product.sale_price!) / product.price) * 100)}% discount)</p></div>)}</div> : <div className="mt-8 rounded-sm border bg-surface p-8"><h3 className="text-xl">No demo offers are currently available.</h3><p className="mt-2 text-muted">Browse the full catalogue for standard tile pricing.</p><Link href="/tiles" className="action-primary mt-6">Browse Tile Catalogue</Link></div>}
       </section>
-    </section>
-  );
+    </section></>;
 }

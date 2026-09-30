@@ -1,3 +1,15 @@
-import Image from "next/image"; import Link from "next/link"; import { Container } from "@/components/ui/container"; import { SectionHeading } from "@/components/ui/section-heading"; import { site } from "@/data/site";
-const descriptions=["Foundations for living spaces and everyday movement.","Surfaces that add character and composure.","Calm, practical finishes for wet areas.","Backsplashes and surfaces for hardworking kitchens.","Durable finishes for patios and open-air spaces."];
-export function CategorySection(){return <section className="py-16 sm:py-24"><Container><SectionHeading eyebrow="Explore by space">Tile collections for every setting</SectionHeading><div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{site.categories.map((c,i)=><Link href={c.href} key={c.href} className="group overflow-hidden border bg-surface"><Image src={`/images/categories/${c.href.split("/").at(-1)}.svg`} alt={`${c.label} collection visual`} width={1600} height={1000} className="w-full transition-transform duration-300 group-hover:scale-[1.02]"/><div className="p-5"><h3 className="text-2xl">{c.label}</h3><p className="mt-2 text-sm leading-6 text-muted">{descriptions[i]}</p></div></Link>)}</div></Container></section>}
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Container } from "@/components/ui/container";
+import { site } from "@/data/site";
+
+export function CategorySection() {
+  return <section className="py-7 sm:py-8"><Container>
+    <h2 className="sr-only">Explore tile categories</h2>
+    <div className="grid gap-3 grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-5">{site.categories.map((category, index) => <Link href={category.href} key={category.href} className="group relative overflow-hidden rounded-sm bg-[#0C1720]">
+      <div className="relative aspect-[1.8/1]"><Image src={category.image} alt={`Illustrative ${category.label.toLowerCase()} interior`} fill loading={index === 0 ? "eager" : "lazy"} sizes="(max-width: 479px) 92vw, (max-width: 1023px) 45vw, 20vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" /></div>
+      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#0C1720]/85 px-4 py-3 text-white"><h3 className="text-xs font-bold uppercase tracking-wide">{category.label}</h3><ArrowRight size={17} aria-hidden /></div>
+    </Link>)}</div>
+  </Container></section>;
+}

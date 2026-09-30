@@ -1,3 +1,4 @@
+import { PageHero } from "@/components/ui/PageHero";
 import type { Metadata } from "next";
 import { createOpenGraphMetadata } from "@/lib/seo/metadata";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -15,5 +16,5 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
   const params = await searchParams;
   const slugs = normalizeCompareSlugs(params.product);
   const products = await getCompareProducts(slugs);
-  return <section className="site-container py-10"><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Compare Tiles" }]} /><h1 className="text-4xl">Compare Tiles</h1><p className="mt-3 max-w-2xl text-muted">Review the details that matter most before choosing a surface for your project.</p><CompareResults products={products} /></section>;
+  return <><PageHero eyebrow="Consider the details" title="Compare" accent="Tiles" description="Review the details that matter most before choosing a surface for your project." image="/images/editorial/about-material-detail.webp" alt="Illustrative close-up of tile surfaces for comparison" /><section className="site-container pb-16 pt-6"><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Compare Tiles" }]} /><CompareResults products={products} /></section></>;
 }

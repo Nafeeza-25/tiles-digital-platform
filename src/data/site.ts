@@ -1,9 +1,9 @@
 export const tileCategories = [
-  { slug: "floor-tiles", label: "Floor Tiles", href: "/tiles/floor-tiles", image: "/images/categories/floor-tiles.svg", description: "Durable-looking surfaces for living spaces, bedrooms, commercial interiors, and everyday floors." },
-  { slug: "wall-tiles", label: "Wall Tiles", href: "/tiles/wall-tiles", image: "/images/categories/wall-tiles.svg", description: "Decorative and practical wall finishes for considered interior spaces." },
-  { slug: "bathroom-tiles", label: "Bathroom Tiles", href: "/tiles/bathroom-tiles", image: "/images/categories/bathroom-tiles.svg", description: "Tile options for wet-area surfaces, grip, maintenance, and calm finishes." },
-  { slug: "kitchen-tiles", label: "Kitchen Tiles", href: "/tiles/kitchen-tiles", image: "/images/categories/kitchen-tiles.svg", description: "Easy-to-explore backsplash and surface options for kitchens and utility spaces." },
-  { slug: "outdoor-tiles", label: "Outdoor Tiles", href: "/tiles/outdoor-tiles", image: "/images/categories/outdoor-tiles.svg", description: "Textured and durable-looking tile options for balconies, patios, and exterior spaces." },
+  { slug: "floor-tiles", label: "Floor Tiles", href: "/tiles/floor-tiles", image: "/images/categories/floor.webp", description: "Durable-looking surfaces for living spaces, bedrooms, commercial interiors, and everyday floors." },
+  { slug: "wall-tiles", label: "Wall Tiles", href: "/tiles/wall-tiles", image: "/images/categories/wall.webp", description: "Decorative and practical wall finishes for considered interior spaces." },
+  { slug: "bathroom-tiles", label: "Bathroom Tiles", href: "/tiles/bathroom-tiles", image: "/images/categories/bathroom.webp", description: "Tile options for wet-area surfaces, grip, maintenance, and calm finishes." },
+  { slug: "kitchen-tiles", label: "Kitchen Tiles", href: "/tiles/kitchen-tiles", image: "/images/categories/kitchen.webp", description: "Easy-to-explore backsplash and surface options for kitchens and utility spaces." },
+  { slug: "outdoor-tiles", label: "Outdoor Tiles", href: "/tiles/outdoor-tiles", image: "/images/categories/outdoor.webp", description: "Textured and durable-looking tile options for balconies, patios, and exterior spaces." },
 ] as const;
 
 export type TileCategory = (typeof tileCategories)[number];
