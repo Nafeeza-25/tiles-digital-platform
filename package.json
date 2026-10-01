@@ -11,6 +11,7 @@
     "db:check-catalogue": "node --env-file=.env.local scripts/check-catalogue-data.mjs",
     "assets:generate": "node --env-file=.env.local scripts/generate-product-renders.mjs",
     "catalog:check": "node --env-file=.env.local scripts/check-catalogue-filters.mjs",
+    "price-filter:check": "node scripts/check-catalog-price-bounds.mjs",
     "category:check": "node --env-file=.env.local scripts/check-category-pages.mjs",
     "product:check": "node --env-file=.env.local scripts/check-product-pages.mjs",
     "compare:check": "node --env-file=.env.local scripts/check-comparison.mjs",
@@ -26,6 +27,7 @@
     "production:check": "node scripts/check-production-readiness.mjs",
     "deployment:check": "node scripts/check-deployment.mjs",
     "visual:check": "node scripts/check-premium-visuals.mjs"
+    ,"images:check": "node scripts/check-premium-visuals.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

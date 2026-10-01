@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CatalogueFilterPanel } from "./CatalogueFilterPanel";
+import { CataloguePriceInputs } from "./CataloguePriceInputs";
 import { CatalogueQueryInputs } from "@/components/catalog/CatalogueQueryInputs";
 import type { CatalogProduct, CatalogState, FilterKey, SearchParams } from "@/lib/catalog/catalog-filters";
 import { getFilterOptions } from "@/lib/catalog/catalog-filters";
@@ -40,14 +41,7 @@ export function CatalogueFilters({ basePath = "/tiles", products, params, state 
             </div>
           </fieldset>
         ))}
-        <label className="text-sm font-semibold">
-          Minimum price
-          <input type="number" name="minPrice" min="0" defaultValue={state.minPrice ?? ""} className="mt-1 w-full border p-2" />
-        </label>
-        <label className="text-sm font-semibold">
-          Maximum price
-          <input type="number" name="maxPrice" min="0" defaultValue={state.maxPrice ?? ""} className="mt-1 w-full border p-2" />
-        </label>
+        <CataloguePriceInputs minPrice={state.minPrice} maxPrice={state.maxPrice} />
         <button className="action-primary">Apply Filters</button>
         <Link href={basePath} className="text-center text-sm text-primary">Clear All</Link>
       </form>

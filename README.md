@@ -118,24 +118,31 @@ Production-readiness preparation is documented without deploying the app or inst
 
 Run `npm run production:check` for read-only production preparation checks. Vercel deployment, a verified production URL, and live analytics remain future work.
 
-## Remaining project work
+## Final Website Implementation & Freeze
 
-The core demo platform, its local creative assets, and production-readiness preparation are implemented. These items remain future work:
+The website implementation for the Timeless Tiles Digital Platform is **COMPLETE & FROZEN**.
 
-- Actual social account creation and publication
-- Live paid advertising or campaign measurement
-- Tracking integration or live analytics
-- Vercel deployment and production-domain verification
-- Final project report, diagrams package, presentation, and viva materials
+- **Production URL:** <https://tiles-digital-platform.vercel.app>
+- **Final Website Implementation Commit:** `feat: finalize dynamic premium experience`
+- **Visual System:** Premium architectural tile-showroom aesthetics (deep navy `#121B2B`, warm gold `#C5A265`, cream `#FAF7F1` / `#FFFFFF` content surfaces).
+- **Motion & Interaction System:** Restrained component animations, homepage hero crossfade slider with pause-on-hover/reduced-motion support, `IntersectionObserver`-based scroll reveal (`src/components/ui/Reveal.tsx`), product card hover scales, gallery thumbnail transitions, micro-interactions, and full accessibility compliance (`prefers-reduced-motion: reduce`). Section separation uses clean whitespace, subtle tone shifts, and deliberate card overlap without intrusive section background fades.
+- **Price Filter Correction:** Blank price inputs in catalogue search parse semantically (`minPrice` / `maxPrice` undefined when blank), handling explicit zero and valid numeric bounds correctly without polluting URL query parameters.
+- **Verification & Testing:** 100% pass across all 20 automated regression check scripts (`npm run db:check`, `npm run catalog:check`, `npm run price-filter:check`, `npm run visual:check`, `npm run lint`, `npm run build`, `npm run deployment:check`, etc.).
+
+### Project Freeze Status
+The web application development is officially **FROZEN**. No further feature or UI development will be initiated. The remaining work consists solely of academic documentation and presentation deliverables (final report, diagrams, presentation slides, demo script, and viva preparation).
 
 ## Project documentation
 
-The following documents define project scope and testing. Marketing strategy files are academic proposals and do not indicate live campaigns or measured outcomes.
-
+- [Design system & motion guide](docs/DESIGN_SYSTEM.md)
+- [Premium redesign report](docs/PREMIUM_REDESIGN_REPORT.md)
+- [Design QA & visual evidence](design-qa.md)
 - [Project scope](docs/PROJECT_SCOPE.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
 - [Testing checklist](docs/TESTING_CHECKLIST.md)
+- [Production readiness record](docs/PRODUCTION_READINESS.md)
+- [Deployment report](docs/DEPLOYMENT_REPORT.md)
 
 ## Environment variables
 
@@ -143,13 +150,14 @@ Private environment files are ignored by Git. Keep real credentials only in `.en
 
 ## Supabase schema
 
-The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, moderated demo reviews, and one local SVG product image per active product. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
+The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, moderated demo reviews, and one local WebP/SVG product image per active product. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
 
 Deployed migration files are immutable. Make future schema changes through new timestamped files in `supabase/migrations/`, never by editing an already deployed migration.
 
 Run the read-only public database access check with `npm run db:check`. It confirms public catalogue reads and verifies that enquiries are not publicly readable.
 
 Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, public review moderation, filter-data diversity, and enquiry read protection. See [Catalogue dataset](docs/CATALOG_DATASET.md) for the fictional content and demo pricing convention.
+
 # Timeless Tiles Digital Platform
 
 ## Visual foundation

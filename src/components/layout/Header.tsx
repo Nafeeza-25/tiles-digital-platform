@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Search } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
+import { useEffect, useState } from "react";
 
 export function Header() {
-  return <header className="site-header">
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => { const update = () => setScrolled(window.scrollY > 12); update(); window.addEventListener("scroll", update, { passive: true }); return () => window.removeEventListener("scroll", update); }, []);
+  return <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
     <Container className="relative flex min-h-[78px] items-center justify-between gap-4">
       <Link href="/" aria-label="Timeless Tiles home" className="flex shrink-0 items-center gap-3">
         <Image src="/images/brand/timeless-tiles-mark.svg" alt="" width={44} height={44} unoptimized className="brand-mark size-9 sm:size-11" />

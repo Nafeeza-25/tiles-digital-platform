@@ -55,9 +55,17 @@ function multi(value: string | string[] | undefined) {
   return Array.from(new Set((Array.isArray(value) ? value : value ? [value] : []).map((item) => item.trim()).filter(Boolean)));
 }
 
+export function hasIntentionalPriceBound(value: string) {
+  const normalized = value.trim();
+  if (!normalized) return false;
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) && parsed >= 0;
+}
+
 function nonNegativeNumber(value: string | string[] | undefined) {
-  const parsed = Number(first(value));
-  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+  const raw = first(value)?.trim();
+  if (!raw || !hasIntentionalPriceBound(raw)) return null;
+  return Number(raw);
 }
 
 export function parseCatalogState(searchParams: SearchParams): CatalogState {

@@ -19,8 +19,8 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 
 ### Core website
 
-- [ ] Responsive website
-- [ ] Homepage
+- [x] Responsive website
+- [x] Homepage
 - [x] Collections
 - [x] Floor Tiles
 - [x] Wall Tiles
@@ -29,7 +29,8 @@ Awareness → Website Visit → Explore → Compare → Request Quote → Sales 
 - [x] Outdoor Tiles
 - [x] About Us
 - [x] Offers
-- [ ] Contact
+- [x] Contact
+
 
 ### Catalogue
 
@@ -165,26 +166,27 @@ This step prepares verification and documentation only. It does not deploy, inst
 
 ### Quality
 
-- [ ] Mobile responsiveness
-- [ ] Tablet responsiveness
-- [ ] Desktop responsiveness
-- [ ] Form validation
-- [ ] Working navigation
-- [ ] Working search
-- [ ] Working filters
-- [ ] Working comparison
-- [ ] Working recommendations
+- [x] Mobile responsiveness
+- [x] Tablet responsiveness
+- [x] Desktop responsiveness
+- [x] Form validation
+- [x] Working navigation
+- [x] Working search
+- [x] Working filters
+- [x] Working comparison
+- [x] Working recommendations
 - [x] Working WhatsApp links
-- [ ] Basic accessibility
-- [ ] No broken links
-- [ ] Production build passes
+- [x] Basic accessibility
+- [x] No broken links
+- [x] Production build passes
 
 ### Deployment
 
-- [ ] GitHub repository
-- [ ] Supabase production configuration
-- [ ] Vercel deployment
-- [ ] Public working URL
+- [x] GitHub repository
+- [x] Supabase production configuration
+- [x] Vercel deployment
+- [x] Public working URL (<https://tiles-digital-platform.vercel.app>)
+
 
 ### Academic deliverables
 

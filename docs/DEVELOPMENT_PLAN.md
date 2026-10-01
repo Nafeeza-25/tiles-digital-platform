@@ -1,97 +1,31 @@
 # Development Plan
 
-Future phases remain planned unless explicitly marked complete below. Phase 10's academic marketing documentation, Step 24 local creative asset pack, and Step 26 production deployment are complete; live campaigns and academic submission materials remain planned.
+The website implementation for the Timeless Tiles Digital Platform is **COMPLETE & FROZEN**. All web application development phases (Phases 1 through 12) have been fully executed, tested, verified, and deployed to production at <https://tiles-digital-platform.vercel.app>. The next phase (Phase 13) consists solely of academic documentation and presentation deliverables.
 
-## Phase 1 - Foundation
+## Phase 1 - Foundation (Complete)
+## Phase 2 - Database & Seed Data (Complete)
+## Phase 3 - Design System & Layout (Complete)
+## Phase 4 - Catalogue & Product Pages (Complete)
+## Phase 5 - Search, Filters & Comparison (Complete)
+## Phase 6 - Room-wise Recommendations (Complete)
+## Phase 7 - Enquiries, Quotes & WhatsApp (Complete)
+## Phase 8 - Reviews & Store Finder (Complete)
+## Phase 9 - SEO & Content (Complete)
+## Phase 10 - Digital Marketing Deliverables (Documentation Complete)
+## Step 24 - Marketing Creative Asset Pack (Complete)
+## Step 25 - Production Readiness & QA Hardening (Complete)
+## Phase 11 - Testing & Optimization (Complete)
+- **Status:** Complete. All 20 automated regression check scripts pass 100%. Price filter edge-case resolved. Component motion system, homepage hero crossfade slider, and `IntersectionObserver` scroll reveals verified. Reduced-motion compliance confirmed.
 
-- **Purpose:** Establish the maintainable technical base.
-- **Major tasks:** Configure Next.js, TypeScript, Tailwind CSS, ESLint, project structure, environment safety, and Supabase helpers.
-- **Expected completion criteria:** A clean scaffold, documented scope, and a passing lint/build checkpoint.
+## Phase 12 - Deployment (Complete)
+- **Status:** Deployed & Verified. Live at <https://tiles-digital-platform.vercel.app>. `npm run deployment:check` verified.
 
-## Phase 2 - Database & Seed Data
+## Phase 13 - Academic Documentation & Presentation (IN PROGRESS / NEXT PHASE)
 
-- **Purpose:** Model the product and lead-generation data.
-- **Major tasks:** Design the schema, access policies, migrations, and representative product seed data.
-- **Expected completion criteria:** Reviewed database schema with secure Supabase configuration and usable seed data. The initial schema and fictional 40-product demo dataset are deployed, but this phase is not marked complete because future validation and ongoing data maintenance remain.
+- **Purpose:** Package the completed digital platform as a comprehensive academic submission and demonstration.
+- **Major tasks:** Final written academic report, system architecture & ER diagrams, implementation screenshots, testing matrix, slide deck (PPT), demo script, and viva preparation.
+- **Expected completion criteria:** All academic submission materials delivered without any further modification to the application codebase.
 
-## Phase 3 - Design System & Layout
-
-- **Purpose:** Establish visual consistency and responsive foundations.
-- **Major tasks:** Define UI primitives, typography, navigation, footer, layout patterns, and responsive rules.
-- **Expected completion criteria:** Reusable design system and shared layout components work across target breakpoints.
-
-## Phase 4 - Catalogue & Product Pages
-
-- **Purpose:** Make tile collections and product information explorable.
-- **Major tasks:** Build catalogue, category, product detail, image, specification, price, and application views.
-- **Expected completion criteria:** Seeded products display correctly through catalogue and detail journeys.
-
-## Phase 5 - Search, Filters & Comparison
-
-- **Purpose:** Help visitors narrow and evaluate tile options.
-- **Major tasks:** Add search, size, colour, finish, material, price, and application filters plus comparison.
-- **Expected completion criteria:** Search, all filters, and comparison return clear, accurate product results. Search, filters, and Tile Comparison are implemented for the public demo catalogue; room-wise recommendations remain planned.
-
-## Phase 6 - Room-wise Recommendations
-
-- **Purpose:** Guide visitors toward suitable products by room or use case.
-- **Major tasks:** Define recommendation rules and build the room-wise discovery interface.
-- **Expected completion criteria:** Recommendations are understandable, relevant, and linked to products. Implemented as a transparent room-tag and catalogue-preference filter, not AI or machine learning.
-
-## Phase 7 - Enquiries, Quotes & WhatsApp
-
-- **Purpose:** Convert visitor interest into actionable sales leads.
-- **Major tasks:** Build quote, product-enquiry, and contact forms; validate inputs; store enquiries; add WhatsApp links.
-- **Expected completion criteria:** Valid leads reach Supabase and users receive clear success or error feedback. Contact, quote, product-aware enquiry, and WhatsApp entry flows are implemented as fictional academic-demo submissions through the existing public INSERT-only RLS policy.
-
-## Phase 8 - Reviews & Store Finder
-
-- **Purpose:** Build trust and connect online visitors to local showrooms.
-- **Major tasks:** Add moderated review submission, store details, finder interactions, and maps/directions integration.
-- **Expected completion criteria:** Product review submission is implemented as a public INSERT-only, default-unapproved academic-demo flow. Manual moderation remains in the Supabase dashboard. Store Finder is implemented with active public records, URL-driven search, derived city filtering, factual contact links, and external directions links; it has no embedded map, Maps API, or geolocation tracking.
-
-## Phase 9 - SEO & Content
-
-- **Purpose:** Improve organic discoverability and useful product education.
-- **Major tasks:** Prepare keyword strategy document (`docs/SEO_KEYWORD_STRATEGY.md`), metadata, semantic structure, sitemap, robots rules, structured data, and long-form educational tile guides (`/guides` + 5 guide routes).
-- **Expected completion criteria:** Core pages and guides meet technical SEO standards, sitemap expanded to 59 URLs, and claim-safety guidelines enforced for "best tiles company" and "tiles near me" keywords. Technical SEO foundation and SEO Content layer are implemented; proposed social and paid campaign deliverables are documented in Phase 10, while live activity remains planned.
-
-## Phase 10 - Digital Marketing Deliverables — documentation complete
-
-- **Purpose:** Turn the platform into a campaign-ready marketing asset.
-- **Major tasks:** Create social strategies, content ideas, banners, content calendar, Google Ads proposal, keywords, ad copy, and landing-page strategy.
-- **Expected completion criteria:** A coherent, channel-specific academic proposal, four-week planned calendar, sample social/ad copy, campaign concepts, route mapping, and measurement framework are available. Completed in Step 23: see `docs/DIGITAL_MARKETING_STRATEGY.md`, `docs/GOOGLE_ADS_PLAN.md`, `docs/CONTENT_CALENDAR.md`, `docs/SOCIAL_CONTENT_LIBRARY.md`, and `docs/MARKETING_MEASUREMENT_PLAN.md`. No live accounts, ads, tracking, or campaign results are included.
-
-## Step 24 - Marketing Creative Asset Pack — local assets complete
-
-- **Purpose:** Produce a reviewable set of brand-aligned social, video, and campaign creatives.
-- **Completed:** 20 SVG assets in five channel/format groups, a factual asset manifest, creative guidelines, a responsive noindex preview at `/dev/marketing-preview`, and `npm run marketing-assets:check`. See `docs/MARKETING_ASSET_MANIFEST.md` and `docs/MARKETING_CREATIVE_GUIDELINES.md`.
-- **Remaining:** Publishing, live paid campaigns, tracking, analytics, and campaign results require future work. The pack is fictional academic-demo material.
-
-## Step 25 - Production Readiness, QA Hardening & Analytics Measurement Preparation — complete
-
-- **Purpose:** Prepare the app and project documentation for a later human-reviewed deployment.
-- **Completed:** Fixed the SEO checker module-type warning without changing package module mode; audited public environment variables and ignored credentials; added baseline response headers and branded error/404 UX; audited development routes, internal route patterns, placeholders, debug statements, secrets, and local assets; documented production routes, analytics events/privacy/conversions, environment setup, Vercel preparation, and limitations; added read-only `npm run production:check`.
-- **Verified:** Read-only Supabase RLS/data checks, application regression checks, production build, browser route/header checks, responsive checks, and manual accessibility checks are listed in `docs/TESTING_CHECKLIST.md` and the task verification report.
-- **Remaining:** Vercel deployment, production-domain verification, live analytics or conversions, real marketing activity, final report, diagrams, presentation, and viva materials. Do not deploy until the production URL and settings are reviewed.
-
-## Phase 11 - Testing & Optimization
-
-- **Purpose:** Verify quality, usability, and performance before release.
-- **Major tasks:** Execute functional, responsive, accessibility, link, and performance checks; fix findings.
-- **Expected completion criteria:** Applicable items in the testing checklist are validated and critical issues are resolved.
-
-## Phase 12 - Deployment
-
-- **Purpose:** Make the platform safely available online.
-- **Major tasks:** Configure GitHub, Supabase production settings, Vercel, environment variables, and production verification.
-- **Expected completion criteria:** A deployed public URL works with the required production configuration.
-
-## Phase 13 - Academic Documentation & Presentation
-
-- **Purpose:** Package the work as a complete academic submission and demonstration.
-- **Major tasks:** Prepare report sections, diagrams, screenshots, test documentation, presentation, demo script, and viva materials.
-- **Expected completion criteria:** All required academic deliverables are complete and aligned with the implemented platform.
 ## Visual foundation
 
 The reusable visual design system, 40 local product renders, category visuals, hero visual, and primary-image database records are complete. Homepage, catalogue UI, product details UI, search, filters, and Tile Comparison are implemented; recommendations remain planned.

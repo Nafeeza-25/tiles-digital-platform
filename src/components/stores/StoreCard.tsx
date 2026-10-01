@@ -9,7 +9,7 @@ export function StoreCard({ store }: { store: PublicStore }) {
   const whatsAppHref = buildStoreWhatsAppHref(store.whatsapp);
   const hours = openingHoursEntries(store.opening_hours);
   const image = storeImages[store.slug];
-  return <article className="flex h-full flex-col overflow-hidden rounded-sm border bg-surface shadow-[var(--shadow-subtle)]">
+  return <article className="surface-card flex h-full flex-col overflow-hidden rounded-sm border bg-surface shadow-[var(--shadow-subtle)]">
     {image ? <div className="relative aspect-[16/9]"><Image src={image} alt={`Illustrative showroom image for the fictional ${store.name}`} fill loading="eager" sizes="(max-width: 767px) 92vw, (max-width: 1279px) 45vw, 33vw" className="object-cover" /></div> : null}
     <div className="flex flex-1 flex-col p-5 sm:p-6"><p className="text-[10px] font-semibold uppercase tracking-[.18em] text-primary">Fictional demo location</p><h3 className="mt-2 text-2xl">{store.name}</h3><address className="mt-4 text-sm not-italic leading-7 text-muted">{storeAddress(store)}</address>
       {hours.length ? <section className="mt-5"><h4 className="text-xs font-semibold uppercase tracking-[.12em]">Opening hours</h4><dl className="mt-3 grid gap-2 text-xs">{hours.map(([day, time]) => <div key={day} className="flex justify-between gap-3"><dt>{day}</dt><dd className="text-right text-muted">{time}</dd></div>)}</dl></section> : null}
