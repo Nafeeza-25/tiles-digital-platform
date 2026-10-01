@@ -132,6 +132,18 @@ The website implementation for the Timeless Tiles Digital Platform is **COMPLETE
 ### Project Freeze Status
 The web application development is officially **FROZEN**. No further feature or UI development will be initiated. The remaining work consists solely of academic documentation and presentation deliverables (final report, diagrams, presentation slides, demo script, and viva preparation).
 
+## Academic Report & Documentation Package
+
+- **[Final Project Report](docs/FINAL_PROJECT_REPORT.md)** — Comprehensive 33-section academic submission report.
+- **[Executive Project Summary](docs/PROJECT_SUMMARY.md)** — Concise 2-page project overview.
+- **[System Architecture Diagram](docs/diagrams/SYSTEM_ARCHITECTURE.md)** — Mermaid diagram showing Client, Hosting, App Logic, and Database tiers.
+- **[Database ER Diagram](docs/diagrams/ER_DIAGRAM.md)** — Mermaid diagram modeling relational schema and key constraints.
+- **[Customer Journey Flowchart](docs/diagrams/CUSTOMER_JOURNEY.md)** — 4-stage journey mapped to web features.
+- **[Marketing Funnel Flowchart](docs/diagrams/MARKETING_FUNNEL.md)** — 7-stage marketing conversion funnel.
+- **[Project Feature Matrix](docs/FEATURE_MATRIX.md)** — Complete requirement-to-implementation mapping matrix.
+- **[Test Summary Report](docs/TEST_SUMMARY.md)** — Verification results across all 21 automated regression check scripts.
+- **[Screenshot Evidence Plan](docs/SCREENSHOT_EVIDENCE_PLAN.md)** — 21-item screenshot submission inventory.
+
 ## Project documentation
 
 - [Design system & motion guide](docs/DESIGN_SYSTEM.md)
@@ -143,6 +155,7 @@ The web application development is officially **FROZEN**. No further feature or 
 - [Testing checklist](docs/TESTING_CHECKLIST.md)
 - [Production readiness record](docs/PRODUCTION_READINESS.md)
 - [Deployment report](docs/DEPLOYMENT_REPORT.md)
+
 
 ## Environment variables
 
