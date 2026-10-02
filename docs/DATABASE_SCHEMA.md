@@ -66,4 +66,4 @@ The schema supports the product catalogue, category browsing, image galleries, a
 
 The linked Supabase schema is the project database schema. The generated [`Database` type](../src/types/database.types.ts) is produced from that deployed schema and is used by both Supabase client helpers.
 
-The deployed `20260928000000_initial_schema.sql` and `20260928231512_seed_catalogue.sql` migrations are immutable. Future schema changes must use new timestamped migration files; do not edit migration history after deployment. See [Timeless Tiles demo dataset](CATALOG_DATASET.md) for dataset conventions.
+The deployed `20260928000000_initial_schema.sql` and `20260928231512_seed_catalogue.sql` migrations are immutable. Future schema changes must use new timestamped migration files; do not edit migration history after deployment. See [Final Project Report](FINAL_PROJECT_REPORT.md) for dataset conventions.

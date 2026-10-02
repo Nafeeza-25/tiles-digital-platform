@@ -1,138 +1,78 @@
-# Tiles Digital Platform
+# Timeless Tiles Digital Platform
 
-An academic and practical project exploring the digital transformation and marketing strategy for a tiles company.
+> **Fictional Academic Demo Disclosure:**
+> Timeless Tiles is a fictional academic demonstration platform created strictly for educational evaluation and project demonstration. All products, prices (expressed in INR ₹/sq.m.), customer reviews, showroom addresses, phone numbers, and marketing campaign proposals represent fictional academic-demo records. The platform does not represent a real commercial entity, does not process real payments, does not publish real digital ads, and does not conduct commercial transactions.
 
-## Tech stack
+---
 
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- ESLint
-- Supabase (public demo catalogue backend and database)
-- Vercel (production deployment)
+## Project Overview
 
-## Production
-
-The academic demonstration is deployed at <https://tiles-digital-platform.vercel.app>. Vercel builds the `main` branch from GitHub using `npm install` and `npm run build`. Live verification is documented in [Deployment Report](docs/DEPLOYMENT_REPORT.md); rerun the read-only check with `npm run deployment:check`.
-
-The production site uses Supabase public client configuration with row-level security. It contains fictional academic-demo content; it has no authentication, real payments, email delivery, or live analytics. Do not submit production forms during verification.
-
-## Development setup
-
-1. Install dependencies with `npm install`.
-2. Create `.env.local` in the repository root:
-
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=<project URL>
-   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<publishable key>
-   ```
-
-   Both values are available from your Supabase project's **Connect** or **API Keys** interface.
-   Never commit `.env.local`. Never use a Supabase secret key or `service_role` key in browser code; the publishable key is the correct client-side project key.
-
-3. Start the development server with `npm run dev`.
-4. Visit `http://localhost:3000`.
-
-## Implemented comparison
-
-Tile Comparison is implemented for the fictional demo catalogue. Visitors can select up to three tiles, keep the selection locally in their browser, and share a `/compare?product=<slug>&product=<slug>` URL that resolves current public catalogue data.
-
-Run `npm run compare:check` to verify that active products expose safe primary local image data for comparison.
-
-## Implemented room recommendations
-
-Room Recommendations use only the fictional catalogue's room-suitability tags and optional exact colour, finish, material, and maximum effective-price filters. The resulting `/recommendations` URLs are shareable. This is a transparent rule/tag-based system, not trained machine learning or AI.
-
-## Implemented lead generation
-
-`/contact` now supports contact, quote, and product-aware enquiry URLs. Forms are validated with Zod and react-hook-form, then use the existing Supabase public INSERT policy for fictional academic-demo enquiries. Public enquiry records remain unreadable. WhatsApp links use existing safe demo-store data when available; no real business contact details are invented.
-
-## Implemented review submission
-
-Every active product detail page includes a product-aware review form. It validates name, whole-star rating, optional title, and comment with Zod and react-hook-form, then submits only the public review fields through Supabase. Reviews are fictional academic-demo submissions, default to unapproved under the existing RLS policy, and never appear publicly until manually moderated in the Supabase dashboard. Public reads continue to return approved reviews only; no review moderation dashboard is implemented here. Run `npm run review:check` to verify the public safety boundary without creating a row.
-
-## Implemented Store Finder
-
-`/stores` reads the existing active fictional Timeless Tiles demo-store records through the Supabase public read policy. It has shareable `q` search and a city filter derived only from active records, plus factual phone, email, WhatsApp, opening-hours, and external directions links when the stored field supports them. It does not use geolocation tracking, an embedded map, or an external Maps API. Run `npm run store:check` for the read-only Store Finder and policy verification.
-
-## Implemented public content pages
-
-`/collections`, `/offers`, and `/about` are fully implemented with data-driven catalogue integration:
-- `/collections`: Renders five transparent, attribute-based editorial groupings (Featured, New Arrivals, Sale Selection, Outdoor Living, Wet Area Selection) with live product preview cards and direct catalogue links.
-- `/offers`: Displays genuine sale-priced items (`sale_price < price`) with calculated savings amounts, discount percentages, and clear academic-demo disclosures without artificial countdowns.
-- `/about`: Presents the academic-demo project context, digital opportunity, implemented capabilities, four target audience overviews, and four-step customer journey.
-Run `npm run public-pages:check` to verify data-driven collections, offer calculations, and security protections.
-
-## Implemented Technical SEO foundation
-
-Technical SEO infrastructure is implemented across all public routes:
-- **Title template & metadata:** Root layout defines `%s | Timeless Tiles` template, default fallback title, metadataBase, Open Graph, and Twitter card defaults.
-- **Site URL abstraction:** Resolves production domain safely via `NEXT_PUBLIC_SITE_URL`, `VERCEL_PROJECT_PRODUCTION_URL`, `VERCEL_URL`, or `http://localhost:3000` fallback (`src/lib/seo/site-url.ts`).
-- **Canonical URL strategy:** Every page exports explicit canonical metadata. Filter/search/pagination variants canonicalize to stable base routes (`/tiles`, `/tiles/[categorySlug]`, `/recommendations`, `/stores`, `/contact`, `/compare`).
-- **Dynamic XML Sitemap:** `/sitemap.xml` generates stable URLs covering the homepage, catalogue, 5 category pages, 40 active products, collections, offers, about, recommendations, contact, and stores while excluding query parameters, inactive products, and `/dev/visual-check`.
-- **Robots.txt:** `/robots.txt` points to `/sitemap.xml`, permits search engine crawling of public pages, and disallows `/dev/`.
-- **Open Graph Image:** `/opengraph-image` generates branded social card previews dynamically via Next.js `ImageResponse`.
-- **Breadcrumb JSON-LD:** Structured `BreadcrumbList` schema rendered via `<JsonLd>` helper. Commercial schemas (LocalBusiness, AggregateRating, Product offer schema) are intentionally omitted for academic demo compliance.
-Run `npm run seo:check` to verify canonical URLs, site URL abstraction, sitemap datasets, and structured data safety.
-
-## Implemented SEO Content & Keyword Strategy
-
-Educational long-form tile guide system and keyword mapping are implemented:
-- **Guide architecture & route:** `/guides` and 5 detailed guide routes (`/guides/[slug]`) covering bathroom tiles, floor tile specifications, room suitabilities, nearby store criteria, and tile company evaluation.
-- **Keyword mapping & strategy:** Documented in [`docs/SEO_KEYWORD_STRATEGY.md`](docs/SEO_KEYWORD_STRATEGY.md) without fabricated keyword metrics.
-- **Internal linking network:** Contextual cross-links connect guides, catalogue categories, recommendations, Store Finder, and quote enquiries.
-- **Claim safety compliance:** Addressed phrases like "best tiles company" and "tiles near me" strictly informationally without making unsupported superiority or physical retail claims.
-Run `npm run seo-content:check` to verify guide structure, slug uniqueness, claim-safety, and sitemap URL expansion (59 URLs).
-
-## Digital marketing deliverables
-
-Step 23 documentation is complete as a proposed academic campaign plan. It includes channel strategies for Instagram, Facebook, and YouTube; short-form concepts; a proposed Google Ads structure and sample copy; a four-week calendar; social copy; integrated campaigns; funnel and destination mapping; and a KPI framework. All campaigns remain fictional examples: no accounts, ads, analytics, or tracking have been created, and no results are claimed.
-
-- [Digital marketing strategy](docs/DIGITAL_MARKETING_STRATEGY.md)
-- [Google Ads proposal](docs/GOOGLE_ADS_PLAN.md)
-- [Four-week content calendar](docs/CONTENT_CALENDAR.md)
-- [Social content library](docs/SOCIAL_CONTENT_LIBRARY.md)
-- [Marketing measurement plan](docs/MARKETING_MEASUREMENT_PLAN.md)
-
-Run `npm run marketing:check` to check required deliverables, planned calendar coverage, claim/data safeguards, and implemented destination routes. This is a documentation check; it does not launch campaigns or add tracking.
-
-### Marketing creative asset pack — Step 24
-
-The local asset pack contains 20 original, brand-aligned SVG creatives: six Instagram squares, four Stories/Reels/Shorts, three Facebook link graphics, four YouTube thumbnails, and three campaign banners. The manifest records each asset's dimensions, intended channel, message, CTA, destination, accessibility text, and source data. Review the responsive, noindex preview at `/dev/marketing-preview` while the local app is running.
-
-- [Asset manifest](public/marketing/manifest.json)
-- [Manifest documentation](docs/MARKETING_ASSET_MANIFEST.md)
-- [Creative guidelines](docs/MARKETING_CREATIVE_GUIDELINES.md)
-
-Run `npm run marketing-assets:check` to validate files, metadata, verified demo sale data, routes, and preview indexing safeguards. The assets are fictional academic-demo creatives; social publication, paid campaign launch, analytics/tracking, and campaign results remain planned.
-
-## Production preparation — Step 25
-
-Production-readiness preparation is documented without deploying the app or installing analytics. It includes public environment-variable setup, a route inventory, baseline response headers, branded error and not-found states, credential and public-route audits, provider-neutral analytics planning, and a Vercel deployment checklist.
-
-- [Environment configuration](docs/ENVIRONMENT_CONFIGURATION.md)
-- [Production route inventory](docs/PRODUCTION_ROUTE_INVENTORY.md)
-- [Analytics event plan](docs/ANALYTICS_EVENT_PLAN.md)
-- [Vercel deployment checklist](docs/VERCEL_DEPLOYMENT_CHECKLIST.md)
-- [Production readiness record](docs/PRODUCTION_READINESS.md)
-
-Run `npm run production:check` for read-only production preparation checks. Vercel deployment, a verified production URL, and live analytics remain future work.
-
-## Final Website Implementation & Freeze
-
-The website implementation for the Timeless Tiles Digital Platform is **COMPLETE & FROZEN**.
+An end-to-end digital transformation platform and multi-channel marketing strategy for a contemporary tiles company. The system provides a high-performance visual product catalogue, dynamic search and multi-criteria attribute filtering, interactive tile comparison, transparent room recommendations, multi-intent lead capture (Quote, Product Enquiry, WhatsApp), showroom store finder, technical SEO automation, educational guides, and a digital marketing strategy.
 
 - **Production URL:** <https://tiles-digital-platform.vercel.app>
-- **Final Website Implementation Commit:** `feat: finalize dynamic premium experience`
-- **Visual System:** Premium architectural tile-showroom aesthetics (deep navy `#121B2B`, warm gold `#C5A265`, cream `#FAF7F1` / `#FFFFFF` content surfaces).
-- **Motion & Interaction System:** Restrained component animations, homepage hero crossfade slider with pause-on-hover/reduced-motion support, `IntersectionObserver`-based scroll reveal (`src/components/ui/Reveal.tsx`), product card hover scales, gallery thumbnail transitions, micro-interactions, and full accessibility compliance (`prefers-reduced-motion: reduce`). Section separation uses clean whitespace, subtle tone shifts, and deliberate card overlap without intrusive section background fades.
-- **Price Filter Correction:** Blank price inputs in catalogue search parse semantically (`minPrice` / `maxPrice` undefined when blank), handling explicit zero and valid numeric bounds correctly without polluting URL query parameters.
-- **Verification & Testing:** 100% pass across all 20 automated regression check scripts (`npm run db:check`, `npm run catalog:check`, `npm run price-filter:check`, `npm run visual:check`, `npm run lint`, `npm run build`, `npm run deployment:check`, etc.).
+- **Repository:** GitHub — `Nafeeza-25/tiles-digital-platform` (`main` branch)
+- **Status:** **COMPLETE & FROZEN** (Website Implementation & Academic Documentation Complete)
 
-### Project Freeze Status
-The web application development is officially **FROZEN**. No further feature or UI development will be initiated. The remaining work consists solely of academic documentation and presentation deliverables (final report, diagrams, presentation slides, demo script, and viva preparation).
+---
 
-## Academic Report & Documentation Package
+## Technology Stack
+
+- **Framework:** Next.js 16 (App Router with Turbopack)
+- **Language:** TypeScript 5 (Strict Mode)
+- **Styling & Design System:** Tailwind CSS v4, Vanilla CSS Design Tokens (`#121B2B` Navy, `#C5A265` Gold, `#FAF7F1` Cream)
+- **Database & Backend:** Supabase PostgreSQL with Row Level Security (RLS)
+- **Form Handling & Validation:** React Hook Form, Zod Schema Validation
+- **Deployment & Hosting:** Vercel Edge Network, GitHub `main` branch integration
+- **Icons & Assets:** Lucide React, 150 local WebP presentation images, 20 SVG marketing assets, 40 product SVG fallbacks
+
+---
+
+## Major Implemented Features
+
+1. **Photographic Hero & Visual Shell:** Responsive architectural visual system with a 3-slide hero crossfade slider, category strip visual overlap, and reduced-motion accessibility.
+2. **Dynamic Catalogue & Search (`/tiles`):** Displays 40 active products across 5 categories with real-time keyword search, multi-value attribute filtering, semantic price bounds parsing (`minPrice`/`maxPrice`), sorting, and pagination.
+3. **Product Detail Experience (`/tiles/[categorySlug]/[productSlug]`):** Gallery thumbnail switching (Texture, Room, Detail), specifications table, room suitability tags, and moderated user review submission.
+4. **Tile Comparison (`/compare`):** Side-by-side spec matrix comparing up to 3 tiles with shareable URL state and `localStorage` persistence.
+5. **Room Recommendations (`/recommendations`):** Deterministic tag-based recommendation matching tiles by room suitabilities (`living_room`, `bathroom`, `kitchen`, etc.).
+6. **Multi-Intent Lead Generation (`/contact`):** Validated forms for Quote Requests, Product Enquiries, and General Contact inserting into Supabase via RLS.
+7. **One-Click WhatsApp Chat:** Pre-filled WhatsApp direct link generator encoding product context and showroom numbers.
+8. **Showroom Store Finder (`/stores`):** Search and city filtering for 3 active demo showrooms (`timeless-tiles-central`, `design-studio`, `trade-centre`).
+9. **Technical SEO Automation:** Dynamic XML Sitemap (59 URLs), Open Graph card generator (`/opengraph-image`), robots.txt, canonical metadata, and Breadcrumb JSON-LD.
+10. **Educational Tile Guides (`/guides`):** 5 long-form educational guides covering tile selection, bathroom design, floor specs, store evaluation, and company quality.
+
+---
+
+## Local Development Setup
+
+1. Clone the repository and install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env.local` file in the project root and define the variable names listed below using your own project values.
+
+   *Note: Never commit `.env.local`. Never use a Supabase secret key or `service_role` key in browser client code.*
+
+3. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open `http://localhost:3000` in your browser.
+
+---
+
+## Environment Variables
+
+| Variable Name | Required | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | Yes | Supabase project REST API endpoint URL |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Yes | Supabase public client publishable key (RLS enforced) |
+| `NEXT_PUBLIC_SITE_URL` | Optional | Canonical site origin; when omitted, the application uses `VERCEL_PROJECT_PRODUCTION_URL`, then `VERCEL_URL`, then its local fallback. |
+
+---
+
+## Core Academic Documentation Package
 
 - **[Final Project Report](docs/FINAL_PROJECT_REPORT.md)** — Comprehensive 33-section academic submission report.
 - **[Executive Project Summary](docs/PROJECT_SUMMARY.md)** — Concise 2-page project overview.
@@ -144,48 +84,16 @@ The web application development is officially **FROZEN**. No further feature or 
 - **[Test Summary Report](docs/TEST_SUMMARY.md)** — Verification results across all 21 automated regression check scripts.
 - **[Screenshot Evidence Plan](docs/SCREENSHOT_EVIDENCE_PLAN.md)** — 21-item screenshot submission inventory.
 
-## Project documentation
+## Marketing & Technical Documentation
 
-- [Design system & motion guide](docs/DESIGN_SYSTEM.md)
-- [Premium redesign report](docs/PREMIUM_REDESIGN_REPORT.md)
-- [Design QA & visual evidence](design-qa.md)
-- [Project scope](docs/PROJECT_SCOPE.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Development plan](docs/DEVELOPMENT_PLAN.md)
-- [Testing checklist](docs/TESTING_CHECKLIST.md)
-- [Production readiness record](docs/PRODUCTION_READINESS.md)
-- [Deployment report](docs/DEPLOYMENT_REPORT.md)
-
-
-## Environment variables
-
-Private environment files are ignored by Git. Keep real credentials only in `.env.local`; `.env.example` contains safe placeholders for the expected variables. Supabase validation runs only when a Supabase client is created, so the homepage can run before `.env.local` is populated.
-
-## Supabase schema
-
-The initial schema and fictional Timeless Tiles demo catalogue are deployed to the linked Supabase project. The database includes 5 categories, 40 products, 3 demo stores, moderated demo reviews, and one local WebP/SVG product image per active product. TypeScript database types in `src/types/database.types.ts` are generated from the deployed schema.
-
-Deployed migration files are immutable. Make future schema changes through new timestamped files in `supabase/migrations/`, never by editing an already deployed migration.
-
-Run the read-only public database access check with `npm run db:check`. It confirms public catalogue reads and verifies that enquiries are not publicly readable.
-
-Run `npm run db:check-catalogue` to verify the deployed demo catalogue counts, public review moderation, filter-data diversity, and enquiry read protection. See [Catalogue dataset](docs/CATALOG_DATASET.md) for the fictional content and demo pricing convention.
-
-# Timeless Tiles Digital Platform
-
-## Visual foundation
-
-The project now includes a reusable local design system, Timeless Tiles brand SVG assets, five category visuals, a hero composition, and 40 original deterministic local demo product renders. Each active product has one deployed primary `product_images` record pointing to its local SVG. Product details and Tile Comparison are implemented; room-wise recommendations remain planned.
-
-## Responsive shell
-
-The responsive global layout, desktop and mobile navigation, footer, breadcrumbs, and route foundations are implemented. Product details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder are implemented.
-
-## Homepage
-
-The homepage now uses read-only deployed demo data for featured products, actual demo offers, and approved reviews. It includes local visual assets, category links, audience and journey sections, and quote/catalogue CTAs. Product details, Tile Comparison, Room Recommendations, lead-generation enquiry flows, moderated review submission, and Store Finder are implemented.
-
-## Catalogue
-
-The `/tiles` catalogue, category pages, and product detail pages use deployed read-only catalogue data with URL-driven search, multi-value filters, effective-price filtering, specifications, approved demo reviews, related collection products, empty states, and a moderated public review-submission form. Tile Comparison, room recommendations, lead-generation forms, and Store Finder are implemented.
-
+- **[Database Schema Reference](docs/DATABASE_SCHEMA.md)** — Relational tables, fields, RLS policies, and migrations.
+- **[Design System & Motion Guide](docs/DESIGN_SYSTEM.md)** — Palette tokens, typography, component motion, and accessibility rules.
+- **[SEO Keyword Strategy](docs/SEO_KEYWORD_STRATEGY.md)** — Intent mapping, educational keyword strategy, and claim safety rules.
+- **[Digital Marketing Strategy](docs/DIGITAL_MARKETING_STRATEGY.md)** — Multi-channel proposal (Instagram, Facebook, YouTube, Google Ads).
+- **[Google Ads Campaign Proposal](docs/GOOGLE_ADS_PLAN.md)** — Search keyword structures, negative keywords, and responsive ad copy.
+- **[Four-Week Content Calendar](docs/CONTENT_CALENDAR.md)** — 28 planned social calendar entries with destination mappings.
+- **[Social Content Library](docs/SOCIAL_CONTENT_LIBRARY.md)** — Copy library and hashtag frameworks.
+- **[Marketing Measurement Plan](docs/MARKETING_MEASUREMENT_PLAN.md)** — Event taxonomy, funnel definitions, and KPI frameworks.
+- **[Marketing Asset Manifest](docs/MARKETING_ASSET_MANIFEST.md)** — Metadata for 20 original SVG graphics (`/dev/marketing-preview`).
+- **[Production Readiness Record](docs/PRODUCTION_READINESS.md)** — Production audit, response headers, and security verification.
+- **[Deployment Report](docs/DEPLOYMENT_REPORT.md)** — Vercel production deployment reference.

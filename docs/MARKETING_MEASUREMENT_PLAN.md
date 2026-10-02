@@ -42,6 +42,10 @@ These formulas are definitions, not calculated results. Actual performance canno
 - Treat attribution as directional unless a valid, consent-aware measurement design supports stronger conclusions.
 - Set numeric targets only after a baseline, project objective, and measurement capability are agreed; this academic plan invents none.
 
+## Privacy and data minimization
+
+Never send a person's name, phone number, email address, message contents, free-text review content, full address, or credentials to an analytics provider. Do not transmit search terms or form values; keep future event parameters limited to non-sensitive identifiers and categorical fields needed for measurement.
+
 ## Event definitions for a future implementation
 
 If separately approved and privacy-reviewed, define events for catalogue/category view, product detail view, search/filter interaction, recommendation start, compare use, guide view, quote/contact/product-enquiry submission, WhatsApp click, Store Finder view, directions click, and phone click. Specify whether each event is a page view, intent action, or completed submission. Store Finder actions on fictional data must not be reported as real visits.

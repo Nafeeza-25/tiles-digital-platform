@@ -12,7 +12,7 @@ The application uses Supabase with the publishable key and public policies. Cata
 
 ## Production deployment and environment configuration
 
-The deployed production URL is <https://tiles-digital-platform.vercel.app> on Vercel, connected to GitHub repository `Nafeeza-25/tiles-digital-platform` and production branch `main`. The environment variable names are `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `NEXT_PUBLIC_SITE_URL`; Vercel system URL names used as fallbacks are `VERCEL_PROJECT_PRODUCTION_URL` and `VERCEL_URL`. Values are not recorded. `.env.local` is ignored and untracked. See [Environment Configuration](ENVIRONMENT_CONFIGURATION.md), [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md), and [Deployment Report](DEPLOYMENT_REPORT.md).
+The deployed production URL is <https://tiles-digital-platform.vercel.app> on Vercel, connected to GitHub repository `Nafeeza-25/tiles-digital-platform` and production branch `main`. The environment variable names are `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `NEXT_PUBLIC_SITE_URL`; Vercel system URL names used as fallbacks are `VERCEL_PROJECT_PRODUCTION_URL` and `VERCEL_URL`. Values are not recorded. `.env.local` is ignored and untracked. See [Deployment Report](DEPLOYMENT_REPORT.md) and [Final Project Report](FINAL_PROJECT_REPORT.md).
 
 ## Error handling and not-found UX
 
@@ -20,7 +20,8 @@ The root route error boundary gives generic user-safe copy, retry, catalogue, an
 
 ## SEO and routes
 
-The public route inventory is documented in [Production Route Inventory](PRODUCTION_ROUTE_INVENTORY.md). The sitemap currently describes 59 public entries and excludes comparison state and `/dev/` routes. `robots.txt` disallows `/dev/`; both development pages declare `noindex` and `nofollow`.
+The public route inventory is documented in [Final Project Report](FINAL_PROJECT_REPORT.md). The sitemap currently describes 59 public entries and excludes comparison state and development preview routes (`/dev/visual-check` and `/dev/marketing-preview`). `robots.txt` disallows `/dev/`; both development pages declare `noindex` and `nofollow`.
+
 
 ## Marketing assets
 
@@ -40,7 +41,7 @@ Verified locally against the optimized production build on 2026-09-29. `npm run 
 
 The production server returned the expected baseline headers on the home and unknown routes. The unknown route returned HTTP 404 and the branded not-found content. The home, catalogue, product, contact, store finder, and guide routes were checked at 320, 375, 768, 1024, and 1440 CSS pixels: one H1 per page, no horizontal overflow, and no unlabeled visible form controls. Keyboard Tab reached the visible skip link. Production live verification also checked route responses, metadata, sitemap, robots, Open Graph image, headers, dev-route indexing, first-party assets, and client bundles. Public Supabase/RLS reads passed. Forms were inspected but not submitted; no production records were written. These are representative smoke, responsive, and basic accessibility checks, not an exhaustive browser matrix or a formal WCAG audit. The read-only checks are repeatable with `npm run deployment:check`.
 
-The public route smoke check also covered category, collections, offers, About, comparison, recommendations, contact, stores, guide details, sitemap, robots, and the 404 route. `npm run production:check` checks 72 literal internal links against known route patterns. This is a static route check, not an external-link checker.
+The public route smoke check also covered category, collections, offers, About, comparison, recommendations, contact, stores, guide details, sitemap, robots, and the 404 route. `npm run production:check` checks 79 literal internal links against known route patterns. This is a static route check, not an external-link checker.
 
 ## Known limitations
 
@@ -55,11 +56,12 @@ The public route smoke check also covered category, collections, offers, About, 
 
 ## Deployment reference
 
-The live deployment procedure and evidence are recorded in the completed [Vercel Deployment Checklist](VERCEL_DEPLOYMENT_CHECKLIST.md) and [Deployment Report](DEPLOYMENT_REPORT.md).
+The live deployment procedure and evidence are recorded in [Deployment Report](DEPLOYMENT_REPORT.md) and [Final Project Report](FINAL_PROJECT_REPORT.md).
 
 ## Analytics status
 
-Provider-neutral event planning, privacy limits, and future conversion definitions are in [Analytics Event Plan](ANALYTICS_EVENT_PLAN.md). No analytics package, pixel, event sender, consent banner, or provider configuration is installed.
+Provider-neutral event planning, privacy limits, and future conversion definitions are in [Marketing Measurement Plan](MARKETING_MEASUREMENT_PLAN.md) and [Final Project Report](FINAL_PROJECT_REPORT.md). No analytics package, pixel, event sender, consent banner, or provider configuration is installed.
+
 
 ## Remaining project work
 
