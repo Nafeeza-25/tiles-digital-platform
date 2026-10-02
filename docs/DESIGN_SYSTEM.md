@@ -13,13 +13,15 @@ Timeless Tiles uses a luxury architectural tile-showroom visual system tailored 
 ## Motion & Interaction Principles
 
 ### Core Rule: Animate Components, Not Section Backgrounds
+Major sections use solid navy, white, and warm-cream surfaces separated by whitespace. Motion is component-level rather than background-level.
+
 Section separation relies on:
 1. Generous vertical whitespace (`72–104px` desktop, `56–80px` tablet, `40–56px` mobile).
-2. Clean, subtle background-tone changes (e.g. White `#FFFFFF` ↔ Warm Cream `#FAF7F1`).
-3. Single deliberate visual overlap: Category image strip overlapping the homepage hero bottom by `24–32px`.
-4. Strong dark/light transitions when content purpose changes (e.g. Content to Dark CTA band/Footer).
+2. Direct solid-surface changes: White `#FFFFFF`, Warm Cream `#FAF7F1`, and Dark Navy `#121B2B`.
+3. A single deliberate visual overlap: the Category image strip may overlap the homepage hero by `24–32px`.
+4. Strong direct dark/light boundaries when content purpose changes (e.g. content to a dark CTA band or footer).
 
-*No long gradients, blurred overlays, or scroll-driven background morphs are used between sections.*
+*No section-to-section gradients, blurred overlays, continuation bands, or scroll-driven background morphs are used.*
 
 ### Recommended Timing & Easing
 - **Micro-interactions (hover/focus):** 150–220ms (`cubic-bezier(0.16, 1, 0.3, 1)` or `ease-out`)
@@ -33,7 +35,7 @@ Section separation relies on:
 - **Product Cards (`ProductCard.tsx`):** Hover image scale (1.03), subtle shadow lift, gold accent reveal, and CTA arrow shift.
 - **Product Gallery (`ProductGallery.tsx`):** Short image crossfade on thumbnail click/keyboard selection (`texture`, `room`, `detail`).
 - **Compare Tray (`CompareTray.tsx`):** Smooth slide-in from bottom upon first item addition.
-- **Category Cards (`CategorySection.tsx`):** Subtle zoom, gradient overlay enhancement, arrow translation.
+- **Category Cards (`CategorySection.tsx`):** Subtle zoom, internal image-label overlay, and arrow translation.
 
 ## Global Reduced Motion Support
 

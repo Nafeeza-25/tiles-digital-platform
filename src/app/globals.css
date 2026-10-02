@@ -55,7 +55,6 @@ input,select,textarea { max-width:100%; }
 .site-footer .text-muted { color:#ABB3BA; }
 .page-hero,.home-hero { position:relative; isolation:isolate; overflow:hidden; background:var(--navy); color:white; }
 .page-hero { min-height:250px; padding:44px 0; display:flex; align-items:center; }
-.page-hero::after { content:""; position:absolute; right:0; bottom:0; left:0; z-index:0; height:72px; background:linear-gradient(transparent,var(--background)); pointer-events:none; }
 .page-hero>.site-container { animation:hero-copy-in .52s cubic-bezier(.22,1,.36,1) both; }
 .hero-image { z-index:-2; object-position:center; }
 .hero-shade { position:absolute; inset:0; z-index:-1; background:rgb(5 15 23 / 58%); }
@@ -112,8 +111,6 @@ details[open]>form { animation:catalogue-grid-in .2s ease-out both; }
 .product-specifications dd { color:var(--muted); overflow-wrap:anywhere; }
 .editorial-split { display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(24px,5vw,72px); align-items:center; }
 .editorial-image { width:100%; object-fit:cover; border-radius:4px; }
-.section-continuation { position:relative; background:linear-gradient(180deg,color-mix(in srgb,var(--background) 82%,var(--surface) 18%),var(--background) 62%); }
-.section-fade-dark { position:relative; background:linear-gradient(180deg,#20303A 0%,var(--navy) 18%,var(--navy) 82%,#182630 100%); }
 .surface-card { transition:border-color .2s ease-out,box-shadow .2s ease-out,transform .2s ease-out; }
 .surface-card:hover,.surface-card:focus-within { border-color:#CBB99D; box-shadow:var(--shadow-subtle); transform:translateY(-2px); }
 .room-card { transition:border-color .2s ease-out,box-shadow .2s ease-out,transform .2s ease-out; }
@@ -128,8 +125,6 @@ details[open]>form { animation:catalogue-grid-in .2s ease-out both; }
 .motion-reveal[data-motion-ready="true"][data-revealed="false"] { opacity:0; transform:translateY(18px); }
 .compare-tray { animation:tray-enter .28s cubic-bezier(.22,1,.36,1) both; }
 .mobile-navigation-panel { animation:menu-enter .2s cubic-bezier(.22,1,.36,1) both; }
-.site-footer { position:relative; margin-top:2rem; }
-.site-footer::before { content:""; position:absolute; top:-2rem; right:0; left:0; height:2rem; background:linear-gradient(180deg,transparent,var(--navy)); pointer-events:none; }
 @keyframes hero-copy-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
 @keyframes gallery-fade { from { opacity:0; transform:scale(1.012); } to { opacity:1; transform:scale(1); } }
 @keyframes tray-enter { from { opacity:0; transform:translate(-50%,14px); } to { opacity:1; transform:translate(-50%,0); } }

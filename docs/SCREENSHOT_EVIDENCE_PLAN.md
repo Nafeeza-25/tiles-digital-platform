@@ -5,7 +5,7 @@ This document defines the exact screenshot inventory required for the final acad
 | # | Evidence Item | Target Route / Tool | Required Visual Content | Academic Justification & Proof |
 | --- | --- | --- | --- | --- |
 | 1 | Homepage Hero & Navigation | `/` (1440px) | Full-width photographic hero slider, dark navy header, gold accents, H1 typography, and category strip overlap. | Proves premium visual redesign, responsive shell, and hero slider implementation. |
-| 2 | Category Discovery Strip | `/` (1440px / 768px) | 5 category visual cards (Floor, Wall, Bathroom, Kitchen, Outdoor) overlapping hero bottom by 24–32px. | Proves visual continuation, category routing, and image dataset mapping. |
+| 2 | Category Discovery Strip | `/` (1440px / 768px) | 5 category visual cards (Floor, Wall, Bathroom, Kitchen, Outdoor) overlapping hero bottom by 24–32px. | Proves the deliberate category-strip composition, category routing, and image dataset mapping. |
 | 3 | Product Catalogue Grid | `/tiles` | Multi-column product grid displaying product cards with prices, specifications, badges, and sorting dropdown. | Proves dynamic database catalogue rendering and grid layout architecture. |
 | 4 | Multi-Criteria Filter Usage | `/tiles?category=floor-tiles&finish=Matt&minPrice=1000` | Filter panel showing active category, finish, and price bounds, with filtered product count update. | Proves multi-criteria filtering, clean URL state management, and semantic price parsing. |
 | 5 | Product Detail Page | `/tiles/floor-tiles/carrara-white` | Carrara White detail page showing gallery, price (₹1,450/sq.m), specifications table, room suitability tags, and CTA buttons. | Proves dynamic product detail rendering, attribute formatting, and lead entry points. |

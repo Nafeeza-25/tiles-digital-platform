@@ -11,8 +11,19 @@ const paths = await files(root);
 const assets = paths.filter(path => path.endsWith(".webp"));
 const slugs = (await readdir(resolve(root, "products"))).filter(name => name.endsWith(".svg")).map(name => name.slice(0, -4));
 const mapping = await readFile("src/lib/visuals/assets.ts", "utf8");
+const globalStyles = await readFile("src/app/globals.css", "utf8");
+const homepageSections = await Promise.all([
+  "src/components/home/BrandCtaSections.tsx",
+  "src/components/home/AudienceJourneySections.tsx",
+  "src/components/home/CategorySection.tsx",
+  "src/components/home/ProductSections.tsx",
+].map(path => readFile(path, "utf8")));
 let failures = 0;
 const check = (ok, message) => { console[ok ? "log" : "error"](`${ok ? "PASS" : "FAIL"} ${message}`); if (!ok) failures++; };
+check(!/\.section-(continuation|fade-dark)\b/.test(globalStyles), "global styles contain no section-continuation fade utilities");
+check(!/\.page-hero::after\b/.test(globalStyles), "page heroes have no bottom continuation overlay");
+check(!/\.site-footer::before\b/.test(globalStyles), "site footer has no top continuation overlay");
+check(homepageSections.every(source => !/section-(continuation|fade-dark)\b/.test(source)), "homepage sections use solid surfaces rather than continuation classes");
 check(assets.length === 150, "150 supplied premium WebP assets exist");
 check(slugs.length === 40, "all 40 existing product SVG fallbacks remain");
 for (const slug of slugs) {
